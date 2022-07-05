@@ -33,19 +33,19 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Special Agent</h3>
+<h3 align="center">Fridge Assist</h3>
 
   <p align="center">
-    I created this application for fun. Basically, create or login to a user profile and accept contracts.
+    I got this idea from the shade room. Basically I'm creating an app that extends regular cookbooks.
     <br />
-    <a href="https://github.com/daniel70125/cia"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/daniel70125/Fridge-Assist"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/daniel70125/cia">View Demo</a>
+    <a href="https://github.com/daniel70125/Fridge-Assist">View Demo</a>
     ·
-    <a href="https://github.com/daniel70125/cia/issues">Report Bug</a>
+    <a href="https://github.com/daniel70125/Fridge-Assist/issues">Report Bug</a>
     ·
-    <a href="https://github.com/daniel70125/cia/issues">Request Feature</a>
+    <a href="https://github.com/daniel70125/Fridge-Assist/issues">Request Feature</a>
   </p>
 </div>
 
@@ -94,7 +94,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [React.js](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Material UI](https://mui.com/)
+* [React Reveal](https://www.react-reveal.com/)
+* [Node.js](https://nodejs.org/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -116,18 +118,19 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run the server (using Node.js)
+   ```sh
+   node server/index.js
    ```
+4. Run the react application
+   ```sh
+   npm start
+   ```
+## Enjoy and happy coding!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -147,12 +150,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Users can view recipes.
+- [ ] Users can enter in informatin about products.
+- [ ] Application will warn users when food items are to expire.
+- [ ] Application will allow users to upload recipes.
+- [ ] Application will create shopping lists for user.
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+
+
+<!-- - [ ] Feature 3
+    - [ ] Nested Feature -->
+
+See the [open issues](https://github.com/daniel70125/Fridge-Assist/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -188,9 +198,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+<!-- Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com -->
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/daniel70125/Fridge-Assist](https://github.com/daniel70125/Fridge-Assist)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
