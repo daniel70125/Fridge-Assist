@@ -4,6 +4,7 @@ import Routes from './routes';
 import {connect} from 'react-redux';
 import {getUser} from './Redux/Reducer';
 import axios from 'axios';
+import Header from './components/Header/Header';
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
     console.log(this.props);
     return ( 
       <div className="App">
+        <Header />
         {Routes}
       </div>
      );
