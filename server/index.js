@@ -22,7 +22,6 @@ app.use(session({
 }));
 
 app.get('/getuser', (req, res) => {
-    console.log("tried it!");
     req.session.user = {
         name: ""
     };

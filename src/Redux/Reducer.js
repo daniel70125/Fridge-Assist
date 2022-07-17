@@ -2,8 +2,10 @@ import axios from 'axios';
 
 const initialState = {
     user: {},
+    navOpen: false
 }
 const GET_USER = 'GET_USER';
+const OPEN_NAV = 'OPEN_NAV'
 
 export function getUser() {
     const user = axios.get('/getUser')
@@ -12,13 +14,12 @@ export function getUser() {
         payload: user
     }
 }
-// export function getItems(){
-//     const items = axios.get('/menuItems')
-// return {
-//     type:GET_ITEMS, 
-//     payload: items 
-//     }
-// }
+export function openNav(result){
+return {
+    type:OPEN_NAV, 
+    payload: result
+    }
+}
 
 export default function Reducer(state = initialState, action){
 const {type, payload} = action;
@@ -31,6 +32,8 @@ switch(type){
         return {...state, user: payload}
     case GET_USER + '_REJECTED':
         return initialState;
+    case OPEN_NAV:
+        return {...state, navOpen:payload}
     // case GET_ITEMS + '_PENDING':
     //     return {...state, loading:true}
     // case GET_ITEMS + '_FULFILLED':

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Header.scss';
+import {connect} from 'react-redux';
+import {openNav} from '../../Redux/Reducer';
 import Logo from '../../Pictures/fridge-assist-logo.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import {Link} from 'react-router-dom';
@@ -14,16 +16,18 @@ class Header extends Component {
         navbarOpen: false
     }
     componentDidMount(){
-        let navLinks = document.querySelectorAll('.header-nav-links');
-        navLinks.forEach((elm) => {elm.addEventListener('click', this.closeNav)})
+        // let navLinks = document.querySelectorAll('.header-nav-links');
+        // navLinks.forEach((elm) => {elm.addEventListener('click', this.closeNav)})
     }
     closeNav(){
+        this.props.openNav(false)
         let overlay = document.querySelector('#myNav');
         overlay.style.width = 0;
     }
     openNav(){
-        let overlay = document.querySelector('#myNav');
-        overlay.style.width = '100vw';
+        this.props.openNav(true)
+        // let overlay = document.querySelector('#myNav');
+        // overlay.style.width = '100vw';
     }
     render() { 
         return ( 
@@ -38,23 +42,8 @@ class Header extends Component {
                 <div>
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
-
-                {/* <!-- The overlay --> */}
-                <div id="myNav" className="overlay">
-
-                {/* <!-- Button to close the overlay navigation --> */}
-                <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a>
-
-                {/* <!-- Overlay content --> */}
-                <div className="overlay-content">
-                    <Link className='header-nav-links' to='/'>Home</Link>
-                    <Link className='header-nav-links' to='/products'>Browse</Link>
-                    <Link className='header-nav-links' to='/about'>About</Link>
-                </div>
-
-                </div>
-
             </div>
+
             <div id='header-main-div2'>
                     <div>
                         <img src={Logo} id='header2-logo' alt='fridge assist logo'/>
@@ -82,4 +71,5 @@ class Header extends Component {
     }
 }
  
-export default Header;
+const mapStateToProps = reduxState => reduxState;
+export default connect(mapStateToProps, {openNav})(Header);
