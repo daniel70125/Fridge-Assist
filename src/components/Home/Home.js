@@ -12,6 +12,7 @@ class Home extends Component {
                     <img alt='main-dish' src={mainDish} />
                     <p>Dish <span>of the</span>  Week</p>
                 </div>
+                <div>hello</div>
             </div>
          );
     }
