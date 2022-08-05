@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     img {
-        width:80%;
+        width:90%;
     }
     p {
         font-size: 4rem;
@@ -32,7 +32,22 @@
 
 // I want these css rules when i'm not Ipad anymore => Laptop
 @media (min-width: 768px) {
-    
+    #home-wrapper {
+        margin-left: 22vw;
+    }
+    #main-dish-container {
+        display: flex;
+        align-items: center;
+        height:60vh;
+        padding-bottom: 20px;
+        img {
+            width: 64%;
+            height: 40vh;
+        }
+        p {
+            font-size:8rem;
+        }
+    }
 }
 // I want these css rules when i'm not Laptop anymore => Xtra Lg Screens
 @media (min-width: 1024px) {

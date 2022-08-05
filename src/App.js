@@ -7,6 +7,8 @@ import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
 import axios from 'axios';
 import Header from './components/Header/Header';
+// Arrows for navbar overlay
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 
 class App extends Component {
@@ -34,6 +36,8 @@ closeNav(){
   this.props.openNav(false)
   let overlay = document.querySelector('#myNav');
   overlay.style.width = 0;
+  let searchInput = document.querySelector('#search-site-input');
+  searchInput.value = '';
 }
 openNav(){
     // this.props.openNav(true)
@@ -48,8 +52,10 @@ render() {
       {/* <!-- The overlay --> */}
       <div id="myNav" className="overlay">
 
+
       {/* <!-- Button to close the overlay navigation --> */}
-      <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a>
+      {/* <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a> */}
+          <input type='search' placeholder='Search recipes..' id='search-site-input'/>
 
       {/* <!-- Overlay content --> */}
       <div className="overlay-content">
@@ -57,7 +63,9 @@ render() {
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Browse</Link>
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/about'>About</Link>
       </div>
-
+      <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>
+        <DoubleArrowIcon id='overlay-close-btn'/> 
+      </div>
       </div>
     </div>
     );

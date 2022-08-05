@@ -7,7 +7,7 @@ class Home extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
+            <div id='home-wrapper'>
                 <div id='main-dish-container'>
                     <img alt='main-dish' src={mainDish} />
                     <p>Dish <span>of the</span>  Week</p>

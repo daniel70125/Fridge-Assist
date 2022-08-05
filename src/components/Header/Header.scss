@@ -2,18 +2,17 @@
 
 #header-main-div {
     display: flex;
-    background-color: grey;
     justify-content: space-between;
-    height:7vh;
+    height:10vh;
     align-items: center;
     position: sticky;
     top:0;
 }
 #header-logo {
-    width:27vw;
+    width:45vw;
 }
 #mobile-nav-btn {
-   font-size: 30px;
+   font-size: 6rem;
    position: relative;
    right:5px;
 }
@@ -119,6 +118,8 @@
     #header-main-div2 {
         display: block;
         width:20vw;
+        position: fixed;
+        left:0;
         #header2-logo {
             width:18vw;
         }

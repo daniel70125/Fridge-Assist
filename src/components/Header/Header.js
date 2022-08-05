@@ -37,9 +37,6 @@ class Header extends Component {
                     <img alt='fridge-assist-logo' id='header-logo' src={Logo} />
                 </div>
                 <div>
-                    <input type="search" name="" id="header-search-input" placeholder='Search ...'/>
-                </div>
-                <div>
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>
@@ -64,6 +61,12 @@ class Header extends Component {
                         <Link className='header-nav-links' to='/'><PersonIcon className='navbar2-icon' /> Chefs</Link>
                         <Link className='header-nav-links' to='/products'> <FavoriteIcon className='navbar2-icon'/> Favorites</Link>
                         <Link className='header-nav-links' to='/about'> <MenuBookIcon className='navbar2-icon' /> My Recipes</Link>
+                    </div>
+                    <div className='header-discover-div'>
+                    <span>Contact Us</span>
+                        <Link className='header-nav-links' to='/'><PersonIcon className='navbar2-icon' />Contact Us</Link>
+                        <Link className='header-nav-links' to='/products'> <FavoriteIcon className='navbar2-icon'/>About Us</Link>
+                        <Link className='header-nav-links' to='/about'> <MenuBookIcon className='navbar2-icon' />Reviews</Link>
                     </div>
             </div>
            </div>
