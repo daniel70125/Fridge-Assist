@@ -9,10 +9,10 @@
     top:0;
 }
 #header-logo {
-    width:45vw;
+    width:40vw;
 }
 #mobile-nav-btn {
-   font-size: 6rem;
+   font-size: 5rem;
    position: relative;
    right:5px;
 }
@@ -73,7 +73,7 @@
             text-decoration: none;
             border-radius: 10px;
             font-size:20px;
-            margin: 10px 0 0 25px;
+            margin: 5px 0 0 25px;
             color:black;
             padding:3px;
             // border:1px solid green;
@@ -116,41 +116,12 @@
         display: none;
     }
     #header-main-div2 {
-        display: block;
-        width:20vw;
-        position: fixed;
-        left:0;
-        #header2-logo {
-            width:18vw;
-        }
-        #user-avatar {
-            width:125px;
-            height:125px;
-        }
-        .header-discover-div {
-            margin:20px 0;
-            .header-nav-links {
-                font-size: 24px;
-            }
-        }
-        .header-discover-div span {
-            font-size:24px;
-        }
+
     }
 }
 // I want these css rules when i'm not Laptop anymore => Xtra Lg Screens
 @media (min-width: 1024px) {
     #header-main-div2 {
-        .header-discover-div {
-            span {
-                font-size:18px;
-            }
-            .header-nav-links {
-                font-size: 18px;
-            }
-        }
-        #header2-logo {
-            width:12vw;
-        }  
+        
     } 
 }

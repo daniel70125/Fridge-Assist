@@ -7,8 +7,10 @@ import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
 import axios from 'axios';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 // Arrows for navbar overlay
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import Search from '@mui/icons-material/Search';
 
 
 class App extends Component {
@@ -48,25 +50,34 @@ render() {
   return ( 
     <div className="App">
       <Header />
-      {Routes}
+        {Routes}
       {/* <!-- The overlay --> */}
       <div id="myNav" className="overlay">
 
 
       {/* <!-- Button to close the overlay navigation --> */}
       {/* <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a> */}
-          <input type='search' placeholder='Search recipes..' id='search-site-input'/>
+          <input type='search' placeholder='Search recipes..' id='search-site-input'/> <Search className='overlay-search-btn' onClick={() => console.log("Hello")}/>
 
       {/* <!-- Overlay content --> */}
       <div className="overlay-content">
+          <h2>Discover</h2>
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Home</Link>
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Browse</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/about'>About</Link>
+          <h2>Library</h2>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Chefs</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Favorites</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>My Recipes</Link>
+          <h2>Contact</h2>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Contact Us</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>About Us</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Reviews</Link>
       </div>
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>
         <DoubleArrowIcon id='overlay-close-btn'/> 
       </div>
       </div>
+      <Footer />
     </div>
     );
 }

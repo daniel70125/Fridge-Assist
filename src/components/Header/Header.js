@@ -50,6 +50,8 @@ class Header extends Component {
                         <p>SuperBaker96!</p>
                         <p>New Orleans, LA 70113</p>
                     </div>
+                    <div>
+
                     <div className='header-discover-div'>
                         <span>Discover</span>
                         <Link className='header-nav-links' to='/'><HomeIcon className='navbar2-icon' /> Home</Link>
@@ -67,6 +69,7 @@ class Header extends Component {
                         <Link className='header-nav-links' to='/'><PersonIcon className='navbar2-icon' />Contact Us</Link>
                         <Link className='header-nav-links' to='/products'> <FavoriteIcon className='navbar2-icon'/>About Us</Link>
                         <Link className='header-nav-links' to='/about'> <MenuBookIcon className='navbar2-icon' />Reviews</Link>
+                    </div>
                     </div>
             </div>
            </div>

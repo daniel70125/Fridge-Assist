@@ -1,0 +1,49 @@
+#footer-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('../../Pictures/footer-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    color:white;
+    font-family: 'Spirax', cursive;
+    font-size: 2rem;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    .footer-follow-icons {
+        font-size: 4rem;
+        margin: 0 8px;
+        background-color: #61a0af;
+    }
+    .contact-form {
+        font-size: 2rem;
+        width: 90%;
+        border: none;
+        background: transparent;
+        color: lightgrey;
+        border-bottom: 1px solid white;
+        margin-top:3vh;
+    }
+    .contact-form::placeholder {
+        color:lightgrey;
+    }
+    #footer-icons {
+        display: flex;
+        width:90%;
+        margin: auto;
+        justify-content:space-between;
+    }
+}
+#footer-div1 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+#footer-div1 a {
+    color: white;
+    letter-spacing: 2px;
+}
+
+// iPad Rules
+@media (min-width: 768px) {
+    
+}

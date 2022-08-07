@@ -10,7 +10,11 @@ class Home extends Component {
             <div id='home-wrapper'>
                 <div id='main-dish-container'>
                     <img alt='main-dish' src={mainDish} />
-                    <p>Dish <span>of the</span>  Week</p>
+                    <p className='main-dish-main-p-tag'>Dish <span>of the</span>  Week</p>
+                    <p >Orange Chicken w/ Ricee</p>
+                </div>
+                <div id='lg-main-dish-container'>
+                    
                 </div>
                 <div>hello</div>
             </div>
