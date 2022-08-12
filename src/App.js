@@ -65,13 +65,13 @@ render() {
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Home</Link>
           <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Browse</Link>
           <h2>Library</h2>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Chefs</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Favorites</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>My Recipes</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/chefs'>Chefs</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/favorites'>Favorites</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/my-recipes'>My Recipes</Link>
           <h2>Contact</h2>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Contact Us</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>About Us</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Reviews</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/contact'>Contact Us</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/about'>About Us</Link>
+          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/reviews'>Reviews</Link>
       </div>
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>
         <DoubleArrowIcon id='overlay-close-btn'/> 

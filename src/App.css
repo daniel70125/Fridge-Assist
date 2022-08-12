@@ -27,6 +27,7 @@ html {
     text-align: center; /* Centered text/links */
   }
   .overlay-content h2 {
+    margin-top:2vh;
     font-size: 3rem;
     color: darkslategrey;
     margin-bottom: 0;
@@ -59,10 +60,10 @@ html {
   }
   .overlay-search-btn {
     position: relative;
-    top: 4vh;
+    top: 3.5vh;
     color: grey;
     font-size: 3.5rem !important;
-    right: 2px;
+    right: 78vw;
     padding: 10px;
     z-index: 1;
   }
@@ -99,7 +100,7 @@ html {
   }
   #overlay-close-btn {
     color: grey;
-    font-size: 7rem;
+    font-size: 5rem;
     animation: arrowMove 1.5s infinite;
   }
 
