@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+
 html {
   font-size: 60%;
+}
+body {
+  font-family: 'Spirax', cursive;
+  letter-spacing: 1px;
 }
 /* // Overlay styles */
 /* The Overlay (background) */
@@ -103,6 +109,29 @@ html {
     font-size: 5rem;
     animation: arrowMove 1.5s infinite;
   }
+
+  #cooking-overlay {
+    width:0; // Change this to 100vw on loading
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #f5b04a;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    p {
+      font-size:3rem;
+      display: none; // Change on load
+    }
+    img {
+      width:0; // Change this to 100vw on loading
+      height:40vh;
+    }
+  } 
 
   @media (min-width: 768px) {
     #routes-wrapper {

@@ -21,8 +21,8 @@ function Footer() {
                 <Form id='footer-form'>
                     <Form.Control type="text" placeholder="First Name" className='contact-form'/>
                     <Form.Control type="email" placeholder="Last Name" className='contact-form'/>
-                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder='Write your message here'>-</textarea>
-                <Button variant="contained" endIcon={<SendIcon />}>Submit</Button>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder='Write your message here'></textarea>
+                <Button endIcon={<SendIcon />}>Submit</Button>
                 </Form>
             </div>
             <div id='footer-div2'>
@@ -34,12 +34,12 @@ function Footer() {
                 </div>
                     <h1>Follow</h1>
                 <div id='footer-icons'>
-                    <span><TwitterIcon className='footer-follow-icons'/></span>
-                    <span><FacebookIcon className='footer-follow-icons'/></span>
-                    <span><YouTubeIcon className='footer-follow-icons'/></span>
-                    <span><InstagramIcon className='footer-follow-icons'/></span>
-                    <span><GoogleIcon className='footer-follow-icons'/></span>
-                    <span><LinkedInIcon className='footer-follow-icons'/></span>
+                    <a href='https://www.twitter.com'><TwitterIcon className='footer-follow-icons'/></a>
+                    <a href='https://www.facebook.com'><FacebookIcon className='footer-follow-icons'/></a>
+                    <a href='https://www.youtube.com'><YouTubeIcon className='footer-follow-icons'/></a>
+                    <a href='https://www.instagram.com'><InstagramIcon className='footer-follow-icons'/></a>
+                    <a href='https://www.google.com'><GoogleIcon className='footer-follow-icons'/></a>
+                    <a href='https://www.linkedin.com'><LinkedInIcon className='footer-follow-icons'/></a>
                 </div>
             </div>
         </div>

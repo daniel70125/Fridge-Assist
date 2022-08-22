@@ -14,9 +14,13 @@ class Home extends Component {
                     <p >Orange Chicken w/ Ricee</p>
                 </div>
                 <div id='lg-main-dish-container'>
-                    
+                    <img src={mainDish} />
+                    <div id='lg-main-dish-caption'>
+                        <p>Dish <span>of the</span> Week</p>
+                        <p>Orange Chicken w/ white rice</p>
+                        <p>Created by: <span>@daniel70125</span></p>
+                    </div>
                 </div>
-                <div>hello</div>
             </div>
          );
     }

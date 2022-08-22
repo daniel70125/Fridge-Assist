@@ -26,64 +26,48 @@
 }
 
 // Secondary Navbar - ipads or bigger
-#header-main-div2 {
-    font-family: 'Spirax', cursive;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-    height: 100vh;
-    width: 25vw;
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #5e5e5e;
+    overflow: hidden;
     display: none;
-    #header2-logo {
-        width:20vw;
+    justify-content: space-between;
+    #topnav-links {
+      display: flex;
+      align-items: center;
     }
-    #user-avatar {
-        border-radius: 50%;
-        width:150px;
-        height:150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        #avatar-img {
-            width:100%;
-            height: 100%;
-        }
+    img {
+      width: 14vw;
+      height: 11vh;
     }
-    .header-discover-div {
-        padding:5px;
-        margin:25px 0;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        .navbar2-icon {
-            padding-right:10px;
-        }
-        .header-nav-links {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-        }
-        span {
-            color:darkgray;
-            font-size:26px;
-        }
-        a {
-            text-decoration: none;
-            border-radius: 10px;
-            font-size:20px;
-            margin: 5px 0 0 25px;
-            color:black;
-            padding:3px;
-            // border:1px solid green;
-            transition: all 1s;
-        }
-        a:hover {
-            background-color: burlywood;
-        }
+    .avatar-img {
+      width:6vw;
+      height:12vh;
+      border-radius: 50%;
     }
-}
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #252627;
+    color: white;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #1976d2;
+    color: white;
+  }
   
   /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
   @media screen and (max-height: 450px) {
@@ -115,10 +99,75 @@
     #header-main-div {
         display: none;
     }
-    #header-main-div2 {
-
+    .topnav {
+        display: flex;
     }
+
+    /* ================================================
+    Dropdown for nav menu from w3schools snippet
+    =================================================== */
+    /* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #252627;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Keeps the profile dropdown from overflowing to right of page*/
+  .dropdown-content2 {
+    right:0;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+    /* ================================================
+        End of dropdown Rules
+    =================================================== */
 }
+
 // I want these css rules when i'm not Laptop anymore => Xtra Lg Screens
 @media (min-width: 1024px) {
     #header-main-div2 {

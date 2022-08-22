@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss';
 import Routes from './routes';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 // Arrows for navbar overlay
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Search from '@mui/icons-material/Search';
+import cookingGif from './Pictures/chef-cooking.gif';
 
 
 class App extends Component {
@@ -76,6 +77,10 @@ render() {
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>
         <DoubleArrowIcon id='overlay-close-btn'/> 
       </div>
+      </div>
+      <div id='cooking-overlay'>
+        <img alt='cookingGif' src={cookingGif} />
+        <p>Welcome to <span>Fridge Assist</span></p>
       </div>
       <Footer />
     </div>
