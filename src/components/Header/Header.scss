@@ -2,6 +2,7 @@
 
 #header-main-div {
     display: flex;
+    background-color: black;
     justify-content: space-between;
     height:10vh;
     align-items: center;
@@ -12,9 +13,10 @@
     width:40vw;
 }
 #mobile-nav-btn {
-   font-size: 4rem;
+   font-size: 4.5rem;
    position: relative;
    right:5px;
+   color:#da6509;
 }
 
 #header-search-input {
@@ -28,7 +30,7 @@
 // Secondary Navbar - ipads or bigger
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #5e5e5e;
+    background-color: #000;
     overflow: hidden;
     display: none;
     justify-content: space-between;
@@ -37,11 +39,11 @@
       align-items: center;
     }
     img {
-      width: 14vw;
-      height: 11vh;
+      width: 23vw;
+      height: 8vh;
     }
     .avatar-img {
-      width:6vw;
+      width:15vw;
       height:12vh;
       border-radius: 50%;
     }
@@ -54,7 +56,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 2.5rem;
   }
   
   /* Change the color of links on hover */
@@ -65,7 +67,7 @@
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #1976d2;
+    background-color: #da6509;
     color: white;
   }
   
@@ -101,6 +103,18 @@
     }
     .topnav {
         display: flex;
+        align-items: center;
+        a {
+          font-size: 2.5rem;
+        }
+        img {
+          width: 30vw;
+          height: 10vh;
+        }
+        .avatar-img {
+          width:14vw;
+          height: 10vh;
+        }
     }
 
     /* ================================================
@@ -114,7 +128,7 @@
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 2.5rem;
     border: none;
     outline: none;
     color: white;
@@ -170,7 +184,21 @@
 
 // I want these css rules when i'm not Laptop anymore => Xtra Lg Screens
 @media (min-width: 1024px) {
-    #header-main-div2 {
-        
-    } 
+    .topnav {
+      .avatar-img {
+        width: 6vw;
+        height: 12vh;
+      }
+      a {
+        font-size: 2rem;
+      }
+      img {
+        width: 12vw;
+        height: 10vh;
+      }
+    }
+    .dropdown .dropbtn {
+      font-size: 2rem;
+    }
+    
 }

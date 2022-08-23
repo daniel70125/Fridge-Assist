@@ -39,8 +39,6 @@ closeNav(){
   this.props.openNav(false)
   let overlay = document.querySelector('#myNav');
   overlay.style.width = 0;
-  let searchInput = document.querySelector('#search-site-input');
-  searchInput.value = '';
 }
 openNav(){
     // this.props.openNav(true)
@@ -58,7 +56,6 @@ render() {
 
       {/* <!-- Button to close the overlay navigation --> */}
       {/* <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a> */}
-          <input type='search' placeholder='Search recipes..' id='search-site-input'/> <Search className='overlay-search-btn' onClick={() => console.log("Hello")}/>
 
       {/* <!-- Overlay content --> */}
       <div className="overlay-content">

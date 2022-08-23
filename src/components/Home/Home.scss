@@ -2,11 +2,11 @@
 
 #main-dish-container {
     text-align: center;
-    background-color: #252627;
+    background-color: black;
     font-family: 'Spirax', cursive;
     overflow-x: hidden;
     position: relative;
-    height:90vh;
+    height:95vh;
     background-image: url('../../Pictures/chef-bottom-bg.png');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -37,7 +37,7 @@
     background-repeat: no-repeat;
     background-color: #000000;
     background-position: bottom;
-    display: flex;
+    display: none;
     overflow: hidden;
     color: #fff;
     img {
@@ -71,6 +71,33 @@
         }
     }
 }
+#who-are-we-cont {
+    display: flex;
+    flex-direction: column;
+    #who-are-we-text {
+        text-align: center;
+        h5 {
+            font-size: 2.5rem;
+            margin-bottom: 1vh;
+        }
+        p {
+            font-size: 2rem;
+            padding: 5px;
+            font-weight: bold;
+        }
+    }
+    img {
+        width:100vw;
+    }
+}
+
+
+
+
+
+
+
+
 
 @keyframes spin {
     0% {transform: rotate(0deg)}
@@ -86,6 +113,34 @@
 @media (min-width: 768px) {
     #main-dish-container {
         display: none;
+    }
+    #lg-main-dish-container {
+        display: flex;
+        img {
+            width: 56vw;
+        }
+    }
+    #who-are-we-cont {
+        flex-direction: row;
+         img {
+            width: 60vw;
+        }
+        #who-are-we-text {
+            padding: 0 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a {
+                width:9vw;
+                margin: 0 auto;
+                button {
+                    padding:8px;
+                    background-color: #da6509;
+                    color:#fff;
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 }
 // I want these css rules when i'm not iPad anymore => Laptop

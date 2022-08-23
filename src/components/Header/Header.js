@@ -6,6 +6,7 @@ import Logo from '../../Pictures/fridge-assist-logo.png';
 import Avatar from '../../Pictures/profile-avatar.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import {Link} from 'react-router-dom';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
 // import PersonIcon from '@mui/icons-material/Person';
@@ -46,12 +47,26 @@ class Header extends Component {
                 <img alt='logo' src={Logo} />
                 <div id='topnav-links'>
                     <Link className='active' to='/'>Home</Link>
-                    <Link to='/'>Browse</Link>
-                    <Link to='/'>Chefs</Link>
-                    <Link to='/'>Contact Us</Link>
-                    <Link to='/'>About Us</Link>
-                    <Link to='/'>Reviews</Link>
 
+                    <div class="dropdown">
+                        <button class="dropbtn">Discover
+                        <ArrowDropDownIcon />
+                        </button>
+                        <div class="dropdown-content">
+                        <Link to='/'>Browse</Link>
+                        <Link to='/'>Chefs</Link>
+                        <Link to='/'>Reviews</Link>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Contact
+                        <ArrowDropDownIcon />
+                        </button>
+                        <div class="dropdown-content">
+                            <Link to='/'>Contact Us</Link>
+                            <Link to='/'>About Us</Link>
+                        </div>
+                    </div>
                     <div class="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>
                         <div class="dropdown-content dropdown-content2">

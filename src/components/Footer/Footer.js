@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import Logo from '../../Pictures/fridge-assist-logo.png';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -14,6 +15,7 @@ function Footer() {
 
     return ( 
         <div id='footer-bg'>
+        <div style={{"textAlign":"center"}}><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></div>
         <div id='footer-wrapper'>
             {/* Secondary Div */}
             <div id='footer-div1'>
