@@ -85,6 +85,18 @@
             padding: 5px;
             font-weight: bold;
         }
+        #who-are-we-btns {
+            display: flex;
+            a {
+                margin: 0 auto;
+                button {
+                    padding:8px;
+                    background-color: #da6509;
+                    color:#fff;
+                    font-size: 2rem;
+                }
+            }
+    }
     }
     img {
         width:100vw;
@@ -131,7 +143,6 @@
             flex-direction: column;
             justify-content: center;
             a {
-                width:9vw;
                 margin: 0 auto;
                 button {
                     padding:8px;

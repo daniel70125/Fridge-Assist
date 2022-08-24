@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Login.scss';
+import './SignUp.scss';
 import {Link} from 'react-router-dom';
 
 import Avatar from '@mui/material/Avatar';
@@ -61,15 +61,25 @@ class Login extends Component {
                         <LockOutlinedIcon />
                       </Avatar>
                       <Typography component="h1" variant="h5">
-                        Sign in
+                        Sign up
                       </Typography>
                       <Box component="form" onSubmit={this.handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                           margin="normal"
                           required
                           fullWidth
+                          id="username"
+                          label="@username"
+                          name="username"
+                          autoComplete="username"
+                          autoFocus
+                        />
+                        <TextField
+                          margin="normal"
+                          required
+                          fullWidth
                           id="email"
-                          label="Email Address"
+                          label="email"
                           name="email"
                           autoComplete="email"
                           autoFocus
@@ -93,7 +103,7 @@ class Login extends Component {
                           fullWidth
                           sx={{ mt: 3, mb: 2 }}
                         >
-                          Sign In
+                          Sign Up
                         </Button>
                         <Grid container>
                           <Grid item xs>
@@ -102,13 +112,14 @@ class Login extends Component {
                             </Link>
                           </Grid>
                           <Grid item>
-                            <Link to='/sign-up' variant="body2">
-                              {"Don't have an account? Sign Up"}
+                            <Link to='/login' variant="body2">
+                              {"Already have an account? Sign In"}
                             </Link>
                           </Grid>
                         </Grid>
                       </Box>
                     </Box>
+                    <Copyright sx={{ mt: 8, mb: 4 }} />
                   </Container>
                 </ThemeProvider>
               )

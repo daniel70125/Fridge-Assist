@@ -15,7 +15,7 @@ function Footer() {
 
     return ( 
         <div id='footer-bg'>
-        <div style={{"textAlign":"center"}}><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></div>
+        <div style={{"textAlign":"center", "paddingTop":"1vh"}}><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></div>
         <div id='footer-wrapper'>
             {/* Secondary Div */}
             <div id='footer-div1'>

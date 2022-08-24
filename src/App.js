@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.scss';
+import STT from './components/STT/STT';
 import Routes from './routes';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -49,7 +50,9 @@ render() {
   return ( 
     <div className="App">
       <Header />
+      <STT>
         {Routes}
+      </STT>
       {/* <!-- The overlay --> */}
       <div id="myNav" className="overlay">
 

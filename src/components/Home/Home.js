@@ -31,7 +31,10 @@ class Home extends Component {
                         <p>Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
                             us you will get to share your recipes and food ideas with hundreds of other like-minded members.
                         </p>
-                        <Link to='/sign-up'><Button>Sign Up</Button></Link>
+                        <div id='who-are-we-btns'>
+                            <Link to='/sign-up'><Button>Sign Up</Button></Link>
+                            <Link to='/login'><Button>Log in</Button></Link>
+                        </div>
                     </div>
                     <img alt='who-are-we-illustration' src={cookingIllustration} />
                 </div>
