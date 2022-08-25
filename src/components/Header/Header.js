@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './Header.scss';
 import {connect} from 'react-redux';
 import {openNav} from '../../Redux/Reducer';
+import {openSearchNav} from '../../Redux/Reducer';
 import Logo from '../../Pictures/fridge-assist-logo.png';
 import Avatar from '../../Pictures/profile-avatar.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import {Link} from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Search from '@mui/icons-material/Search';
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
 // import PersonIcon from '@mui/icons-material/Person';
@@ -26,8 +28,18 @@ class Header extends Component {
         let overlay = document.querySelector('#myNav');
         overlay.style.width = 0;
     }
+    closeSearchNav(){
+        this.props.openSearchNav(false)
+        let overlay = document.querySelector('#search-overlay');
+        overlay.style.height = 0;
+    }
     openNav(){
         this.props.openNav(true)
+        // let overlay = document.querySelector('#myNav');
+        // overlay.style.width = '100vw';
+    }
+    openSearchNav(){
+        this.props.openSearchNav(true)
         // let overlay = document.querySelector('#myNav');
         // overlay.style.width = '100vw';
     }
@@ -39,6 +51,7 @@ class Header extends Component {
                     <img alt='fridge-assist-logo' id='header-logo' src={Logo} />
                 </div>
                 <div>
+                    <Search onClick={(e) => this.openSearchNav(e)} />
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>
@@ -67,6 +80,7 @@ class Header extends Component {
                             <Link to='/'>About Us</Link>
                         </div>
                     </div>
+                    <Search />
                     <div class="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>
                         <div class="dropdown-content dropdown-content2">
@@ -83,4 +97,4 @@ class Header extends Component {
 }
  
 const mapStateToProps = reduxState => reduxState;
-export default connect(mapStateToProps, {openNav})(Header);
+export default connect(mapStateToProps, {openNav, openSearchNav})(Header);

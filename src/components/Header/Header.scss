@@ -18,76 +18,79 @@
    right:5px;
    color:#da6509;
 }
-
-#header-search-input {
-    padding: 8px;
-    border-radius: 10px;
-    width: 53vw;
-    color: #AE5633;
-    font-size: 12px;
+.css-i4bv87-MuiSvgIcon-root {
+  color:#da6509 !important;
+  font-size:4rem !important;
+  transition: all 0.5s;
 }
-
+.css-i4bv87-MuiSvgIcon-root:hover {
+  rotate: -46deg;
+  transition: all 0.5s;
+}
 // Secondary Navbar - ipads or bigger
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #000;
-    overflow: hidden;
-    display: none;
-    justify-content: space-between;
-    #topnav-links {
-      display: flex;
-      align-items: center;
-    }
-    img {
-      width: 23vw;
-      height: 8vh;
-    }
-    .avatar-img {
-      width:15vw;
-      height:12vh;
-      border-radius: 50%;
-    }
+  background-color: #000;
+  overflow: hidden;
+  display: none;
+  justify-content: space-between;
+  #topnav-links {
+    display: flex;
+    align-items: center;
   }
-  
+  img {
+    width: 23vw;
+    height: 8vh;
+  }
+  .avatar-img {
+    width:15vw;
+    height:12vh;
+    border-radius: 50%;
+  }
+}
+
   /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 2.5rem;
-  }
+.topnav a {
+  float: left;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 2.5rem;
+}
   
   /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #252627;
-    color: white;
-  }
+.topnav a:hover {
+  background-color: #252627;
+  color: white;
+}
   
   /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #da6509;
-    color: white;
+.topnav a.active {
+  background-color: #da6509;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
+}
 
 // I want these css rules when i'm not mobile anymore => Ipad
 @media (min-width: 480px) {
-    #header-search-input {
-        padding:15px;
-        position: relative;
-        right: 26px;
-    }
     #mobile-nav-btn {
         font-size: 58px;
     }

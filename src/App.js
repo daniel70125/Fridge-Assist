@@ -6,12 +6,14 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
+import {openSearchNav} from './Redux/Reducer';
 import axios from 'axios';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 // Arrows for navbar overlay
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Search from '@mui/icons-material/Search';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import cookingGif from './Pictures/chef-cooking.gif';
 
 
@@ -35,16 +37,32 @@ componentDidUpdate(){
   } else {
     this.closeNav()
   }
+  if (this.props.searchOpen) {
+    this.openSearchNav()
+  } else {
+    this.closeSearchNav()
+  }
+  
 }
 closeNav(){
   this.props.openNav(false)
   let overlay = document.querySelector('#myNav');
   overlay.style.width = 0;
 }
+closeSearchNav(){
+  this.props.openSearchNav(false)
+  let overlay = document.querySelector('#search-overlay');
+  overlay.style.height = 0;
+}
 openNav(){
     // this.props.openNav(true)
     let overlay = document.querySelector('#myNav');
     overlay.style.width = '100vw';
+}
+openSearchNav(){
+    // this.props.openNav(true)
+    let overlay = document.querySelector('#search-overlay');
+    overlay.style.height = '100vh';
 }
 render() { 
   return ( 
@@ -78,9 +96,18 @@ render() {
         <DoubleArrowIcon id='overlay-close-btn'/> 
       </div>
       </div>
+
       <div id='cooking-overlay'>
         <img alt='cookingGif' src={cookingGif} />
         <p>Welcome to <span>Fridge Assist</span></p>
+      </div>
+      {/*  */}
+      <div id='search-overlay'>
+        <div id='search-overlay-main'>
+          <p>Start Typing and hit the Search button...</p>
+          <input type="search" placeholder='Search Recipes' /><Search id='search-overlay-btn' />
+          <ExpandLessIcon id='search-overlay-close-btn' onClick={(e) => this.closeSearchNav(e)}/>
+        </div>
       </div>
       <Footer />
     </div>
@@ -88,4 +115,4 @@ render() {
 }
 }
 const mapStateToProps = reduxState => reduxState;
-export default connect(mapStateToProps, {getUser, openNav})(App);
+export default connect(mapStateToProps, {getUser, openNav, openSearchNav})(App);

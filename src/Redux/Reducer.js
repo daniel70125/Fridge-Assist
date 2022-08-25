@@ -2,10 +2,13 @@ import axios from 'axios';
 
 const initialState = {
     user: {},
+    searchOpen: false,
     navOpen: false
 }
 const GET_USER = 'GET_USER';
-const OPEN_NAV = 'OPEN_NAV'
+const OPEN_NAV = 'OPEN_NAV';
+const OPEN_SEARCH_NAV = 'OPEN_SEARCH_NAV';
+
 
 export function getUser() {
     const user = axios.get('/getUser')
@@ -17,6 +20,12 @@ export function getUser() {
 export function openNav(result){
 return {
     type:OPEN_NAV, 
+    payload: result
+    }
+}
+export function openSearchNav(result){
+return {
+    type:OPEN_SEARCH_NAV, 
     payload: result
     }
 }
@@ -34,6 +43,8 @@ switch(type){
         return initialState;
     case OPEN_NAV:
         return {...state, navOpen:payload}
+    case OPEN_SEARCH_NAV:
+        return {...state, searchOpen:payload}
     // case GET_ITEMS + '_PENDING':
     //     return {...state, loading:true}
     // case GET_ITEMS + '_FULFILLED':
