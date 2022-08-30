@@ -9,6 +9,7 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import {Link} from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Search from '@mui/icons-material/Search';
+import Form from 'react-bootstrap/Form';
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
 // import PersonIcon from '@mui/icons-material/Person';
@@ -20,6 +21,7 @@ class Header extends Component {
         navbarOpen: false
     }
     componentDidMount(){
+        
         // let navLinks = document.querySelectorAll('.header-nav-links');
         // navLinks.forEach((elm) => {elm.addEventListener('click', this.closeNav)})
     }
@@ -51,7 +53,7 @@ class Header extends Component {
                     <img alt='fridge-assist-logo' id='header-logo' src={Logo} />
                 </div>
                 <div>
-                    <Search onClick={(e) => this.openSearchNav(e)} />
+                    <Search style={{"color":"#da6509", "fontSize":"4rem"}} onClick={(e) => this.openSearchNav(e)} />
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>
@@ -59,6 +61,11 @@ class Header extends Component {
             <div class="topnav">
                 <img alt='logo' src={Logo} />
                 <div id='topnav-links'>
+                    <div id='topnav-lg-search-bar'>
+                    <Form id='footer-form'>
+                        <Form.Control type="text" placeholder="Search recipes" className='topnav-search-input'/>
+                    </Form>
+                    </div>
                     <Link className='active' to='/'>Home</Link>
 
                     <div class="dropdown">
@@ -80,7 +87,7 @@ class Header extends Component {
                             <Link to='/'>About Us</Link>
                         </div>
                     </div>
-                    <Search />
+                    <Search id='topnav-lg-search' style={{"color":"#da6509", "fontSize":"3.5rem", "margin":"0 1vw"}} onClick={(e) => this.openSearchNav(e)}/>
                     <div class="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>
                         <div class="dropdown-content dropdown-content2">

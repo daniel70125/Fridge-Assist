@@ -4,7 +4,6 @@ html {
   font-size: 60%;
 }
 body {
-  font-family: 'Spirax', cursive !important;
   letter-spacing: 1px;
 }
 /* // Overlay styles */
@@ -27,7 +26,6 @@ body {
   /* Position the content inside the overlay */
   .overlay-content {
     position: relative;
-    font-family: 'Spirax', cursive;
     top: 1%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
@@ -60,7 +58,6 @@ body {
     border: none;
     border-bottom: 1px solid #da6509;
     font-size: 2.5rem;
-    font-family: 'Spirax', cursive;
     font-weight: bold;
     text-align: center;
   }

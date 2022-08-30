@@ -3,7 +3,6 @@
 #main-dish-container {
     text-align: center;
     background-color: black;
-    font-family: 'Spirax', cursive;
     overflow-x: hidden;
     position: relative;
     height:95vh;
@@ -41,7 +40,7 @@
     overflow: hidden;
     color: #fff;
     img {
-        animation: spin 9s infinite linear;
+        animation: spin 35s infinite linear;
         width: 50vw;
     }
     #lg-main-dish-caption {
@@ -213,12 +212,22 @@
         }
     }
     #feature-cont-reversed {
-        background-color: beige;
+        background-color: #3c3b5b;
         flex-direction: row-reverse;
+        border-radius: 10px;
     }
 }
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1024px) {
+    .lg-screen-margin {
+        width:80%;
+        margin: 0 auto;
+    }
+    #who-are-we-cont {
+        img {
+            width: 50vw;
+        }
+    }
     #lg-main-dish-container {
         img {
             width:40vw;

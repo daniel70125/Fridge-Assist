@@ -30,22 +30,22 @@ function Footer() {
             <div id='footer-div2'>
                 <div>
                     <h1>Contacts</h1>
-                    <p><span>Email: </span><a href="mailto:fridgeassist@hotmail.com">fridgeassist@hotmail.com</a></p>
-                    <p><span>Phone: </span><a href="tel:5042368584">(504) 123-4567</a></p>
-                    <p><span>Fax: </span><a href="fax:504.555.1234567">504 555 1234567</a></p>
+                    <p><span>Email: </span><a className='footer-nav-links' href="mailto:fridgeassist@hotmail.com">fridgeassist@hotmail.com</a></p>
+                    <p><span>Phone: </span><a className='footer-nav-links' href="tel:5042368584">(504) 123-4567</a></p>
+                    <p><span>Fax: </span><a className='footer-nav-links' href="fax:504.555.1234567">504 555 1234567</a></p>
                 </div>
                     <h1>Follow</h1>
                 <div id='footer-icons'>
-                    <a href='https://www.twitter.com'><TwitterIcon className='footer-follow-icons'/></a>
-                    <a href='https://www.facebook.com'><FacebookIcon className='footer-follow-icons'/></a>
-                    <a href='https://www.youtube.com'><YouTubeIcon className='footer-follow-icons'/></a>
-                    <a href='https://www.instagram.com'><InstagramIcon className='footer-follow-icons'/></a>
-                    <a href='https://www.google.com'><GoogleIcon className='footer-follow-icons'/></a>
-                    <a href='https://www.linkedin.com'><LinkedInIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.twitter.com'><TwitterIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.facebook.com'><FacebookIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.youtube.com'><YouTubeIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.instagram.com'><InstagramIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.google.com'><GoogleIcon className='footer-follow-icons'/></a>
+                    <a className='footer-nav-links' href='https://www.linkedin.com'><LinkedInIcon className='footer-follow-icons'/></a>
                 </div>
             </div>
         </div>
-        <p id='footer-copyright'>Developed by <a href="https://www.linkedin.com/in/daniel70125">Daniel Wright</a> </p>
+        <p id='footer-copyright'>Developed by <a className='footer-nav-links' href="https://www.linkedin.com/in/daniel70125">Daniel Wright</a> </p>
         </div>
      );
 }

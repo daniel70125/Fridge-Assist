@@ -28,6 +28,8 @@ class Home extends Component {
                         <p>Created by: <span>@daniel70125</span></p>
                     </div>
                 </div>
+
+                <div className='lg-screen-margin'>
                 <div id='who-are-we-cont'>
                     <div id='who-are-we-text'>
                         <h5>Welcome to Fridge Assist !</h5>
@@ -78,6 +80,7 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={expirationFeaturedImg}/>
                     </div>
                 </div>
+                </div> {/* End of wrapper of middle/main content*/}
             {/* End of component*/}    
             </div>
          );
