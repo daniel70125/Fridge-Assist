@@ -85,8 +85,17 @@ class Home extends Component {
                 </div>
 
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
-                <HomeRecipeGallery />
-            {/* End of component*/}    
+
+                <div id='home-recipe-gallery-wrapper'>
+                    <h2 id='home-recipe-gallery-h2'>Our Users Recipes</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis delectus iste eius corrupti quasi deleniti veritatis cum dignissimos doloremque aspernatur? Doloremque dignissimos placeat cumque officiis sit molestias sint porro vero.</p>
+                    <HomeRecipeGallery /> {/* Recipe gallery */}
+                </div>
+
+                <div id='home-recipe-categories'>
+
+                </div>
+            {/* End of component*/}
             </div>
          );
     }

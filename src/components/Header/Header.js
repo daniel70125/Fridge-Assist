@@ -58,7 +58,7 @@ class Header extends Component {
                 </div>
             </div>
 
-            <div class="topnav">
+            <div className="topnav">
                 <img alt='logo' src={Logo} />
                 <div id='topnav-links'>
                     <div id='topnav-lg-search-bar'>
@@ -68,29 +68,29 @@ class Header extends Component {
                     </div>
                     <Link className='active' to='/'>Home</Link>
 
-                    <div class="dropdown">
-                        <button class="dropbtn">Discover
+                    <div className="dropdown">
+                        <button className="dropbtn">Discover
                         <ArrowDropDownIcon />
                         </button>
-                        <div class="dropdown-content">
+                        <div className="dropdown-content">
                         <Link to='/'>Browse</Link>
                         <Link to='/'>Chefs</Link>
                         <Link to='/'>Reviews</Link>
                         </div>
                     </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">Contact
+                    <div className="dropdown">
+                        <button className="dropbtn">Contact
                         <ArrowDropDownIcon />
                         </button>
-                        <div class="dropdown-content">
+                        <div className="dropdown-content">
                             <Link to='/'>Contact Us</Link>
                             <Link to='/'>About Us</Link>
                         </div>
                     </div>
                     <Search id='topnav-lg-search' style={{"color":"#da6509", "fontSize":"3.5rem", "margin":"0 1vw"}} onClick={(e) => this.openSearchNav(e)}/>
-                    <div class="dropdown">
+                    <div className="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>
-                        <div class="dropdown-content dropdown-content2">
+                        <div className="dropdown-content dropdown-content2">
                         <Link to='/'>My Profile</Link>
                         <Link to='/'>Favorites</Link>
                         <Link to='/'>My Recipes</Link>
