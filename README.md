@@ -155,6 +155,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Application will warn users when food items are to expire.
 - [ ] Application will allow users to upload recipes.
 - [ ] Application will create shopping lists for user.
+- [ ] Application will have a guide to 'eating healthy' for people who don't know where to start.
 
 
 
