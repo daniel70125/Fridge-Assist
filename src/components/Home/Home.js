@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './Home.scss';
+import HomeRecipeGallery from '../HomeRecipeGallery/HomeRecipeGallery';
+// Imports from packages
 import {Link} from 'react-router-dom';
+import Button from '@mui/material/Button';
+// Imports of images
 import mainDish from '../../Pictures/main-dish.png';
 import cookingIllustration from '../../Pictures/who-are-we.jpg';
 import recipeFeaturedImg from '../../Pictures/recipe-illustration.jpg';
 import groceryFeaturedImg from '../../Pictures/grocery-list.webp';
 import expirationFeaturedImg from '../../Pictures/expiration-date.jpg';
-import Button from '@mui/material/Button';
 
 class Home extends Component {
     state = { 
@@ -80,7 +83,9 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={expirationFeaturedImg}/>
                     </div>
                 </div>
-                </div> {/* End of wrapper of middle/main content*/}
+
+                </div> {/* End of wrapper of middle/main content w/ margin*/}
+                <HomeRecipeGallery />
             {/* End of component*/}    
             </div>
          );

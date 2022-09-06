@@ -1,0 +1,11 @@
+#home-recipe-gallery-cont {
+    background-color: black;
+    display: flex;
+    padding:5px;
+    div {
+        width:25%;
+        img {
+            width:100%;
+        }
+    }
+}
