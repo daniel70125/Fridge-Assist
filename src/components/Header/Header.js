@@ -50,7 +50,7 @@ class Header extends Component {
            <div>
              <div id='header-main-div'>
                 <div>
-                    <img alt='fridge-assist-logo' id='header-logo' src={Logo} />
+                    <Link className='no-bg' to='/'><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></Link>
                 </div>
                 <div>
                     <Search style={{"color":"#da6509", "fontSize":"4rem"}} onClick={(e) => this.openSearchNav(e)} />
@@ -59,7 +59,7 @@ class Header extends Component {
             </div>
 
             <div className="topnav">
-                <img alt='logo' src={Logo} />
+                <Link className='no-bg' to='/'><img alt='logo' src={Logo} /> </Link>
                 <div id='topnav-links'>
                     <div id='topnav-lg-search-bar'>
                     <Form id='footer-form'>

@@ -4,12 +4,16 @@ import HomeRecipeGallery from '../HomeRecipeGallery/HomeRecipeGallery';
 // Imports from packages
 import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
+import StarIcon from '@mui/icons-material/Star';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 // Imports of images
 import mainDish from '../../Pictures/main-dish.png';
 import cookingIllustration from '../../Pictures/who-are-we.jpg';
 import recipeFeaturedImg from '../../Pictures/recipe-illustration.jpg';
 import groceryFeaturedImg from '../../Pictures/grocery-list.webp';
 import expirationFeaturedImg from '../../Pictures/expiration-date.jpg';
+import bgImage from '../../Pictures/chef-bottom-bg.png';
+import avatarImg from '../../Pictures/profile-avatar.png';
 
 class Home extends Component {
     state = { 
@@ -90,10 +94,28 @@ class Home extends Component {
                     <h2 id='home-recipe-gallery-h2'>Our Users Recipes</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis delectus iste eius corrupti quasi deleniti veritatis cum dignissimos doloremque aspernatur? Doloremque dignissimos placeat cumque officiis sit molestias sint porro vero.</p>
                     <HomeRecipeGallery /> {/* Recipe gallery */}
+                    <Button>View Recipes <KeyboardArrowRightIcon/> </Button>
                 </div>
 
                 <div id='home-recipe-categories'>
+                    <img src={bgImage} alt='bg-image'/>
+                    <h2>Our Vision</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum inventore quae sed ipsa, dicta fugiat perferendis vitae sunt molestias repudiandae sequi quasi nemo dignissimos autem nostrum culpa? Iste, quo.</p>
+                    <img src={bgImage} alt='bg-image'/>
+                </div>
 
+                <div id='home-review-cont'>
+                    <h2>See Our Customers <br /> <span style={{"color":"#da6509"}}>Review</span></h2>
+                    <span style={{"fontSize":"2rem"}}>Testimonial</span>
+                    <div>
+                        <img alt='testimonial-avatar' src={avatarImg}/>
+                        <div id='home-review-testimonial-caption'>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cum placeat in aliquid quisquam odit maiores soluta, error, quam officia omnis quis nesciunt aperiam ea at ab minus rem doloremque!</p>
+                        <StarIcon className='home-review-testimonial-star' /> <StarIcon className='home-review-testimonial-star' /> <StarIcon className='home-review-testimonial-star' /> <StarIcon className='home-review-testimonial-star' />
+                        <p>John Adams</p>
+                        <span>Founder, CEO</span>
+                        </div>
+                    </div>
                 </div>
             {/* End of component*/}
             </div>

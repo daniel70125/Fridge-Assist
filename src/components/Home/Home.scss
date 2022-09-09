@@ -135,6 +135,8 @@
     }
 }
 #home-recipe-gallery-wrapper {
+    text-align: center;
+    padding-bottom: 2em;
     #home-recipe-gallery-h2 {
         text-align: center;
         font-size: 3rem;
@@ -144,8 +146,76 @@
         text-align: center;
         font-size: 1.5rem;
     }
+    button {
+        background-color: #da6509;
+        color: white;
+        padding:1.3em;
+        border-radius: 30px;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+    }
 }
-
+#home-recipe-categories {
+    background-color: black;
+    min-height:120vh;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2{
+        font-size: 4rem;
+    }
+    p {
+        font-size: 2rem;
+        padding:5px;
+    }
+    img:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        overflow: hidden;
+        transform: rotate(180deg);
+    }
+    img:nth-child(4){
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        overflow: hidden;
+    }
+}
+#home-review-cont {
+    min-height:50vh;
+    text-align: center;
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1vh;
+    }
+    img {
+        width: 45%;
+        margin-top: 5vh;
+    }
+    #home-review-testimonial-caption {
+        font-size: 1.8rem;
+        padding: 0 2em;
+        text-align: left;
+        p:nth-child(6) {
+            font-size: 2.2rem;
+            margin-bottom: 4px;
+        }
+        span {
+            color: lightgray;
+        }
+    }
+    .home-review-testimonial-star {
+        font-size:3.4rem;
+        color: #febd2f;
+        margin-left: -8px;
+    }
+}
 
 
 
@@ -227,6 +297,15 @@
         flex-direction: row-reverse;
         border-radius: 10px;
     }
+    #home-recipe-categories {
+        min-height: 100vh;
+        h2 {
+            font-size: 6.5rem;
+        }
+        p {
+            font-size: 3.5rem;
+        }
+    }
 }
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1024px) {
@@ -244,4 +323,19 @@
             width:40vw;
         }
     }
+    #home-recipe-categories {
+        h2 {
+            font-size:4rem;
+        }
+        p {
+            font-size: 2rem;
+            padding:0 2em;
+        }
+        img:nth-child(1) {
+            top:-50px;
+        }
+        img:nth-child(4) {
+            bottom:-50px;
+        }
+    } 
 }

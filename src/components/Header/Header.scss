@@ -54,6 +54,9 @@ font-size: 2.5rem;
   background-color: #252627;
   color: white;
 }
+.no-bg:hover {
+  background-color:transparent !important;
+}
   
   /* Add a color to the active/current link */
 .topnav a.active {
