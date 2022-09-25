@@ -94,14 +94,14 @@ class Home extends Component {
                     <h2 id='home-recipe-gallery-h2'>Our Users Recipes</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis delectus iste eius corrupti quasi deleniti veritatis cum dignissimos doloremque aspernatur? Doloremque dignissimos placeat cumque officiis sit molestias sint porro vero.</p>
                     <HomeRecipeGallery /> {/* Recipe gallery */}
-                    <Button>View Recipes <KeyboardArrowRightIcon/> </Button>
+                    <Link to='/recipes'>View Recipes <KeyboardArrowRightIcon style={{"position":"relative", "top":"4px"}}/> </Link>
                 </div>
 
                 <div id='home-recipe-categories'>
-                    <img src={bgImage} alt='bg-image'/>
+                    <img src={bgImage} alt='bg'/>
                     <h2>Our Vision</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum inventore quae sed ipsa, dicta fugiat perferendis vitae sunt molestias repudiandae sequi quasi nemo dignissimos autem nostrum culpa? Iste, quo.</p>
-                    <img src={bgImage} alt='bg-image'/>
+                    <img src={bgImage} alt='bg'/>
                 </div>
 
                 <div id='home-review-cont'>

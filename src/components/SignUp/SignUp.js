@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import './SignUp.scss';
 import {Link} from 'react-router-dom';
 
+import boyIcon from '../../Pictures/boy-chef-1.png';
+import girlIcon from '../../Pictures/girl-chef-1.png';
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import RadioGroup from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
@@ -94,6 +99,21 @@ class Login extends Component {
                           id="password"
                           autoComplete="current-password"
                         />
+                         {/* This is the radio group for picking avatar image */}
+                         <RadioGroup id='sign-up-radio-group-cont' row aria-labelledby="demo-form-control-label-placement" name="position" defaultValue="top" >
+                          <div className='sign-up-avatar-cont'>
+                            <img alt='image1' src={boyIcon} />
+                            <FormControlLabel value="boyChef" control={<Radio style={{"transform":"scale(1.5)"}} />} labelPlacement="bottom" />
+                          </div>
+                          <div className='sign-up-avatar-cont'>
+                            <img alt='image1' src={girlIcon} />
+                            <FormControlLabel value="girlChef" control={<Radio style={{"transform":"scale(1.5)"}} />} labelPlacement="bottom" />
+                          </div>
+                        </RadioGroup> {/* End of radio group */}
+
+
+
+
                         <FormControlLabel
                           control={<Checkbox value="remember" color="primary" />}
                           label="Remember me"

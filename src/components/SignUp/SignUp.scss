@@ -6,3 +6,17 @@
 .css-1999axt-MuiAvatar-root {
     background-color: #da6509 !important;
 }
+#sign-up-radio-group-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .sign-up-avatar-cont {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        img {
+            width:28vw;
+        }
+    }
+
+}

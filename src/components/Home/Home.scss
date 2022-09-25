@@ -136,7 +136,7 @@
 }
 #home-recipe-gallery-wrapper {
     text-align: center;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
     #home-recipe-gallery-h2 {
         text-align: center;
         font-size: 3rem;
@@ -146,13 +146,16 @@
         text-align: center;
         font-size: 1.5rem;
     }
-    button {
+    a {
         background-color: #da6509;
         color: white;
-        padding:1.3em;
+        padding:1em;
         border-radius: 30px;
         letter-spacing: 1px;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        position: relative;
+        top:16px;
+        text-decoration: none;
     }
 }
 #home-recipe-categories {
@@ -304,6 +307,14 @@
         }
         p {
             font-size: 3.5rem;
+        }
+    }
+    #home-review-cont {
+        img {
+            width:30%;
+        }
+        #home-review-testimonial-caption {
+            padding: 0 10em;
         }
     }
 }
