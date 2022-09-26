@@ -21,9 +21,14 @@ class Header extends Component {
         navbarOpen: false
     }
     componentDidMount(){
-        
-        // let navLinks = document.querySelectorAll('.header-nav-links');
-        // navLinks.forEach((elm) => {elm.addEventListener('click', this.closeNav)})
+        // If on home page add active class, else remove active class on 'Home' button
+        window.addEventListener('click', () => {
+            if (window.location.href === 'http://localhost:3000/') {
+                document.querySelector('#topnav-home-btn').classList.add("active");
+            } else {
+                document.querySelector('#topnav-home-btn').classList.remove("active");
+            }
+          })
     }
     closeNav(){
         this.props.openNav(false)
@@ -61,7 +66,7 @@ class Header extends Component {
             <div className="topnav">
                 <Link className='no-bg' to='/'><img alt='logo' src={Logo} /> </Link>
                 <div id='topnav-links'>
-                    <Link className='active' to='/'>Home</Link>
+                    <Link id='topnav-home-btn' className='active' to='/'>Home</Link>
 
                     <div className="dropdown">
                         <button className="dropbtn">Discover

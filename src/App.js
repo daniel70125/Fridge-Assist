@@ -42,7 +42,6 @@ componentDidUpdate(){
   } else {
     this.closeSearchNav()
   }
-  
 }
 closeNav(){
   this.props.openNav(false)
@@ -65,6 +64,7 @@ openSearchNav(){
     overlay.style.height = '100vh';
 }
 render() { 
+  console.log(window.location.href)
   return ( 
     <div className="App">
       <Header />
