@@ -99,6 +99,9 @@ class Login extends Component {
                           id="password"
                           autoComplete="current-password"
                         />
+
+                        <h2 style={{"textAlign":"center"}}>Choose your avatar!</h2>
+
                          {/* This is the radio group for picking avatar image */}
                          <RadioGroup id='sign-up-radio-group-cont' row aria-labelledby="demo-form-control-label-placement" name="position" defaultValue="top" >
                           <div className='sign-up-avatar-cont'>

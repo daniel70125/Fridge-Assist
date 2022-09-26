@@ -168,7 +168,7 @@ body {
     }
     #search-overlay-btn {
       position: absolute;
-      top: 15vh;
+      top: 14.5vh;
       right: 20vw;
       font-size: 3rem !important;
     }
@@ -177,6 +177,7 @@ body {
       border-radius: 50%;
       position: relative;
       top:3vh;
+      font-size: 3rem;
     }
   }
 
@@ -184,4 +185,39 @@ body {
     #routes-wrapper {
       margin-left: 15vw;
     }
+    #search-overlay {
+      #search-overlay-main {
+        input {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      } 
+      #search-overlay-btn {
+        font-size: 5rem !important;
+      }
+    } 
+    
+     
+  }
+  @media (min-width: 1024px) {
+    #search-overlay {
+      #search-overlay-close-btn {
+        font-size: 3rem !important;
+      }
+      #search-overlay-main {
+        input {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      } 
+      #search-overlay-btn {
+        font-size: 3rem !important;
+        right:39vw;
+        top:15.5vh !important;
+      }
+    } 
   }

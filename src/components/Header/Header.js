@@ -61,11 +61,6 @@ class Header extends Component {
             <div className="topnav">
                 <Link className='no-bg' to='/'><img alt='logo' src={Logo} /> </Link>
                 <div id='topnav-links'>
-                    <div id='topnav-lg-search-bar'>
-                    <Form id='footer-form'>
-                        <Form.Control type="text" placeholder="Search recipes" className='topnav-search-input'/>
-                    </Form>
-                    </div>
                     <Link className='active' to='/'>Home</Link>
 
                     <div className="dropdown">
@@ -87,7 +82,7 @@ class Header extends Component {
                             <Link to='/'>About Us</Link>
                         </div>
                     </div>
-                    <Search id='topnav-lg-search' style={{"color":"#da6509", "fontSize":"3.5rem", "margin":"0 1vw"}} onClick={(e) => this.openSearchNav(e)}/>
+                    <Search id='topnav-lg-search' onClick={(e) => this.openSearchNav(e)}/>
                     <div className="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>
                         <div className="dropdown-content dropdown-content2">

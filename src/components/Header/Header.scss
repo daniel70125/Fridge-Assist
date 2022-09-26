@@ -112,6 +112,10 @@ font-size: 2.5rem;
           height: 10vh;
         }
     }
+    #topnav-lg-search {
+      color:#da6509;
+      font-size:5rem;
+    }
 
     /* ================================================
     Dropdown for nav menu from w3schools snippet
@@ -128,7 +132,7 @@ font-size: 2.5rem;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 14px 10px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -200,19 +204,7 @@ font-size: 2.5rem;
     }
     #topnav-lg-search {
       order: -1;
-    }
-    #topnav-lg-search-bar {
-      order:-2;
-      input {
-        font-size: 2rem;
-        width: 90%;
-        border: none;
-        background: transparent;
-        color: lightgrey;
-        border-bottom: 1px solid white;
-      }
-      input:focus {
-        outline: none;
-      }
+      font-size: 3.5rem;
+      margin: 10px 16px;
     }
 }
