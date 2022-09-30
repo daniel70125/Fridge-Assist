@@ -7,29 +7,86 @@ import {connect} from 'react-redux';
 import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
 import {openSearchNav} from './Redux/Reducer';
-import axios from 'axios';
+// import axios from 'axios';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 // Arrows for navbar overlay
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Search from '@mui/icons-material/Search';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
 import cookingGif from './Pictures/chef-cooking.gif';
+import Logo from './Pictures/fridge-assist-logo.png';
+import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+      discoverDropdown: false,  
+      contactDropdown: false,  
+      userDropdown: false,  
+     }
   }
 async componentDidMount(){
-  await axios.get('/getuser')
-  .then(res => console.log(res.data))
-  .catch(err => console.log(err))
-  // this.props.getUser();
-  // await axios.get('/session')
-  // .then(res => this.props.getUser(res.data))
+  // await axios.get('/getuser')
+  // .then(res => console.log(res.data))
   // .catch(err => console.log(err))
+  if (window.location.href === 'http://localhost:3000/') {
+      document.querySelector('#topnav-home-btn').classList.add("active");
+  } else {
+      document.querySelector('#topnav-home-btn').classList.remove("active");
+  }
+  
+  let dropdownContainers = document.querySelectorAll('.app-overlay-links-cont');
+  let dropdowns = document.querySelectorAll('.app-overlay-links-dropdown-cont');
+
+  dropdownContainers.forEach((elm, index) => {
+    elm.addEventListener('click', (e) => {
+      if (index === 0){
+        if (this.state.discoverDropdown === false){
+          dropdowns[index].style.height = '90px';
+          // timeout because event bubbling is happening. this function runs twice.
+          window.setTimeout(() => {
+            this.setState({discoverDropdown: true})
+          }, 1000)
+        } else if (this.state.discoverDropdown === true){
+          dropdowns[index].style.height = '0';
+          window.setTimeout(() => {
+            this.setState({discoverDropdown: false})
+          }, 1000)
+        }
+        
+      } else if (index === 1) {
+        if (this.state.contactDropdown === false){
+          dropdowns[index].style.height = '60px';
+          // timeout because event bubbling is happening. this function runs twice.
+          window.setTimeout(() => {
+            this.setState({contactDropdown: true})
+          }, 1000)
+        } else if (this.state.contactDropdown === true){
+          dropdowns[index].style.height = '0';
+          window.setTimeout(() => {
+            this.setState({contactDropdown: false})
+          }, 1000)
+        }
+      } else {
+        if (this.state.userDropdown === false){
+          dropdowns[index].style.height = '120px';
+          // timeout because event bubbling is happening. this function runs twice.
+          window.setTimeout(() => {
+            this.setState({userDropdown: true})
+          }, 1000)
+        } else if (this.state.userDropdown === true){
+          dropdowns[index].style.height = '0';
+          window.setTimeout(() => {
+            this.setState({userDropdown: false})
+          }, 1000)
+        }
+      } 
+    })
+  })
 }
 componentDidUpdate(){
   if (this.props.navOpen) {
@@ -64,37 +121,67 @@ openSearchNav(){
     overlay.style.height = '100vh';
 }
 render() { 
-  console.log(window.location.href)
   return ( 
     <div className="App">
       <Header />
       <STT>
         {Routes}
       </STT>
+
       {/* <!-- The overlay --> */}
       <div id="myNav" className="overlay">
-
-
-      {/* <!-- Button to close the overlay navigation --> */}
-      {/* <a href="/#" className="closebtn" onClick={(e) => this.closeNav(e)}>&times;</a> */}
+      {/* <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Home</Link> */}
 
       {/* <!-- Overlay content --> */}
       <div className="overlay-content">
-          <h2>Discover</h2>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/'>Home</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/products'>Browse</Link>
-          <h2>Library</h2>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/chefs'>Chefs</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/favorites'>Favorites</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/my-recipes'>My Recipes</Link>
-          <h2>Contact</h2>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/contact'>Contact Us</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/about'>About Us</Link>
-          <Link className='header-nav-links' onClick={(e) => this.closeNav(e)} to='/reviews'>Reviews</Link>
+          <div id='app-fridge-assist-logo-cont'>
+            <img id='fridge-assist-logo' alt='fridge-assist-logo' src={Logo} />
+          </div>
+          <div id='app-overlay-links'>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li>
+                <div className='app-overlay-links-cont'>
+                  <p>Discover</p>
+                  <ArrowDropDown />
+                </div>
+                  <div className='app-overlay-links-dropdown-cont'>
+                    <Link to='/'>Browse</Link>
+                    <Link to='/'>Chefs</Link>
+                    <Link to='/'>Reviews</Link>
+                  </div>
+              </li>
+              <li>
+                <div className='app-overlay-links-cont'>
+                  <p>Contact</p>
+                  <ArrowDropDown />
+                </div>
+                  <div className='app-overlay-links-dropdown-cont'>
+                    <Link to='/'>Contact Us</Link>
+                    <Link to='/'>About Us</Link>
+                  </div>
+              </li>
+              <li>
+                <div className='app-overlay-links-cont'>
+                  <p>User</p>
+                  <ArrowDropDown />
+                </div>
+                  <div className='app-overlay-links-dropdown-cont'>
+                    <Link to='/'>My Profile</Link>
+                    <Link to='/'>Favorites</Link>
+                    <Link to='/'>My Recipes</Link>
+                    <Link to='/'>Grocery List</Link>
+                  </div>
+              </li>
+            </ul>
+          </div>
       </div>
+      <p style={{"color":"white", "fontSize":"1.5rem"}}>Copyright © 2022 Daniel Wright ®</p>
+
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>
         <DoubleArrowIcon id='overlay-close-btn'/> 
       </div>
+
       </div>
 
       <div id='cooking-overlay'>
@@ -114,5 +201,6 @@ render() {
     );
 }
 }
+
 const mapStateToProps = reduxState => reduxState;
 export default connect(mapStateToProps, {getUser, openNav, openSearchNav})(App);

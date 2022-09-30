@@ -45,7 +45,7 @@ class Home extends Component {
                             us you will get to share your recipes and food ideas with hundreds of other like-minded members.
                         </p>
                         <div id='who-are-we-btns'>
-                            <Link to='/sign-up'><Button>Sign Up</Button></Link>
+                            <Link to='/sign_up'><Button>Sign Up</Button></Link>
                             <Link to='/login'><Button>Log in</Button></Link>
                         </div>
                     </div>

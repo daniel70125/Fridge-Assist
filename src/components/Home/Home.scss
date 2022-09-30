@@ -209,6 +209,8 @@
         font-size: 1.8rem;
         padding: 0 2em;
         text-align: left;
+        position: relative;
+        bottom: 2em;
         p:nth-child(6) {
             font-size: 2.2rem;
             margin-bottom: 4px;
@@ -351,6 +353,14 @@
         }
         img:nth-child(4) {
             bottom:-50px;
+        }
+    } 
+    #home-review-cont {
+        img {
+            width: 25%;
+        }
+        #home-review-testimonial-caption {
+            padding: 0 18em;
         }
     } 
 }

@@ -3,32 +3,26 @@ import './Header.scss';
 import {connect} from 'react-redux';
 import {openNav} from '../../Redux/Reducer';
 import {openSearchNav} from '../../Redux/Reducer';
+import {Link} from 'react-router-dom';
+
 import Logo from '../../Pictures/fridge-assist-logo.png';
 import Avatar from '../../Pictures/profile-avatar.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
-import {Link} from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Search from '@mui/icons-material/Search';
-import Form from 'react-bootstrap/Form';
-// import HomeIcon from '@mui/icons-material/Home';
-// import SearchIcon from '@mui/icons-material/Search';
-// import PersonIcon from '@mui/icons-material/Person';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-// import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 class Header extends Component {
     state = { 
         navbarOpen: false
     }
     componentDidMount(){
-        // If on home page add active class, else remove active class on 'Home' button
         window.addEventListener('click', () => {
             if (window.location.href === 'http://localhost:3000/') {
                 document.querySelector('#topnav-home-btn').classList.add("active");
             } else {
                 document.querySelector('#topnav-home-btn').classList.remove("active");
             }
-          })
+        })
     }
     closeNav(){
         this.props.openNav(false)
@@ -94,6 +88,7 @@ class Header extends Component {
                         <Link to='/'>My Profile</Link>
                         <Link to='/'>Favorites</Link>
                         <Link to='/'>My Recipes</Link>
+                        <Link to='/grocery_list'>Grocery List</Link>
                         </div>
                     </div>
                 </div>

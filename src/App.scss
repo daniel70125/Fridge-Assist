@@ -5,6 +5,7 @@ html {
 }
 body {
   letter-spacing: 1px;
+  overflow-wrap:break-word;
 }
 /* // Overlay styles */
 /* The Overlay (background) */
@@ -17,207 +18,237 @@ body {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 1); /* Black */
+    background-color: #1e1d22; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 1%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-  }
-  .overlay-content h2 {
-    margin-top:2vh;
-    font-size: 3rem;
-    color: darkslategrey;
-    margin-bottom: 0;
-    text-decoration: underline;
-  }
-  
-  /* The navigation links inside the overlay */
-  .overlay a {
-    padding: 3px 0;
-    text-decoration: none;
-    font-size: 3rem;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-  .overlay input[type='search'] {
-    margin-bottom: 2vh;
-    position: relative;
-    top: 1vh;
-    color: grey;
-    padding: 5px;
-    width: 75vw;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #da6509;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  .overlay-search-btn {
-    position: relative;
-    top: 3.5vh;
-    color: grey;
-    font-size: 3.5rem !important;
-    right: 78vw;
-    padding: 10px;
-    z-index: 1;
-  }
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-  #overlay-btn-div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    transform: rotate(180deg);
-  }
-
-
-
-  @keyframes arrowMove {
-    from {
-      position: relative;
-      left:0px;
+    
+    .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
     }
-    to {
+    input[type='search'] {
+      margin-bottom: 2vh;
       position: relative;
-      left:20px;
+      top: 1vh;
+      color: grey;
+      padding: 5px;
+      width: 75vw;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #da6509;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
     }
-  }
+      /* When you mouse over the navigation links, change their color */
+    a:hover, a:focus {
+      color: #f1f1f1;
+    }
+      /* Position the content inside the overlay */
+    .overlay-content {
+      position: relative;
+      top: 1%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      #fridge-assist-logo {
+        width:50vw;
+      }
+      h2 {
+        margin-top:2vh;
+        font-size: 3rem;
+        color: darkslategrey;
+        margin-bottom: 0;
+        text-decoration: underline;
+      }
+      #app-fridge-assist-logo-cont {
+        margin-top:5em;
+      }
+      #app-overlay-links {
+        min-height:40vh;
+        width: 87vw;
+        ul {
+          list-style-type: none;
+          li {
+            position: relative;
+            color:white;
+            text-align: left;
+            a {
+              color: white;
+                  font-size: 2.2rem;
+                  text-decoration: none;
+                  margin-bottom:0.5em;
+            }
+            div.app-overlay-links-cont {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              p {
+                font-size: 2.2rem;
+                margin: 1vh 0;
+              }
+              svg {
+                font-size: 3rem !important;
+                background-color: #353439;
+                color:#da6509;
+              }
+            }
+            .app-overlay-links-dropdown-cont {
+                overflow: hidden;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                height: 0;
+                overflow: hidden;
+                transition: all 1s;
+                a {
+                  color: white;
+                  font-size: 1.8rem;
+                  padding-left:1.1em;
+                  text-decoration: none;
+                  margin-bottom:0.5em;
+                }
+            }
+          }
+        }
+      }
+    }
+}
+#overlay-btn-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  transform: rotate(180deg);
+}
 
-  #overlay-close-btn {
-    color: grey;
-    font-size: 5rem;
-    animation: arrowMove 1.5s infinite;
-  }
 
-  #cooking-overlay {
+
+@keyframes arrowMove {
+  from {
+    position: relative;
+    left:0px;
+  }
+  to {
+    position: relative;
+    left:20px;
+  }
+}
+
+#overlay-close-btn {
+  color: grey;
+  font-size: 5rem;
+  animation: arrowMove 1.5s infinite;
+}
+
+#cooking-overlay {
+  width:0; // Change this to 100vw on loading
+  height:100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: #f5b04a;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  p {
+    font-size:3rem;
+    display: none; // Change on load
+  }
+  img {
     width:0; // Change this to 100vw on loading
-    height:100vh;
-    position: fixed;
-    top:0;
-    left:0;
-    background-color: #f5b04a;
-    color: black;
+    height:40vh;
+  }
+} 
+#search-overlay {
+  transition: all 1s;
+  z-index:2;
+  height:0;
+  overflow: hidden;
+  width:100vw;
+  position: fixed;
+  top:0;
+  left:0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,0.9));
+
+  #search-overlay-main {
+    height:30vh;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    z-index: 1;
     p {
-      font-size:3rem;
-      display: none; // Change on load
+      font-size: 1.5rem;
     }
-    img {
-      width:0; // Change this to 100vw on loading
-      height:40vh;
+    input {
+      border: 1px solid #FF5A5A;
+      color: #1D3557;
+      box-shadow: none;
+      border-radius: 50px;
+      height: 50px;
+      font-size: 13px;
+      line-height: 50px;
+      text-transform: capitalize;
+      padding: 10px 55px 10px 24px;
+    }
+  }
+  #search-overlay-btn {
+    position: absolute;
+    top: 14.5vh;
+    right: 20vw;
+    font-size: 3rem !important;
+  }
+  #search-overlay-close-btn {
+    background-color: #faebd7 !important;
+    border-radius: 50%;
+    position: relative;
+    top:3vh;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #routes-wrapper {
+    margin-left: 15vw;
+  }
+  #search-overlay {
+    #search-overlay-main {
+      input {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 3rem;
+      }
+    } 
+    #search-overlay-btn {
+      font-size: 5rem !important;
     }
   } 
+}
+@media (min-width: 1024px) {
   #search-overlay {
-    transition: all 1s;
-    z-index:2;
-    height:0;
-    overflow: hidden;
-    width:100vw;
-    position: fixed;
-    top:0;
-    left:0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,0.9));
-
-    #search-overlay-main {
-      height:30vh;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      p {
-        font-size: 1.5rem;
-      }
-      input {
-        border: 1px solid #FF5A5A;
-        color: #1D3557;
-        box-shadow: none;
-        border-radius: 50px;
-        height: 50px;
-        font-size: 13px;
-        line-height: 50px;
-        text-transform: capitalize;
-        padding: 10px 55px 10px 24px;
-      }
-    }
-    #search-overlay-btn {
-      position: absolute;
-      top: 14.5vh;
-      right: 20vw;
+    #search-overlay-close-btn {
       font-size: 3rem !important;
     }
-    #search-overlay-close-btn {
-      background-color: #faebd7 !important;
-      border-radius: 50%;
-      position: relative;
-      top:3vh;
-      font-size: 3rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    #routes-wrapper {
-      margin-left: 15vw;
-    }
-    #search-overlay {
-      #search-overlay-main {
-        input {
-          font-size: 2.5rem;
-        }
-        p {
-          font-size: 3rem;
-        }
-      } 
-      #search-overlay-btn {
-        font-size: 5rem !important;
+    #search-overlay-main {
+      input {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 2rem;
       }
     } 
-    
-     
-  }
-  @media (min-width: 1024px) {
-    #search-overlay {
-      #search-overlay-close-btn {
-        font-size: 3rem !important;
-      }
-      #search-overlay-main {
-        input {
-          font-size: 2rem;
-        }
-        p {
-          font-size: 2rem;
-        }
-      } 
-      #search-overlay-btn {
-        font-size: 3rem !important;
-        right:39vw;
-        top:15.5vh !important;
-      }
-    } 
-  }
+    #search-overlay-btn {
+      font-size: 3rem !important;
+      right:39vw;
+      top:15.5vh !important;
+    }
+  } 
+}
