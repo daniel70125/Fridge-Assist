@@ -20,10 +20,11 @@ app.use(session({
     secret: SESSION_SECRET,
     cookie: {maxAge: 1000 * 60 * 60 * 24}
 }));
-
+// Get user session info
 app.get('/getuser', (req, res) => {
     req.session.user = {
-        name: ""
+        name: "",
+        groceryList: []
     };
     res.send(req.session);
 })
@@ -46,9 +47,5 @@ massive({
     app.set('db', db)
     console.log('db connected !');   }).catch(err => console.log(err))
 .catch(err => console.log(err));
-
-app.get('/swapi', async (req, res) => {
-    
-})
 
 app.listen(SERVER_PORT || 4000, () => console.log(`Server Running on port ${SERVER_PORT} !`));

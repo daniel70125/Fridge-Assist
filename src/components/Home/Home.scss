@@ -87,6 +87,7 @@
             font-size: 2rem;
             padding: 5px;
             font-weight: bold;
+            color: #939393;
         }
         #who-are-we-btns {
             display: flex;
@@ -98,6 +99,9 @@
                     color:#fff;
                     font-size: 2rem;
                 }
+            }
+            a:visited, a:link, a:active {
+                text-decoration: none;
             }
     }
     }
@@ -114,6 +118,8 @@
     }
     p {
         font-size: 2rem;
+        color: #939393;
+        margin-top: 1vh;
         padding:5px;
         text-align: center;
     }
@@ -129,6 +135,7 @@
         p {
             padding:10px 5px;
             font-size: 2rem;
+            color:#939393;
         }
     }
     .featured-img-div {
@@ -336,6 +343,11 @@
         }
     }
     #lg-main-dish-container {
+        #lg-main-dish-caption {
+            p:nth-child(1) {
+                margin-bottom: 2.5vh;
+            }
+        } 
         img {
             width:40vw;
         }

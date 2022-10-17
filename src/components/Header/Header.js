@@ -52,7 +52,7 @@ class Header extends Component {
                     <Link className='no-bg' to='/'><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></Link>
                 </div>
                 <div>
-                    <Search style={{"color":"#da6509", "fontSize":"4rem"}} onClick={(e) => this.openSearchNav(e)} />
+                    <Search style={{"color":"#da6509", "fontSize":"3rem","marginRight":"1vw"}} onClick={(e) => this.openSearchNav(e)} />
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>

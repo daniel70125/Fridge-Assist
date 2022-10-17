@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
-
+#mobile-nav-search-btn:hover {
+  cursor: pointer;
+}
 #header-main-div {
     display: flex;
     background-color: black;
@@ -8,12 +10,13 @@
     align-items: center;
     position: sticky;
     top:0;
+    height:7vh;
 }
 #header-logo {
-    width:40vw;
+    width:108px;
 }
 #mobile-nav-btn {
-   font-size: 4.5rem;
+   font-size: 3rem;
    position: relative;
    right:5px;
    color:#da6509;
@@ -111,6 +114,9 @@ font-size: 2.5rem;
           height: 10vh;
         }
     }
+    #topnav-lg-search:hover {
+      cursor: pointer;
+    }
     #topnav-lg-search {
       color:#da6509;
       font-size:5rem;
@@ -185,25 +191,25 @@ font-size: 2.5rem;
 
 // I want these css rules when i'm not Laptop anymore => Xtra Lg Screens
 @media (min-width: 1024px) {
-    .topnav {
-      .avatar-img {
-        width: 6vw;
-        height: 12vh;
-      }
-      a {
-        font-size: 2rem;
-      }
-      img {
-        width: 12vw;
-        height: 10vh;
-      }
+  .topnav {
+    .avatar-img {
+      width: 6vw;
+      height: 12vh;
     }
-    .dropdown .dropbtn {
+    a {
       font-size: 2rem;
     }
-    #topnav-lg-search {
-      order: -1;
-      font-size: 3.5rem;
-      margin: 10px 16px;
+    img {
+      width: 12vw;
+      height: 10vh;
     }
+  }
+  .dropdown .dropbtn {
+    font-size: 2rem;
+  }
+  #topnav-lg-search {
+    order: -1;
+    font-size: 3.5rem;
+    margin: 10px 16px;
+  }
 }

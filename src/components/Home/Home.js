@@ -25,7 +25,7 @@ class Home extends Component {
                 <div id='main-dish-container'>
                     <img alt='main-dish' src={mainDish} />
                     <p className='main-dish-main-p-tag'>Dish <span>of the</span>  Week</p>
-                    <p >Orange Chicken w/ Ricee</p>
+                    <p >Orange Chicken w/ Rice</p>
                     <p>Created by: <span>@daniel70125</span></p>
                 </div>
                 <div id='lg-main-dish-container'>
@@ -51,6 +51,7 @@ class Home extends Component {
                     </div>
                     <img alt='who-are-we-illustration' src={cookingIllustration} />
                 </div>
+                
                 <div id='features-intro-cont'>
                     <h1>Features</h1>
                     <p>Let's explore what we can do using Fridge Assist</p>

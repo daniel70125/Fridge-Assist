@@ -201,8 +201,8 @@ body {
   }
   #search-overlay-btn {
     position: absolute;
-    top: 14.5vh;
-    right: 20vw;
+    top: 0.5vh;
+    right: 1vw;
     font-size: 3rem !important;
   }
   #search-overlay-close-btn {
@@ -229,10 +229,15 @@ body {
     } 
     #search-overlay-btn {
       font-size: 5rem !important;
+      top:0;
+      cursor: pointer;
     }
   } 
 }
 @media (min-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
   #search-overlay {
     #search-overlay-close-btn {
       font-size: 3rem !important;
@@ -247,8 +252,7 @@ body {
     } 
     #search-overlay-btn {
       font-size: 3rem !important;
-      right:39vw;
-      top:15.5vh !important;
+      top:1.5vh;
     }
   } 
 }

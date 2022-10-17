@@ -1,165 +1,42 @@
-a.footer-nav-links {
-    color: lightgrey;
-}
-#footer-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('../../Pictures/footer-background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
+#footer-cont {
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../Pictures/footer-background.png');
     background-size: cover;
-    padding-bottom: 5vh;
-    #footer-copyright {
-        margin:0;
-        color:white;
-        font-size:2rem;
-        text-align: center;
-    }
-}
-#footer-wrapper {
-    width: 100vw;
-    color:white;
-    font-size: 2rem;
-    padding-top: 3vh;
-    padding-bottom: 5vh;
-    .footer-follow-icons {
-        font-size: 5rem;
-        margin: 0 8px;
-        background-color: #da6509;
-    }
-    .contact-form {
-        font-size: 2rem;
-        width: 90%;
-        border: none;
-        background: transparent;
-        color: lightgrey;
-        border-bottom: 1px solid white;
-        margin-top:2vh;
-    }
-    .contact-form:focus, textarea:focus {
-        outline: none;
-    }
-    .contact-form::placeholder {
-        color:lightgrey;
-    }
-    #footer-icons {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 2vh auto;
-        justify-content:space-between;
-        svg {
-            padding:1px;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 58px 25px;
+    text-align: center;
+    #footer-logo-cont {
+        img {
+            width:45%;
+        }
+        p {
+            font-size: 13px;
+            margin: 10px 0;
         }
     }
-    #footer-form {
-        overflow-x: hidden;
-        text-align: center;
-        position: relative;
-        padding-bottom: 8vh;
+    #footer-icon-cont {
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0;
+        }
+        svg {
+            font-size:4rem;
+        }
     }
-}
-#footer-div1 {
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: 2.5rem;
-    position: relative;
-    margin-bottom:1em;
-    h1 {
-        margin: 0;
-        font-size: 4rem;
-    }
-    Button {
-        padding: 11px;
-        position: absolute;
-        left: 5vw;
-        font-size: 1.5rem;
-        bottom: 0;
-        align-items: center;
-        display: flex;
-        background: #da6509;
-        color: white;
-    }
-    textarea {
-        width: 90%;
-        font-family: auto;
-        margin-top: 3vh;
-        background: transparent;
-        border: none;
-        color: lightgray;
-        font-size: 2.3rem;
-        border-bottom: 1px solid white;
-    }
-}
-#footer-div1 a {
-    color: white;
-    letter-spacing: 2px;
-}
-#footer-div2 {
-    align-items: center;
-    text-align: center;
-    font-size: 2.5rem;
-    p {
-        margin: 1vh 0 0 0;
-    }
-    h1 {
-        margin: 0;
-        font-size: 4rem;
+    #footer-support-cont {
+        #footer-support-ul {
+            padding: 5px 12px;
+        }
     }
 }
 
 // iPad Rules
 @media (min-width: 768px) {
-    #footer-wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        font-size: 3rem;
-        justify-content: center;
-        width:98vw;
-        .footer-follow-icons {
-        margin: 0 3px;
-        }
-    }
-    #footer-div1, #footer-div2{
-        width:50%;
-    }
-    #footer-div1 {
-        padding: 0px 35px;
-        Button {
-            left:2vw;
-            font-size: 2rem;
-            bottom:0vh;
-        }
-    }
-    #footer-wrapper .contact-form {
-        font-size: 2.5rem;
-    }
-    #footer-wrapper #footer-form {
-        padding-bottom: 5vh;
-    }
+
 }
 @media (min-width: 1000px) {
-    #footer-div1, #footer-div2{
-        width:40%;
-    }
-    #footer-wrapper {
-        padding:0;
-        #footer-form {
-            padding-bottom: 7.5vh;
-        }
-        #footer-icons {
-            width: 55%;
-        }
-        .footer-follow-icons {
-            font-size: 4rem;
-        }
-    }
-    #footer-div1 {
-        Button {
-            font-size:1.5rem;
-            left:1.8vw;
-            bottom:0vh;
-        }
-    }
-    #header-logo {
-        width:15vw;
-    }
+
 }

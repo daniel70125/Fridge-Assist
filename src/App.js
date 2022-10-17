@@ -7,10 +7,10 @@ import {connect} from 'react-redux';
 import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
 import {openSearchNav} from './Redux/Reducer';
-// import axios from 'axios';
+import axios from 'axios';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-// Arrows for navbar overlay
+// Arrows for navbar overlay 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Search from '@mui/icons-material/Search';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -30,9 +30,10 @@ class App extends Component {
      }
   }
 async componentDidMount(){
-  // await axios.get('/getuser')
-  // .then(res => console.log(res.data))
-  // .catch(err => console.log(err))
+  await axios.get('/getuser')
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err))
+
   if (window.location.href === 'http://localhost:3000/') {
       document.querySelector('#topnav-home-btn').classList.add("active");
   } else {
@@ -139,16 +140,16 @@ render() {
           </div>
           <div id='app-overlay-links'>
             <ul>
-              <li><Link to='/'>Home</Link></li>
+              <li onClick={(e) => this.closeNav(e)}><Link to='/'>Home</Link></li>
               <li>
                 <div className='app-overlay-links-cont'>
                   <p>Discover</p>
                   <ArrowDropDown />
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
-                    <Link to='/'>Browse</Link>
-                    <Link to='/'>Chefs</Link>
-                    <Link to='/'>Reviews</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>Browse</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>Chefs</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>Reviews</Link>
                   </div>
               </li>
               <li>
@@ -157,8 +158,8 @@ render() {
                   <ArrowDropDown />
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
-                    <Link to='/'>Contact Us</Link>
-                    <Link to='/'>About Us</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>Contact Us</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>About Us</Link>
                   </div>
               </li>
               <li>
@@ -167,10 +168,10 @@ render() {
                   <ArrowDropDown />
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
-                    <Link to='/'>My Profile</Link>
-                    <Link to='/'>Favorites</Link>
-                    <Link to='/'>My Recipes</Link>
-                    <Link to='/'>Grocery List</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>My Profile</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>Favorites</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/'>My Recipes</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/grocery_list'>Grocery List</Link>
                   </div>
               </li>
             </ul>
@@ -192,7 +193,9 @@ render() {
       <div id='search-overlay'>
         <div id='search-overlay-main'>
           <p>Start Typing and hit the Search button...</p>
-          <input type="search" placeholder='Search Recipes' /><Search id='search-overlay-btn' />
+          <div style={{"position":"relative"}}>
+            <input type="search" placeholder='Search Recipes' /><Search id='search-overlay-btn' />          
+          </div>
           <ExpandLessIcon id='search-overlay-close-btn' onClick={(e) => this.closeSearchNav(e)}/>
         </div>
       </div>
