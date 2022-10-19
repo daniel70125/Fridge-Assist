@@ -30,6 +30,9 @@ class App extends Component {
      }
   }
 async componentDidMount(){
+  window.addEventListener('load', (e) => {
+    console.log('Ive loaded');
+  })
   await axios.get('/getuser')
   .then(res => console.log(res.data))
   .catch(err => console.log(err))

@@ -3,14 +3,23 @@ import './GroceryList.scss';
 
 import CheckIcon from '@mui/icons-material/Check';
 import EditIcon from '@mui/icons-material/Edit';
-import CloseIcon from '@mui/icons-material/Close';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from '@mui/material';
 
 
 
 class GroceryList extends Component {
     state = { 
-        
+        list: [
+            {
+                "name":"Apple",
+                "checked":false
+            },
+            {
+                "name":"Bananas",
+                "checked":true
+            }
+        ]
     }
     componentDidMount(){
         
@@ -27,27 +36,31 @@ class GroceryList extends Component {
             itemNameNodes[Index].style.textDecoration = 'none';
             element.checked = false;
         }
-
+        this.setState({})
     }
-    render() { 
-        const list = [
-            {
-                "name":"Apple",
-                "checked":false
-            },
-            {
-                "name":"Bananas",
-                "checked":true
-            }
-        ];
-        let fruitDivs = list.map((elm, index) => {
+    deleteItem(e, index, list){
+        list.splice(index, 1); 
+        this.setState({})
+    }
+    addItem(e, list){
+        let searchInput = document.querySelector('#itemInput').value;
+        searchInput = searchInput.charAt(0).toUpperCase() + searchInput.slice(1);
+        let obj = {
+            "name":searchInput,
+            "checked": false
+        }
+        this.setState({list: [...this.state.list, obj]})
+        document.querySelector('#itemInput').value = '';
+    }
+    render() {
+        let fruitDivs = this.state.list.map((elm, index, list) => {
             return (
                 <div onClick={(e, Index, element) => this.addCheckedClass(e, index, elm)} className='grocery-list-children-cont' key={index}>
                     <span><CheckIcon className='checkIcon' /></span>
                     <p className='itemName'>{elm.name}</p>
                     <div className='grocery-list-edit-cont'>
                         <EditIcon />
-                        <CloseIcon />
+                        <DeleteIcon onClick={(e, Index, List) => this.deleteItem(e, index, list)} />
                     </div>
                 </div>
             )
@@ -55,7 +68,7 @@ class GroceryList extends Component {
         return ( 
             <div id='grocery-list-cont'>
                 <div id='grocery-list-add-item-cont'>
-                    
+                    <input placeholder='Add Item..' id='itemInput' type='text' /><Button onClick={(e, List) => this.addItem(e, this.state.list)}>Add Item</Button>
                 </div>
                 {fruitDivs}
             </div>

@@ -1,7 +1,24 @@
 #grocery-list-cont {
     min-height:80vh;
     #grocery-list-add-item-cont {
-
+        height: 8vh;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            color: white;
+            border: 1px solid orange;
+        }
+        input {
+            border: none;
+            padding: 1em;
+            font-size: 1.5rem;
+            margin-right:2vw;
+            background: transparent;
+            border-bottom: 1px solid orange;
+            color: white;
+        }
     }
     .grocery-list-children-cont:nth-child(odd) {
         background-color: #212A2E;

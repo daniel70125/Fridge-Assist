@@ -4,13 +4,14 @@
 }
 #header-main-div {
     display: flex;
-    background-color: black;
+    background-color: beige;
     justify-content: space-between;
     height:10vh;
     align-items: center;
     position: sticky;
     top:0;
     height:7vh;
+    border-bottom: 1px solid #da6509;
 }
 #header-logo {
     width:108px;
@@ -24,7 +25,6 @@
 // Secondary Navbar - ipads or bigger
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #000;
   overflow: hidden;
   display: none;
   justify-content: space-between;
@@ -86,9 +86,6 @@ font-size: 2.5rem;
 
 // I want these css rules when i'm not mobile anymore => Ipad
 @media (min-width: 480px) {
-    #mobile-nav-btn {
-        font-size: 58px;
-    }
     #header-logo {
         width: 22vw;
     }
@@ -101,13 +98,15 @@ font-size: 2.5rem;
     }
     .topnav {
         display: flex;
+        border-bottom: 2px solid #da6509;
         align-items: center;
+        background-color: beige;
         a {
           font-size: 2.5rem;
         }
         img {
           width: 30vw;
-          height: 10vh;
+          height: 8vh;
         }
         .avatar-img {
           width:14vw;
@@ -118,6 +117,7 @@ font-size: 2.5rem;
       cursor: pointer;
     }
     #topnav-lg-search {
+      order:-1;
       color:#da6509;
       font-size:5rem;
     }
@@ -136,7 +136,6 @@ font-size: 2.5rem;
     font-size: 2.5rem;
     border: none;
     outline: none;
-    color: white;
     padding: 14px 10px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -147,7 +146,7 @@ font-size: 2.5rem;
   
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #252627;
+    // background-color: #252627;
   }
   
   /* Dropdown content (hidden by default) */

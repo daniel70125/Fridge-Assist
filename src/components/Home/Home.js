@@ -22,21 +22,7 @@ class Home extends Component {
     render() { 
         return ( 
             <div id='home-wrapper'>
-                <div id='main-dish-container'>
-                    <img alt='main-dish' src={mainDish} />
-                    <p className='main-dish-main-p-tag'>Dish <span>of the</span>  Week</p>
-                    <p >Orange Chicken w/ Rice</p>
-                    <p>Created by: <span>@daniel70125</span></p>
-                </div>
-                <div id='lg-main-dish-container'>
-                    <img alt='main-dish' src={mainDish} />
-                    <div id='lg-main-dish-caption'>
-                        <p>Dish <span>of the</span> Week</p>
-                        <p>Orange Chicken w/ white rice</p>
-                        <p>Created by: <span>@daniel70125</span></p>
-                    </div>
-                </div>
-
+                
                 <div className='lg-screen-margin'>
                 <div id='who-are-we-cont'>
                     <div id='who-are-we-text'>
@@ -91,6 +77,11 @@ class Home extends Component {
                 </div>
 
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
+
+                <div id='home-what-are-we-eating-cont'>
+                    <h2>What are we eating today?</h2>
+                    <input type='search' />
+                </div>
 
                 <div id='home-recipe-gallery-wrapper'>
                     <h2 id='home-recipe-gallery-h2'>Our Users Recipes</h2>
