@@ -15,7 +15,8 @@ import SendIcon from '@mui/icons-material/Send';
 function Footer() {
 
     return ( 
-        <div id='footer-cont'>
+        <div style={{"background":"black"}}>
+            <div id='footer-cont'>
             <div className='footer-divs' id='footer-logo-cont'>
                 {/* <img alt='fridge assist logo' src={Logo} /> */}
                 <h2>Our Story</h2>
@@ -40,8 +41,21 @@ function Footer() {
                     <li><LinkedInIcon /></li>
                 </ul>
             </div>
-        
-        {/* <p id='footer-copyright'>Developed by <a className='footer-nav-links' href="https://www.linkedin.com/in/daniel70125">Daniel Wright</a> </p> */}
+            <div id='footer-gallery-cont'>
+            <h2>Gallery</h2>
+            <div id='footer-gallery'>
+                <img alt='image-1' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-06-300x300.jpg' />
+                <img alt='image-2' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-05-300x300.jpg' />
+                <img alt='image-3' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-04-300x300.jpg' />
+                <img alt='image-4' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-01-300x300.jpg' />
+                <img alt='image-5' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-02-300x300.jpg' />
+                <img alt='image-6' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-03-300x300.jpg' />
+            </div>
+            </div>
+        </div>
+        <div id='footer-copyright-cont'>
+            <p id='footer-copyright'>Developed by <a className='footer-nav-links' href="https://www.linkedin.com/in/daniel70125">Daniel Wright</a> </p>
+        </div>
         </div>
      );
 }

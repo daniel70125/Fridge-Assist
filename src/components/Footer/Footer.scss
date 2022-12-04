@@ -6,16 +6,25 @@
     color: white;
     padding: 58px 25px;
     text-align: center;
+    div {
+        margin: 2vh 0;
+    }
     #footer-logo-cont {
         img {
             width:45%;
         }
         p {
-            font-size: 13px;
+            font-size: 15px;
             margin: 10px 0;
+        }
+        h2 {
+            font-size: 2rem; 
         }
     }
     #footer-icon-cont {
+        h2 {
+            font-size: 2rem;
+        }
         ul {
             list-style-type: none;
             display: flex;
@@ -29,14 +38,108 @@
     #footer-support-cont {
         #footer-support-ul {
             padding: 5px 12px;
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        ul {
+            list-style-type: none;
+        }
+    }
+    #footer-gallery-cont {
+        h2 {
+            font-size: 2rem;
+        }
+        #footer-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            img {
+                margin: 5px;
+                width:90px;
+            }
         }
     }
 }
+#footer-copyright-cont {
+    border-top: 1px solid white;
+    background-color: black;
+    color: white;
 
+    p {
+        margin: 0;
+        padding:2vh 2vw;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
 // iPad Rules
 @media (min-width: 768px) {
+    #footer-cont {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 15px 25px;
+        #footer-logo-cont, #footer-icon-cont, #footer-support-cont, #footer-gallery-cont {
+            width:45vw;
+        }
+        #footer-gallery-cont {
+            #footer-gallery {
+                justify-content: left;
+            }
+        } 
+        #footer-icon-cont {
+            ul {
+                flex-wrap: wrap;
+                justify-content: left;
+            }
+            svg {
+                font-size: 8rem;
+                margin-left:0.5vw;
+            }
+        }
+        #footer-logo-cont {
+            p {
+                font-size: 19px;
+            }
+        } 
+        #footer-support-cont {
+            #footer-support-ul {
+                font-size: 2rem;
+            }
 
+        } 
+    }
 }
 @media (min-width: 1000px) {
-
+    #footer-cont {
+        padding: 0 10px;
+        width:90%;
+        margin: auto;
+        #footer-logo-cont, #footer-icon-cont, #footer-support-cont {
+            width:20%;
+        }
+        #footer-gallery-cont {
+            width: 32%;
+            #footer-gallery {
+                justify-content: left;
+            }
+            img {
+                font-size: 102px;
+            }
+        }
+        #footer-icon-cont {
+            svg {
+                font-size: 5rem;
+            }
+        }
+        #footer-logo-cont {
+            p {
+                font-size: 12px;
+            }
+        } 
+    }
 }

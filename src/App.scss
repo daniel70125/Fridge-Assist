@@ -201,7 +201,7 @@ body {
   }
   #search-overlay-btn {
     position: absolute;
-    top: 0.5vh;
+    top: 1vh;
     right: 1vw;
     font-size: 3rem !important;
   }
@@ -241,6 +241,7 @@ body {
   #search-overlay {
     #search-overlay-close-btn {
       font-size: 3rem !important;
+      top:1.5vh;
     }
     #search-overlay-main {
       input {
@@ -252,7 +253,7 @@ body {
     } 
     #search-overlay-btn {
       font-size: 3rem !important;
-      top:1.5vh;
+      top:2.5vh;
     }
   } 
 }

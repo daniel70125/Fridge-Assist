@@ -10,6 +10,7 @@ import Avatar from '../../Pictures/profile-avatar.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Search from '@mui/icons-material/Search';
+import { Button } from '@mui/material';
 
 class Header extends Component {
     state = { 
@@ -49,10 +50,10 @@ class Header extends Component {
            <div>
              <div id='header-main-div'>
                 <div>
-                    <Link className='no-bg' to='/'><img alt='fridge-assist-logo' id='header-logo' src={Logo} /></Link>
+                    <Link className='no-bg' to='/'><img onClick={() => this.setState({update: true})} alt='fridge-assist-logo' id='header-logo' src={Logo} /></Link>
                 </div>
                 <div>
-                    <Search style={{"color":"#da6509", "fontSize":"3rem","marginRight":"1vw"}} onClick={(e) => this.openSearchNav(e)} />
+                    <Search id='header-main-div-search-btn' onClick={(e) => this.openSearchNav(e)} />
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>
@@ -81,6 +82,8 @@ class Header extends Component {
                             <Link to='/'>About Us</Link>
                         </div>
                     </div>
+                    <Link style={{"padding":"10px 5px"}} to='/sign_up'><Button>Sign Up</Button></Link>
+                    <Link style={{"padding":"10px 5px"}} to='/login'><Button>Log in</Button></Link>
                     <Search id='topnav-lg-search' onClick={(e) => this.openSearchNav(e)}/>
                     <div className="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>

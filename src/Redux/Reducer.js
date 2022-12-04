@@ -3,11 +3,13 @@ import axios from 'axios';
 const initialState = {
     user: {},
     searchOpen: false,
-    navOpen: false
+    navOpen: false,
+    overlayLoading: false
 }
 const GET_USER = 'GET_USER';
 const OPEN_NAV = 'OPEN_NAV';
 const OPEN_SEARCH_NAV = 'OPEN_SEARCH_NAV';
+const LOADING_OVERLAY = 'LOADING_OVERLAY';
 
 
 export function getUser() {
@@ -29,6 +31,12 @@ return {
     payload: result
     }
 }
+export function loadingOverlay(result){
+return {
+    type:LOADING_OVERLAY, 
+    payload: result
+    }
+}
 
 export default function Reducer(state = initialState, action){
 const {type, payload} = action;
@@ -45,6 +53,8 @@ switch(type){
         return {...state, navOpen:payload}
     case OPEN_SEARCH_NAV:
         return {...state, searchOpen:payload}
+    case LOADING_OVERLAY:
+        return {...state, overlayLoading: !state.overlayLoading}
     // case GET_ITEMS + '_PENDING':
     //     return {...state, loading:true}
     // case GET_ITEMS + '_FULFILLED':

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 
-
 #who-are-we-cont {
     display: flex;
     flex-direction: column;
@@ -73,9 +72,17 @@
     }
 }
 #home-what-are-we-eating-cont {
-    height:50vh;
-    background-color: #939393;
-    
+    min-height:80vh;
+    background-color: #131516;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 #home-recipe-gallery-wrapper {
     text-align: center;
@@ -101,7 +108,7 @@
         text-decoration: none;
     }
 }
-#home-recipe-categories {
+#home-recipe-vision {
     background-color: black;
     min-height:120vh;
     position: relative;
@@ -191,9 +198,16 @@
         }
         #who-are-we-text {
             padding: 0 5px;
+            text-align: left;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            #who-are-we-btns {
+                justify-content: space-between;
+                a {
+                    margin: 0;
+                }
+            }
             a {
                 margin: 0 auto;
                 button {
@@ -204,9 +218,6 @@
                 }
             }
         }
-    }
-    #featured-reversed {
-
     }
     #feature-cont, #feature-cont-reversed {
         flex-direction: row;

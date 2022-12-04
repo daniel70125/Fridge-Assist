@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import './App.scss';
 import STT from './components/STT/STT';
+import ChefOverlay from './components/ChefCookingOverlay/ChefCookingOverlay';
 import Routes from './routes';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUser} from './Redux/Reducer';
 import {openNav} from './Redux/Reducer';
 import {openSearchNav} from './Redux/Reducer';
+import {loadingOverlay} from './Redux/Reducer';
 import axios from 'axios';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -15,7 +17,6 @@ import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Search from '@mui/icons-material/Search';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-import cookingGif from './Pictures/chef-cooking.gif';
 import Logo from './Pictures/fridge-assist-logo.png';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 
@@ -30,9 +31,23 @@ class App extends Component {
      }
   }
 async componentDidMount(){
-  window.addEventListener('load', (e) => {
-    console.log('Ive loaded');
-  })
+  if (window.location.href === 'http://localhost:3000/'){
+    document.title = `Home | Fridge Assist`;
+  } else {
+    let newTitle = window.location.href.toString().slice(22);
+    newTitle = newTitle.replace(/_/g, ' ');
+    document.title = `${newTitle} | Fridge Assist`;
+}
+  window.addEventListener('click', function (event) {
+    if (window.location.href === 'http://localhost:3000/'){
+      this.document.title = `Home | Fridge Assist`;
+    } else {
+      let newTitle = window.location.href.toString().slice(22);
+      newTitle = newTitle.replace(/_/g, ' ');
+      this.document.title = `${newTitle} | Fridge Assist`;
+    }
+  });
+
   await axios.get('/getuser')
   .then(res => console.log(res.data))
   .catch(err => console.log(err))
@@ -93,6 +108,7 @@ async componentDidMount(){
   })
 }
 componentDidUpdate(){
+  console.log('changed')
   if (this.props.navOpen) {
     this.openNav()
   } else {
@@ -189,8 +205,7 @@ render() {
       </div>
 
       <div id='cooking-overlay'>
-        <img alt='cookingGif' src={cookingGif} />
-        <p>Welcome to <span>Fridge Assist</span></p>
+        <ChefOverlay />
       </div>
       {/*  */}
       <div id='search-overlay'>
@@ -209,4 +224,4 @@ render() {
 }
 
 const mapStateToProps = reduxState => reduxState;
-export default connect(mapStateToProps, {getUser, openNav, openSearchNav})(App);
+export default connect(mapStateToProps, {getUser, openNav, openSearchNav, loadingOverlay})(App);

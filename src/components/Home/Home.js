@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import HomeRecipeGallery from '../HomeRecipeGallery/HomeRecipeGallery';
+import HomeSearch from '../HomeSearch/HomeSearch';
 // Imports from packages
 import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -79,8 +80,7 @@ class Home extends Component {
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
 
                 <div id='home-what-are-we-eating-cont'>
-                    <h2>What are we eating today?</h2>
-                    <input type='search' />
+                    <HomeSearch />
                 </div>
 
                 <div id='home-recipe-gallery-wrapper'>
@@ -90,7 +90,7 @@ class Home extends Component {
                     <Link to='/recipes'>View Recipes <KeyboardArrowRightIcon style={{"position":"relative", "top":"4px"}}/> </Link>
                 </div>
 
-                <div id='home-recipe-categories'>
+                <div id='home-recipe-vision'>
                     <img src={bgImage} alt='bg'/>
                     <h2>Our Vision</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum inventore quae sed ipsa, dicta fugiat perferendis vitae sunt molestias repudiandae sequi quasi nemo dignissimos autem nostrum culpa? Iste, quo.</p>
