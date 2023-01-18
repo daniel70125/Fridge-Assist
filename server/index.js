@@ -39,13 +39,13 @@ app.get('/getuser', (req, res) => {
 // })
 
 
-massive({
-    connectionString: CONNECTION_STRING,
-    ssl: {rejectUnauthorized: false}
-})
-.then(db => {
-    app.set('db', db)
-    console.log('db connected !');   }).catch(err => console.log(err))
-.catch(err => console.log(err));
+// massive({
+//     connectionString: CONNECTION_STRING,
+//     ssl: {rejectUnauthorized: false}
+// })
+// .then(db => {
+//     app.set('db', db)
+//     console.log('db connected !');   }).catch(err => console.log(err))
+// .catch(err => console.log(err));
 
-app.listen(SERVER_PORT || 4000, () => console.log(`Server Running on port ${SERVER_PORT} !`));
+app.listen(SERVER_PORT || 4000, () => console.log(`Server running on Port ${SERVER_PORT}!`));

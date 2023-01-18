@@ -87,7 +87,6 @@ class Login extends Component {
                           label="email"
                           name="email"
                           autoComplete="email"
-                          autoFocus
                         />
                         <TextField
                           margin="normal"

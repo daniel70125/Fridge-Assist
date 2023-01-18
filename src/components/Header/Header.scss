@@ -4,6 +4,7 @@
 }
 #header-main-div {
     display: flex;
+    background-color: #313638;
     justify-content: space-between;
     height:10vh;
     align-items: center;
@@ -32,6 +33,7 @@
   overflow: hidden;
   display: none;
   justify-content: space-between;
+  background-color: #313638;
   #topnav-links {
     display: flex;
     align-items: center;
@@ -42,6 +44,7 @@
     #topnav-home-btn {
       padding: 6px 10px;
       border-radius: 5px;
+      margin-right: 4px;
     }
   }
   img {
@@ -123,7 +126,6 @@
     }
     .topnav {
         display: none;
-        border-bottom: 2px solid #da6509;
         align-items: center;
         a {
           font-size: 2.5rem;
@@ -177,6 +179,7 @@
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
+    transition: all 1s;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -240,6 +243,7 @@
   }
   .dropdown .dropbtn {
     font-size: 2rem;
+    color: white;
     // Use cursor if user can click on tab ..
     // cursor: pointer;
   }
