@@ -4,7 +4,7 @@ const initialState = {
     user: {},
     searchOpen: false,
     navOpen: false,
-    overlayLoading: false
+    overlayLoading: true
 }
 const GET_USER = 'GET_USER';
 const OPEN_NAV = 'OPEN_NAV';
@@ -54,7 +54,7 @@ switch(type){
     case OPEN_SEARCH_NAV:
         return {...state, searchOpen:payload}
     case LOADING_OVERLAY:
-        return {...state, overlayLoading: !state.overlayLoading}
+        return {...state, overlayLoading: payload};
     // case GET_ITEMS + '_PENDING':
     //     return {...state, loading:true}
     // case GET_ITEMS + '_FULFILLED':

@@ -82,21 +82,18 @@
     position: relative;
     overflow: hidden;
     // Icons in search div - line
-    img {
-        width:50vw;
-    }
     img:nth-child(1){
-        top:2vh;
-        left:2vw;
-        // animation: shake 10s infinite;
+        transform: rotate(180deg);
+        position: absolute;
+        top: -60px;
+        right: 0px;
+        overflow: hidden;
     }
-    img:nth-child(2){
-        top:2vh;
-        right:2vw;
-    }
-    img:nth-child(3){
-        top:20vh;
-        left:4vw;
+    img:nth-child(5){
+        position: absolute;
+        bottom: -80px;
+        left: 0px;
+        overflow: hidden;
     }
     @keyframes shake {
         0% {
@@ -293,6 +290,9 @@
         #home-review-testimonial-caption {
             padding: 0 10em;
         }
+    }
+    #home-what-are-we-eating-cont {
+        min-height: 60vh;
     }
 }
 // I want these css rules when i'm not iPad anymore => Laptop

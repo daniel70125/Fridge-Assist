@@ -80,7 +80,9 @@ class Home extends Component {
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
 
                 <div id='home-what-are-we-eating-cont'>
+                    <img src={bgImage} alt='bg'/>
                     <HomeSearch />
+                    <img src={bgImage} alt='bg'/>
                 </div>
 
                 <div id='home-recipe-gallery-wrapper'>

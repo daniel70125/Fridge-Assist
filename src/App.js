@@ -31,6 +31,24 @@ class App extends Component {
      }
   }
 async componentDidMount(){
+  const loadingOverlayElement = document.querySelector('#cooking-overlay');
+  const p = document.querySelector('#chefcookingoverlay-p');
+
+  if (window.sessionStorage.firstTimeUser){
+    console.log("been here before");
+    loadingOverlayElement.style.height = '0vh';
+    loadingOverlayElement.style.display = 'none';
+    
+  } else {
+    setTimeout(() => {
+      this.props.loadingOverlay(false);
+      loadingOverlayElement.style.height = '0vh';
+      p.style.display = 'none';
+      // window.sessionStorage.setItem('firstTimeUser', true);
+    }, 5000)
+    
+  }
+  // Changes title depending on href location
   if (window.location.href === 'http://localhost:3000/'){
     document.title = `Home | Fridge Assist`;
   } else {
@@ -38,15 +56,16 @@ async componentDidMount(){
     newTitle = newTitle.replace(/_/g, ' ');
     document.title = `${newTitle} | Fridge Assist`;
 }
-  window.addEventListener('click', function (event) {
-    if (window.location.href === 'http://localhost:3000/'){
-      this.document.title = `Home | Fridge Assist`;
-    } else {
-      let newTitle = window.location.href.toString().slice(22);
-      newTitle = newTitle.replace(/_/g, ' ');
-      this.document.title = `${newTitle} | Fridge Assist`;
-    }
-  });
+// Change title on every click, usually page change click
+window.addEventListener('click', function (event) {
+  if (window.location.href === 'http://localhost:3000/'){
+    this.document.title = `Home | Fridge Assist`;
+  } else {
+    let newTitle = window.location.href.toString().slice(22);
+    newTitle = newTitle.replace(/_/g, ' ');
+    this.document.title = `${newTitle} | Fridge Assist`;
+  }
+});
 
   await axios.get('/getuser')
   .then(res => console.log(res.data))
@@ -106,6 +125,7 @@ async componentDidMount(){
       } 
     })
   })
+
 }
 componentDidUpdate(){
   console.log('changed')

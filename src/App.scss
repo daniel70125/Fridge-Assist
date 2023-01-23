@@ -145,7 +145,7 @@ body {
 }
 
 #cooking-overlay {
-  width:0; // Change this to 100vw on loading
+  width:100vw; // Change this to 100vw on loading
   height:100vh;
   position: fixed;
   top:0;
@@ -153,16 +153,17 @@ body {
   background-color: #f5b04a;
   color: black;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   z-index: 1;
+  transition: all 1s;
+  overflow: hidden;
   p {
     font-size:3rem;
-    display: none; // Change on load
   }
   img {
-    width:0; // Change this to 100vw on loading
     height:40vh;
   }
 } 
@@ -232,7 +233,10 @@ body {
       top:0;
       cursor: pointer;
     }
-  } 
+  }
+  #cooking-overlay img {
+    height:55vh
+  }
 }
 @media (min-width: 1024px) {
   html {
@@ -256,4 +260,8 @@ body {
       top:2.5vh;
     }
   } 
+  #cooking-overlay img {
+    width:30vw;
+    height:auto;
+  }
 }

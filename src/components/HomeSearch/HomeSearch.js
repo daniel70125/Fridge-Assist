@@ -16,33 +16,33 @@ class HomeSearch extends Component {
         img1Visible: true
     }
     componentDidMount(){
-        this.setImage()
+        // this.setImage()
     }
-    setImage(){
-        // Grab those image elements
-        const img1 = document.querySelector("#home-search-img1");
-        const img2 = document.querySelector("#home-search-img2");
+    // setImage(){
+    //     // Grab those image elements
+    //     const img1 = document.querySelector("#home-search-img1");
+    //     const img2 = document.querySelector("#home-search-img2");
 
-        // Set arrays of image source links
-        const images1 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
-        const images2 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
+    //     // Set arrays of image source links
+    //     const images1 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
+    //     const images2 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
 
-        // Random numbers to grab different image from array
-        let randomNumber1 = Math.floor(Math.random() * (images1.length));
-        let randomNumber2 = Math.floor(Math.random() * (images2.length));
-        // Set those image sources
-        img1.src = images1[randomNumber1];
-        img2.src = images1[randomNumber2];
+    //     // Random numbers to grab different image from array
+    //     let randomNumber1 = Math.floor(Math.random() * (images1.length));
+    //     let randomNumber2 = Math.floor(Math.random() * (images2.length));
+    //     // Set those image sources
+    //     img1.src = images1[randomNumber1];
+    //     img2.src = images1[randomNumber2];
 
-        // Animate images
+    //     // Animate images
         
 
-    }
+    // }
     render() { 
         
         return ( 
             <>
-            <img id='home-search-img1' src={burgerImg} alt='burger'/>
+            {/* <img id='home-search-img1' src={burgerImg} alt='burger'/> */}
             <div>
                 <h1 id="homesearch-h1">Search through our recipes !</h1>
             </div>
@@ -53,7 +53,8 @@ class HomeSearch extends Component {
                 <button type="submit">Go</button>    
             </form>
             </div>
-            <img alt='burger' id='home-search-img2' src={burgerImg} />
+            <p id='homesearch-p'>Search through 100's of recipes that we have. I'm sure there's something for everyone.</p>
+            {/* <img alt='burger' id='home-search-img2' src={burgerImg} /> */}
             </>
          );
     }

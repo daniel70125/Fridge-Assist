@@ -79,7 +79,7 @@ class Header extends Component {
                         </button>
                         <div className="dropdown-content">
                             <Link to='/'>Contact Us</Link>
-                            <Link to='/'>About Us</Link>
+                            {/* <Link to='/'>About Us</Link> */}
                         </div>
                     </div>
                     <Link style={{"padding":"10px 5px"}} to='/sign_up'><Button>Sign Up</Button></Link>

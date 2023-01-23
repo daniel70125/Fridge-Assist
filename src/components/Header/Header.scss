@@ -4,7 +4,8 @@
 }
 #header-main-div {
     display: flex;
-    background-color: #313638;
+    // background-color: #313638;
+    background-color: #000;
     justify-content: space-between;
     height:10vh;
     align-items: center;
@@ -14,7 +15,7 @@
     border-bottom: 1px solid #da6509;
     #header-main-div-search-btn {
       color: rgb(218, 101, 9);
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-right: 1vw;
     }
 }
@@ -22,7 +23,7 @@
     width:32vw;
 }
 #mobile-nav-btn {
-   font-size: 3rem;
+   font-size: 3.5rem;
    position: relative;
    right:5px;
    color:#da6509;
