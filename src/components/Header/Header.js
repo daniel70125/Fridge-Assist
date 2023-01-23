@@ -5,6 +5,8 @@ import {openNav} from '../../Redux/Reducer';
 import {openSearchNav} from '../../Redux/Reducer';
 import {Link} from 'react-router-dom';
 
+import Flip from 'react-reveal/Flip';
+
 import Logo from '../../Pictures/fridge-assist-logo.png';
 import Avatar from '../../Pictures/profile-avatar.png';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
@@ -57,7 +59,7 @@ class Header extends Component {
                     <DensityMediumIcon id='mobile-nav-btn' onClick={(e) => this.openNav(e)} />
                 </div>
             </div>
-
+            
             <div className="topnav">
                 <Link className='no-bg' to='/'><img alt='logo' src={Logo} /> </Link>
                 <div id='topnav-links'>
@@ -96,6 +98,7 @@ class Header extends Component {
                     </div>
                 </div>
             </div>
+            
            </div>
          );
     }

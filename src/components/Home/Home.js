@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+// React Reveal animations
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+
 // Imports of images
 import mainDish from '../../Pictures/main-dish.png';
 import cookingIllustration from '../../Pictures/who-are-we.jpg';
@@ -26,8 +30,9 @@ class Home extends Component {
                 
                 <div className='lg-screen-margin'>
                 <div id='who-are-we-cont'>
+                    <Fade left>
                     <div id='who-are-we-text'>
-                        <h5>Welcome to Fridge Assist !</h5>
+                        <h5>Welcome to <span className='trademarkName'>Fridge Assist</span>!</h5>
                         <p>Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
                             us you will get to share your recipes and food ideas with hundreds of other like-minded members.
                         </p>
@@ -36,17 +41,22 @@ class Home extends Component {
                             <Link to='/login'><Button>Log in</Button></Link>
                         </div>
                     </div>
-                    <img alt='who-are-we-illustration' src={cookingIllustration} />
+                    </Fade>
+                    <Fade right>
+                        <img alt='who-are-we-illustration' src={cookingIllustration} />
+                    </Fade>
                 </div>
-                
-                <div id='features-intro-cont'>
-                    <h1>Features</h1>
-                    <p>Let's explore what we can do using Fridge Assist</p>
-                </div>
+                <Slide bottom>
+                    <div id='features-intro-cont'>
+                        <h1 className='main-color'>Features</h1>
+                        <p>Let's explore what we can do using <span className='trademarkName'>Fridge Assist</span></p>
+                    </div>
+                </Slide>
                 {/* Feature 1 */}
+                <Slide bottom>
                 <div id='feature-cont'>
                     <div className='featured-text-div'>
-                        <h1>Recipes !</h1>
+                        <h1 className='main-color'>Recipes !</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius quae id qui pariatur, dolor fugiat maiores possimus a debitis enim praesentium, quam neque recusandae dolorum labore beatae. Accusamus, voluptate iure.
                         Vitae ipsa, perspiciatis aspernatur explicabo repudiandae blanditiis aliquid quia corporis animi quo non ipsam? Cumque perspiciatis in alias totam harum, odit odio. Id optio, totam deleniti fuga eaque quaerat nihil?</p>
                     </div>
@@ -54,10 +64,12 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={recipeFeaturedImg}/>
                     </div>
                 </div>
+                </Slide>
                 {/* Feature 2 */}
+                <Slide bottom>
                 <div id='feature-cont-reversed'>
                     <div className='featured-text-div'>
-                        <h1>Grocery List !</h1>
+                        <h1 className='main-color'>Grocery List !</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sapiente rem a, dolorem vel enim cupiditate vero deserunt blanditiis odit sequi perspiciatis vitae qui esse corporis eius? Fugiat, vel dolorum?
                         Incidunt id, ducimus, quibusdam porro enim molestiae accusamus consequuntur facilis ipsam architecto odio minus consectetur iure sunt, animi ut est pariatur! Repellat accusamus, excepturi corrupti aperiam sequi praesentium soluta mollitia!</p>
                     </div>
@@ -65,10 +77,12 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={groceryFeaturedImg}/>
                     </div>
                 </div>
+                </Slide>
                 {/* Feature 3 */}
+                <Slide bottom>
                 <div id='feature-cont'>
                     <div className='featured-text-div'>
-                        <h1>Expiration Notification !</h1>
+                        <h1 className='main-color'>Expiration Notification !</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eos amet nisi magni sunt quas aspernatur esse excepturi nesciunt. Id soluta voluptatem dolorem velit dignissimos. Doloribus incidunt quasi architecto sapiente.
                         Magni aspernatur delectus vitae optio, consequatur ut porro, doloremque error illum dolore voluptatem voluptatum vel rerum explicabo. Eius provident harum quas, in obcaecati veritatis debitis at, nostrum iste, aliquid a?</p>
                     </div>
@@ -76,6 +90,7 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={expirationFeaturedImg}/>
                     </div>
                 </div>
+                </Slide>
 
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
 
@@ -84,9 +99,9 @@ class Home extends Component {
                     <HomeSearch />
                     <img src={bgImage} alt='bg'/>
                 </div>
-
+                
                 <div id='home-recipe-gallery-wrapper'>
-                    <h2 id='home-recipe-gallery-h2'>Our Users Recipes</h2>
+                    <h2 className='main-color' id='home-recipe-gallery-h2'>Our Users Recipes</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis delectus iste eius corrupti quasi deleniti veritatis cum dignissimos doloremque aspernatur? Doloremque dignissimos placeat cumque officiis sit molestias sint porro vero.</p>
                     <HomeRecipeGallery /> {/* Recipe gallery */}
                     <Link to='/recipes'>View Recipes <KeyboardArrowRightIcon style={{"position":"relative", "top":"4px"}}/> </Link>
@@ -94,7 +109,7 @@ class Home extends Component {
 
                 <div id='home-recipe-vision'>
                     <img src={bgImage} alt='bg'/>
-                    <h2>Our Vision</h2>
+                    <h2 className='main-color'>Our Vision</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum inventore quae sed ipsa, dicta fugiat perferendis vitae sunt molestias repudiandae sequi quasi nemo dignissimos autem nostrum culpa? Iste, quo.</p>
                     <img src={bgImage} alt='bg'/>
                 </div>

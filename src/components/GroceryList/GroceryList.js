@@ -4,7 +4,6 @@ import './GroceryList.scss';
 import CheckIcon from '@mui/icons-material/Check';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Button } from '@mui/material';
 
 
 
@@ -39,10 +38,12 @@ class GroceryList extends Component {
         this.setState({})
     }
     deleteItem(e, index, list){
+        e.stopPropagation(); // Stop event bubbling - checked line after deleting item
         list.splice(index, 1); 
         this.setState({})
     }
     addItem(e, list){
+        e.preventDefault();
         let searchInput = document.querySelector('#itemInput').value;
         searchInput = searchInput.charAt(0).toUpperCase() + searchInput.slice(1);
         let obj = {
@@ -68,8 +69,13 @@ class GroceryList extends Component {
         return ( 
             <div id='grocery-list-cont'>
                 <div id='grocery-list-add-item-cont'>
-                    <input placeholder='Add Item..' id='itemInput' type='text' /><Button onClick={(e, List) => this.addItem(e, this.state.list)}>Add Item</Button>
+                <form id='home-search-form' role="search">
+                    <label>Search for stuff</label>
+                    <input  id="itemInput" type='search' placeholder='Add Item..' required />
+                    <button onClick={(e, List) => this.addItem(e, this.state.list)}>Search</button>    
+                </form>
                 </div>
+                <h2>To-Do-List!</h2>
                 {fruitDivs}
             </div>
          );

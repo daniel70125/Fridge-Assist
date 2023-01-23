@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); // Fridge Assist name special logo
+// font-family: 'Parisienne', cursive;
+
 html {
   font-size: 60%;
 }
 body {
   letter-spacing: 1px;
   overflow-wrap:break-word;
+  font-family: 'Montserrat', sans-serif;
+}
+span.trademarkName {
+  font-family: 'Parisienne', cursive;
+  color:#da6509;
+  font-size:3rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.main-color {
+  color: #da6509;
 }
 /* // Overlay styles */
 /* The Overlay (background) */

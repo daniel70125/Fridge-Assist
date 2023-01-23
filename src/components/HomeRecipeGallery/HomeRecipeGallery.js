@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HomeRecipeGallery.scss';
+import Fade from 'react-reveal/Fade';
 
 class HomeRecipeGallery extends Component {
     
@@ -100,14 +101,15 @@ class HomeRecipeGallery extends Component {
         ]
         const recipeGallery = recipeObject.map((elm, index) => {
             return (
-                <div key={index} className='home-recipe-gallery-div'>
+                <Fade key={index} bottom>
+                <div className='home-recipe-gallery-div'>
                     <img src={elm.url} alt={elm.title} />
                     <div className='home-recipe-gallery-overlay'>
                         <h1>Aue De La Che</h1>
                         <p>User: <span>chef_dynamite</span></p>
                     </div>
                 </div>
-
+                </Fade>
             )
         })
         return ( 
