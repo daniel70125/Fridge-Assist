@@ -35,7 +35,7 @@ async componentDidMount(){
   const p = document.querySelector('#chefcookingoverlay-p');
 
   if (window.sessionStorage.firstTimeUser){
-    console.log("been here before");
+    this.props.loadingOverlay(false);
     loadingOverlayElement.style.height = '0vh';
     loadingOverlayElement.style.display = 'none';
     
@@ -44,7 +44,7 @@ async componentDidMount(){
       this.props.loadingOverlay(false);
       loadingOverlayElement.style.height = '0vh';
       p.style.display = 'none';
-      // window.sessionStorage.setItem('firstTimeUser', true);
+      window.sessionStorage.setItem('firstTimeUser', true);
     }, 5000)
     
   }
@@ -231,9 +231,11 @@ render() {
       <div id='search-overlay'>
         <div id='search-overlay-main'>
           <p>Start Typing and hit the Search button...</p>
-          <div style={{"position":"relative"}}>
-            <input type="search" placeholder='Search Recipes' /><Search id='search-overlay-btn' />          
-          </div>
+          <form id='home-search-form' role="search">
+                <label>Search for stuff</label>
+                <input id="search" type="search" placeholder="Chinese, Snacks, Burgers..." required />
+                <button type="submit">Search</button>    
+            </form>
           <ExpandLessIcon id='search-overlay-close-btn' onClick={(e) => this.closeSearchNav(e)}/>
         </div>
       </div>
