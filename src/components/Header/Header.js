@@ -70,7 +70,7 @@ class Header extends Component {
                         <ArrowDropDownIcon />
                         </button>
                         <div className="dropdown-content">
-                        <Link to='/'>Browse</Link>
+                        <Link to='/recipes'>Browse</Link>
                         <Link to='/'>Chefs</Link>
                         <Link to='/'>Reviews</Link>
                         </div>
@@ -93,7 +93,7 @@ class Header extends Component {
                         <Link to='/'>My Profile</Link>
                         <Link to='/'>Favorites</Link>
                         <Link to='/'>My Recipes</Link>
-                        <Link to='/grocery_list'>Grocery List</Link>
+                        <Link to='/grocery-list'>Grocery List</Link>
                         </div>
                     </div>
                 </div>

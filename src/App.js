@@ -75,6 +75,7 @@ window.addEventListener('click', function (event) {
       document.querySelector('#topnav-home-btn').classList.add("active");
   } else {
       document.querySelector('#topnav-home-btn').classList.remove("active");
+      document.querySelector('#topnav-home-btn').style.color='#cfc7c7';
   }
   
   let dropdownContainers = document.querySelectorAll('.app-overlay-links-cont');
@@ -186,7 +187,7 @@ render() {
                   <ArrowDropDown />
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
-                    <Link onClick={(e) => this.closeNav(e)} to='/'>Browse</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/recipes'>Browse</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Chefs</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Reviews</Link>
                   </div>
@@ -210,7 +211,7 @@ render() {
                     <Link onClick={(e) => this.closeNav(e)} to='/'>My Profile</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Favorites</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>My Recipes</Link>
-                    <Link onClick={(e) => this.closeNav(e)} to='/grocery_list'>Grocery List</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/grocery-list'>Grocery List</Link>
                   </div>
               </li>
             </ul>
