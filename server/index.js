@@ -8,7 +8,7 @@ let ctrl = require('./controller');
 const session = require('express-session');
 const axios = require('axios');
 
-const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
+const {CONNECTION_STRING, SESSION_SECRET, PORT} = process.env
 
 // bewlow: DigitalOcean middleware !
 app.use(express.static(`${__dirname}/../build`));
