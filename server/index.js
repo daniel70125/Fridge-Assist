@@ -48,4 +48,8 @@ app.get('/getuser', (req, res) => {
 //     console.log('db connected !');   }).catch(err => console.log(err))
 // .catch(err => console.log(err));
 
-app.listen(SERVER_PORT || 4000, () => console.log(`Server running on Port ${SERVER_PORT}!`));
+// app.listen(SERVER_PORT || 4000, () => console.log(`Server running on Port ${SERVER_PORT}!`));
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
