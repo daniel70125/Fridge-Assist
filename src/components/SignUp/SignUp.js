@@ -21,9 +21,6 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
-    }
     state = { 
         
     }

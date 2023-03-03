@@ -14,7 +14,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 // Arrows for navbar overlay 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import Search from '@mui/icons-material/Search';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 import Logo from './Pictures/fridge-assist-logo.png';

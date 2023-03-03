@@ -7,12 +7,9 @@ import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-// React Reveal animations
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
 
 // Imports of images
-import mainDish from '../../Pictures/main-dish.png';
+// import mainDish from '../../Pictures/main-dish.png';
 import cookingIllustration from '../../Pictures/who-are-we.jpg';
 import recipeFeaturedImg from '../../Pictures/recipe-illustration.jpg';
 import groceryFeaturedImg from '../../Pictures/grocery-list.webp';
@@ -30,7 +27,6 @@ class Home extends Component {
                 
                 <div className='lg-screen-margin'>
                 <div id='who-are-we-cont'>
-                    <Fade left>
                     <div id='who-are-we-text'>
                         <h5>Welcome to <span className='trademarkName'>Fridge Assist</span>!</h5>
                         <p>Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
@@ -41,19 +37,19 @@ class Home extends Component {
                             <Link to='/login'><Button>Log in</Button></Link>
                         </div>
                     </div>
-                    </Fade>
-                    <Fade right>
+                    
+                    
                         <img alt='who-are-we-illustration' src={cookingIllustration} />
-                    </Fade>
+                    
                 </div>
-                <Slide bottom>
+                
                     <div id='features-intro-cont'>
                         <h1 className='main-color'>Features</h1>
                         <p>Let's explore what we can do using <span className='trademarkName'>Fridge Assist</span></p>
                     </div>
-                </Slide>
+                
                 {/* Feature 1 */}
-                <Slide bottom>
+                
                 <div id='feature-cont'>
                     <div className='featured-text-div'>
                         <h1 className='main-color'>Recipes !</h1>
@@ -64,9 +60,7 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={recipeFeaturedImg}/>
                     </div>
                 </div>
-                </Slide>
                 {/* Feature 2 */}
-                <Slide bottom>
                 <div id='feature-cont-reversed'>
                     <div className='featured-text-div'>
                         <h1 className='main-color'>Grocery List !</h1>
@@ -77,9 +71,7 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={groceryFeaturedImg}/>
                     </div>
                 </div>
-                </Slide>
                 {/* Feature 3 */}
-                <Slide bottom>
                 <div id='feature-cont'>
                     <div className='featured-text-div'>
                         <h1 className='main-color'>Expiration Notification !</h1>
@@ -90,7 +82,6 @@ class Home extends Component {
                         <img alt='recipe-illustration' src={expirationFeaturedImg}/>
                     </div>
                 </div>
-                </Slide>
 
                 </div> {/* End of wrapper of middle/main content w/ margin*/}
 

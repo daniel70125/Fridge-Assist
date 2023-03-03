@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ChefCookingOverlay.scss';
 import cookingGif from '../../Pictures/chef-cooking.gif';
 

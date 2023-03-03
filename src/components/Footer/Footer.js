@@ -7,10 +7,6 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GoogleIcon from '@mui/icons-material/Google';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Post from '../../Pictures/who-are-we.jpg';
-import Button from '@mui/material/Button';
-import Form from 'react-bootstrap/Form';
-import SendIcon from '@mui/icons-material/Send';
 
 function Footer() {
 
@@ -44,12 +40,12 @@ function Footer() {
             <div id='footer-gallery-cont'>
             <h2>Gallery</h2>
             <div id='footer-gallery'>
-                <img alt='image-1' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-06-300x300.jpg' />
-                <img alt='image-2' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-05-300x300.jpg' />
-                <img alt='image-3' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-04-300x300.jpg' />
-                <img alt='image-4' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-01-300x300.jpg' />
-                <img alt='image-5' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-02-300x300.jpg' />
-                <img alt='image-6' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-03-300x300.jpg' />
+                <img alt='pizza' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-06-300x300.jpg' />
+                <img alt='drinks' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-05-300x300.jpg' />
+                <img alt='pasta' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-04-300x300.jpg' />
+                <img alt='burger' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-01-300x300.jpg' />
+                <img alt='seafood' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-02-300x300.jpg' />
+                <img alt='pasta' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-03-300x300.jpg' />
             </div>
             </div>
         </div>

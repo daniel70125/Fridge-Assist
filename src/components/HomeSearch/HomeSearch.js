@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import './HomeSearch.scss';
 // Imports of images
-import burgerImg from '../../Pictures/home-search/homesearch-burger.png';
-import chineseImg from '../../Pictures/home-search/homesearch-chinese-food.png';
-import pizzaSliceImg from '../../Pictures/home-search/homesearch-pizza-slice.png';
-import chickenLegImg from '../../Pictures/home-search/homesearch-chicken-leg.png';
-import poachedEggImg from '../../Pictures/home-search/homesearch-poached-egg.png';
-import cakeImg from '../../Pictures/home-search/homesearch-cake.png';
-import hotDogImg from '../../Pictures/home-search/homesearch-hot-dog.png';
 
 
 
