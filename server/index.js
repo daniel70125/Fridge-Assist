@@ -8,7 +8,9 @@ let ctrl = require('./controller');
 const session = require('express-session');
 const axios = require('axios');
 
-const {CONNECTION_STRING, SESSION_SECRET, PORT} = process.env
+// Needed for Heroku setup - port
+const PORT = process.env.PORT || 5000;
+const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 // bewlow: DigitalOcean middleware !
 app.use(express.static(`${__dirname}/../build`));
@@ -50,6 +52,4 @@ app.get('/getuser', (req, res) => {
 
 // app.listen(SERVER_PORT || 4000, () => console.log(`Server running on Port ${SERVER_PORT}!`));
 
-app.listen(PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
