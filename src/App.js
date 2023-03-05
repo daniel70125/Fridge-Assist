@@ -70,7 +70,7 @@ window.addEventListener('click', function (event) {
   .then(res => console.log(res.data))
   .catch(err => console.log(err))
 
-  if (window.location.href === 'http://localhost:3000/') {
+  if (window.location.href === 'http://localhost:4000/') {
       document.querySelector('#topnav-home-btn').classList.add("active");
   } else {
       document.querySelector('#topnav-home-btn').classList.remove("active");
