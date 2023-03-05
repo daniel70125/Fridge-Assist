@@ -11,7 +11,7 @@ const axios = require('axios');
 const {CONNECTION_STRING, SESSION_SECRET, PORT} = process.env;
 
 // bewlow: DigitalOcean middleware !
-app.use(express.static(`${__dirname}/../build`));
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json());
 
 app.use(session({
