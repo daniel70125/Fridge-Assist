@@ -20,6 +20,15 @@ app.use(session({
     secret: SESSION_SECRET,
     cookie: {maxAge: 1000 * 60 * 60 * 24}
 }));
+
+const path = require('path')
+
+//middleware, endpoints, massive, etc...
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
+
 // Get user session info
 app.get('/getuser', (req, res) => {
     req.session.user = {
