@@ -8,9 +8,7 @@ let ctrl = require('./controller');
 const session = require('express-session');
 const axios = require('axios');
 
-// Needed for Heroku setup - port
-const PORT = process.env.PORT || 5000;
-const {CONNECTION_STRING, SESSION_SECRET} = process.env
+const {CONNECTION_STRING, SESSION_SECRET, PORT} = process.env;
 
 // bewlow: DigitalOcean middleware !
 app.use(express.static(`${__dirname}/../build`));
