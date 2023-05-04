@@ -18,7 +18,7 @@ class Header extends Component {
     }
     componentDidMount(){
         window.addEventListener('click', () => {
-            if (window.location.href === 'http://localhost:3000/') {
+            if (window.location.href === 'http://localhost:4001/') {
                 document.querySelector('#topnav-home-btn').classList.add("active");
             } else {
                 document.querySelector('#topnav-home-btn').classList.remove("active");
@@ -68,9 +68,10 @@ class Header extends Component {
                         <ArrowDropDownIcon />
                         </button>
                         <div className="dropdown-content">
-                        <Link to='/recipes'>Browse</Link>
+                        <Link to='/meals'>Meals</Link>
                         <Link to='/'>Chefs</Link>
                         <Link to='/'>Reviews</Link>
+                        <Link to='/food-maker'>Food-Maker</Link>
                         </div>
                     </div>
                     <div className="dropdown">
@@ -82,7 +83,7 @@ class Header extends Component {
                             {/* <Link to='/'>About Us</Link> */}
                         </div>
                     </div>
-                    <Link style={{"padding":"10px 5px"}} to='/sign_up'><Button>Sign Up</Button></Link>
+                    <Link style={{"padding":"10px 5px"}} to='/sign-up'><Button>Sign Up</Button></Link>
                     <Link style={{"padding":"10px 5px"}} to='/login'><Button>Log in</Button></Link>
                     <Search id='topnav-lg-search' onClick={(e) => this.openSearchNav(e)}/>
                     <div className="dropdown">

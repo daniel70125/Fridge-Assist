@@ -10,7 +10,7 @@ class HomeRecipeGallery extends Component {
         let arrOfGalleryOverlays = document.querySelectorAll('.home-recipe-gallery-div');
         arrOfGalleryOverlays.forEach((elm, index) => {
             elm.addEventListener('mouseover', () => {
-                document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '100%';
+                document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '35%';
             })
             elm.addEventListener('mouseout', () => {
                 document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '0';
@@ -100,8 +100,7 @@ class HomeRecipeGallery extends Component {
         ]
         const recipeGallery = recipeObject.map((elm, index) => {
             return (
-                // <Fade key={index} bottom>
-                <div className='home-recipe-gallery-div'>
+                <div key={index} className='home-recipe-gallery-div'>
                     <img src={elm.url} alt={elm.title} />
                     <div className='home-recipe-gallery-overlay'>
                         <h1>Aue De La Che</h1>

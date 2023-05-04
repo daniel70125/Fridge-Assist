@@ -1,0 +1,32 @@
+#food-maker-cont {
+    min-height:80vh;
+    position: relative;
+    #food-maker-clear-icon {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    #food-maker-intro-text {
+        font-size: 2rem;
+        background: black;
+        color: white;
+        margin: 0;
+        padding: 28px;
+        text-align: center;
+    }
+    #food-maker-intro-cont {
+       position: relative;
+    }
+    #food-maker-title-cont {
+        background-color: #da6509;
+        color: black;
+        padding: 8px;
+        text-align: center;
+        font-size: 2rem;
+        h1 {
+            margin: 0;
+            font-family: 'Parisienne', cursive;
+            letter-spacing: 1px;
+        }
+    }
+}

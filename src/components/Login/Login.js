@@ -28,18 +28,7 @@ class Login extends Component {
         })};
     
     render() { 
-        function Copyright(props) {
-            return (
-              <Typography variant="body2" color="text.secondary" align="center" {...props}>
-                {'Copyright © '}
-                <Link to='/'>
-                  Your Website
-                </Link>
-                {new Date().getFullYear()}
-                {'.'}
-              </Typography>
-            );
-          }
+        
         const theme = createTheme();
         return ( 
             (

@@ -33,7 +33,7 @@ class Home extends Component {
                             us you will get to share your recipes and food ideas with hundreds of other like-minded members.
                         </p>
                         <div id='who-are-we-btns'>
-                            <Link to='/sign_up'><Button>Sign Up</Button></Link>
+                            <Link to='/sign-up'><Button>Sign Up</Button></Link>
                             <Link to='/login'><Button>Log in</Button></Link>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ class Home extends Component {
                     <h2 className='main-color' id='home-recipe-gallery-h2'>Our Users Recipes</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis delectus iste eius corrupti quasi deleniti veritatis cum dignissimos doloremque aspernatur? Doloremque dignissimos placeat cumque officiis sit molestias sint porro vero.</p>
                     <HomeRecipeGallery /> {/* Recipe gallery */}
-                    <Link to='/recipes'>View Recipes <KeyboardArrowRightIcon style={{"position":"relative", "top":"4px"}}/> </Link>
+                    <Link to='/meals'>View Recipes <KeyboardArrowRightIcon style={{"position":"relative", "top":"4px"}}/> </Link>
                 </div>
 
                 <div id='home-recipe-vision'>

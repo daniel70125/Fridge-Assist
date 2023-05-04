@@ -7,12 +7,18 @@ let ctrl = require('./controller');
 
 const session = require('express-session');
 const axios = require('axios');
+const merchant_model = require('./merchant_model')
+const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env;
 
-const {CONNECTION_STRING, SESSION_SECRET, PORT} = process.env;
-
-// bewlow: DigitalOcean middleware !
-app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json());
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+  next();
+  // below: DigitalOcean middleware !
+  app.use( express.static( `${__dirname}/../build` ) );
+  });
 
 app.use(session({
     resave: false,
@@ -29,6 +35,15 @@ app.get('/getuser', (req, res) => {
     };
     res.send(req.session);
 })
+app.get('/meals', (req, res) => {
+    merchant_model.getMerchants()
+    .then(response => {
+      res.status(200).send(response);
+    })
+    .catch(error => {
+      res.status(500).send(error);
+    })
+  })
 
 // app.get('/sendtext',(req, res) => {
 //     const {user, name, number, address} = req.body;
@@ -51,4 +66,4 @@ app.get('/getuser', (req, res) => {
 
 // app.listen(SERVER_PORT || 4000, () => console.log(`Server running on Port ${SERVER_PORT}!`));
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(SERVER_PORT, () => console.log(`Listening on ${ SERVER_PORT }`))

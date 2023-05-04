@@ -9,28 +9,8 @@ class HomeSearch extends Component {
         img1Visible: true
     }
     componentDidMount(){
-        // this.setImage()
-    }
-    // setImage(){
-    //     // Grab those image elements
-    //     const img1 = document.querySelector("#home-search-img1");
-    //     const img2 = document.querySelector("#home-search-img2");
-
-    //     // Set arrays of image source links
-    //     const images1 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
-    //     const images2 = [burgerImg, chineseImg, pizzaSliceImg, chickenLegImg, poachedEggImg, cakeImg, hotDogImg];
-
-    //     // Random numbers to grab different image from array
-    //     let randomNumber1 = Math.floor(Math.random() * (images1.length));
-    //     let randomNumber2 = Math.floor(Math.random() * (images2.length));
-    //     // Set those image sources
-    //     img1.src = images1[randomNumber1];
-    //     img2.src = images1[randomNumber2];
-
-    //     // Animate images
         
-
-    // }
+    }
     render() { 
         
         return ( 

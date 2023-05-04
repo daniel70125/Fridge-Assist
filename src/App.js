@@ -48,7 +48,7 @@ async componentDidMount(){
     
   }
   // Changes title depending on href location
-  if (window.location.href === 'http://localhost:3000/'){
+  if (window.location.href === 'http://localhost:4001/'){
     document.title = `Home | Fridge Assist`;
   } else {
     let newTitle = window.location.href.toString().slice(22);
@@ -57,7 +57,7 @@ async componentDidMount(){
 }
 // Change title on every click, usually page change click
 window.addEventListener('click', function (event) {
-  if (window.location.href === 'http://localhost:3000/'){
+  if (window.location.href === 'http://localhost:4001/'){
     this.document.title = `Home | Fridge Assist`;
   } else {
     let newTitle = window.location.href.toString().slice(22);
@@ -70,7 +70,7 @@ window.addEventListener('click', function (event) {
   .then(res => console.log(res.data))
   .catch(err => console.log(err))
 
-  if (window.location.href === 'http://localhost:4000/') {
+  if (window.location.href === 'http://localhost:4001/') {
       document.querySelector('#topnav-home-btn').classList.add("active");
   } else {
       document.querySelector('#topnav-home-btn').classList.remove("active");
@@ -84,7 +84,7 @@ window.addEventListener('click', function (event) {
     elm.addEventListener('click', (e) => {
       if (index === 0){
         if (this.state.discoverDropdown === false){
-          dropdowns[index].style.height = '90px';
+          dropdowns[index].style.height = '120px';
           // timeout because event bubbling is happening. this function runs twice.
           window.setTimeout(() => {
             this.setState({discoverDropdown: true})
@@ -186,9 +186,10 @@ render() {
                   <ArrowDropDown />
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
-                    <Link onClick={(e) => this.closeNav(e)} to='/recipes'>Browse</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/meals'>Meals</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Chefs</Link>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Reviews</Link>
+                    <Link onClick={(e) => this.closeNav(e)} to='/food-maker'>Food Maker</Link>
                   </div>
               </li>
               <li>
@@ -232,10 +233,10 @@ render() {
         <div id='search-overlay-main'>
           <p>Start Typing and hit the Search button...</p>
           <form id='home-search-form' role="search">
-                <label>Search for stuff</label>
-                <input id="search" type="search" placeholder="Chinese, Snacks, Burgers..." required />
-                <button type="submit">Search</button>    
-            </form>
+              <label>Search for stuff</label>
+              <input id="search" type="search" placeholder="Chinese, Snacks, Burgers..." required />
+              <button type="submit">Search</button>    
+          </form>
           <ExpandLessIcon id='search-overlay-close-btn' onClick={(e) => this.closeSearchNav(e)}/>
         </div>
       </div>

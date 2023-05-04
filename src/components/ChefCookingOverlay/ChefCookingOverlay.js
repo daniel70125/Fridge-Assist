@@ -4,7 +4,6 @@ import cookingGif from '../../Pictures/chef-cooking.gif';
 
 function ChefCookingOverlay() {
     // console.log(window.location.href);
-    console.log(window.sessionStorage.getItem('firstTimeUser'));
     return ( 
         window.sessionStorage.getItem('firstTimeUser') ? 
         <>
