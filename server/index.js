@@ -35,6 +35,8 @@ app.get('/getuser', (req, res) => {
     };
     res.send(req.session);
 })
+
+// Get all meals
 app.get('/meals', (req, res) => {
     merchant_model.getMerchants()
     .then(response => {
@@ -44,6 +46,13 @@ app.get('/meals', (req, res) => {
       res.status(500).send(error);
     })
   })
+// Add Ingredient
+app.post('/add-recipe', (req, res) => {
+  console.log(req.body);
+  // let {title, quantity, price, img} = req.body;
+  res.send(req.body);
+}
+)
 
 // app.get('/sendtext',(req, res) => {
 //     const {user, name, number, address} = req.body;

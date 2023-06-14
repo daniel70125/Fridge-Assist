@@ -30,6 +30,7 @@ class App extends Component {
      }
   }
 async componentDidMount(){
+  console.log(window.location.href);
   const loadingOverlayElement = document.querySelector('#cooking-overlay');
   const p = document.querySelector('#chefcookingoverlay-p');
 
@@ -48,7 +49,7 @@ async componentDidMount(){
     
   }
   // Changes title depending on href location
-  if (window.location.href === 'http://localhost:4001/'){
+  if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000' || window.location.href === 'localhost:3000'){
     document.title = `Home | Fridge Assist`;
   } else {
     let newTitle = window.location.href.toString().slice(22);
@@ -57,7 +58,7 @@ async componentDidMount(){
 }
 // Change title on every click, usually page change click
 window.addEventListener('click', function (event) {
-  if (window.location.href === 'http://localhost:4001/'){
+  if (window.location.href === 'http://localhost:3000/'){
     this.document.title = `Home | Fridge Assist`;
   } else {
     let newTitle = window.location.href.toString().slice(22);
@@ -128,7 +129,14 @@ window.addEventListener('click', function (event) {
 
 }
 componentDidUpdate(){
-  console.log('changed')
+  // Changes title depending on href location
+  if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000'){
+    document.title = `Home | Fridge Assist`;
+  } else {
+    let newTitle = window.location.href.toString().slice(22);
+    newTitle = newTitle.replace(/_/g, ' ');
+    document.title = `${newTitle} | Fridge Assist`;
+}
   if (this.props.navOpen) {
     this.openNav()
   } else {

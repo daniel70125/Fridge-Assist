@@ -40,6 +40,7 @@
     button {
     display: none; // prevent being able to tab to it
     position: absolute;
+    cursor: pointer;
     top: 0;
     right: 0;
     width: var(--btn-width);

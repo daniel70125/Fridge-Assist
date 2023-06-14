@@ -16,15 +16,15 @@
     }
     #add-recipe-flexbox {
         #add-recipe-input-cont {
-            // border: 1px solid orange;
+            // border: 1px solid #da6509;
             margin: 5vh 0;
             text-align: center;
             font-size: 2.5rem;
             input[type="text"]{
                 border:0;
-                border-bottom: 2px solid orange;
-                background: rgb(59, 58, 58);
-                color: white;
+                border-bottom: 2px solid #da6509;
+                background: #fff;
+                border-radius: 10px;
                 font-size: 2.5rem;
                 padding: 10px;
                 text-align: center;
@@ -33,6 +33,7 @@
             }
             .add-recipe-search-form {
                 margin: auto;
+                margin-top: 1.5vh;
                 text-align: left;
                 width: 85vw;
                 input[type="search"]{
@@ -50,7 +51,7 @@
                 width: 90vw;
                 padding: 5px;
                 color: white;
-                border: 1px solid orange;
+                border: 1px solid #da6509;
                 background: black;
                 margin-top:1vh;
             }
@@ -78,28 +79,41 @@
                 margin-bottom: 2vh;
             }
             #add-recipe-ingredients-list{
-                #add-recipe-ingredients-list-child {
-                    border: 1px solid purple;
+                .add-recipe-ingredients-list-child {
+                    border: 1px solid #da6509;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin:1vh auto;
                 }
                 .add-recipe-ingredients-list-p {
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
                 }
                 button {
                     background: black;
                     display: flex;
+                    padding: 5px 5px 5px 10px;
                     align-items: center;
-                    border: 1px solid orange;
+                    border: 0px solid #da6509;
+                    border-left: 1px solid white;
+                    color: white;
+                    position: relative;
+                    font-size: 1.5rem;
+                    margin-left: 1.5vw;
                     img {
-                        width:5vw;
+                        width:4.5vw;
+                        margin-right:1vw;
                     }
                 }
             }
+            #add-recipe-ingredients-example {
+                font-size: 1.3rem;
+                font-style: italic;
+                color: grey;
+            }
         }
         #add-recipe-preview {
-            border: 1px solid orange;
+            border: 1px solid #da6509;
             min-height:50vh;
             width:90vw;
             margin: auto;
@@ -176,6 +190,8 @@
 @media (min-width: 768px) {
     #add-recipe-cont {
         .home-recipe-gallery-div {
+            width:60vw;
+            margin: auto;
             .home-recipe-gallery-overlay {
                 h1 {
                     font-size: 3rem;
@@ -184,10 +200,6 @@
                     font-size: 2rem;
                 }
             } 
-        }
-        .home-recipe-gallery-div {
-            width:60vw;
-            margin: auto;
         }
         #add-recipe-flexbox {
             #add-recipe-info-preview {
@@ -214,15 +226,31 @@
                     width: 40vw;
                 }
                 #add-recipe-ingredients-example {
-                    font-size: 1.2rem;
+                    font-size: 1.6rem;
                 }
                 .add-recipe-search-form {
                     width: 60vw;
+                }
+                #add-recipe-ingredients-list {
+                    .add-recipe-ingredients-list-child {
+                        width: 60vw;
+                        margin: auto;
+                    }
+                    .add-recipe-ingredients-list-p {
+                        font-size: 1.8rem;
+                    }
+                    button {
+                        font-size: 1.8rem;
+                        img {
+                            width: 3.5vw;
+                        }
+                    }
                 }
             }
         }
     }
 }
+    
 @media (min-width: 1000px) {
     #add-recipe-cont {
         .home-recipe-gallery-div {
@@ -273,6 +301,25 @@
             }
             .add-recipe-search-form {
                 width: 35vw;
+            }
+            #add-recipe-ingredients-example {
+                font-size: 1.2rem;
+            }
+            #add-recipe-ingredients-list {
+                .add-recipe-ingredients-list-p {
+                    font-size: 1.4rem;
+                    padding: 0 10px;
+                } 
+                .add-recipe-ingredients-list-child {
+                    width: 75%;
+                }
+                button {
+                    font-size: 1.2rem;
+                    img {
+                        width: 1.5vw;
+                        margin-right: 0.2vw;
+                    }
+                }
             }
         }
     }
