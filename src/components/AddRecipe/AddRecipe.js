@@ -8,11 +8,13 @@ class AddRecipe extends Component {
     constructor(props) {
         super(props);
         this.addToIngredients = this.addToIngredients.bind(this);
+        this.addToSteps = this.addToSteps.bind(this);
         this.createNewIngredient = this.createNewIngredient.bind(this);
         this.deleteIngredient = this.deleteIngredient.bind(this);
     }
     state = { 
         ingredients: [],
+        steps: [],
      }
     componentDidMount(){
         let arrOfGalleryOverlays = document.querySelectorAll('.home-recipe-gallery-div');
@@ -27,13 +29,14 @@ class AddRecipe extends Component {
     }
     // This is the main function that adds ingredient to your list
     async addToIngredients(e){
-        e.preventDefault()
+        e.preventDefault() // Prevent refresh
+
         let searchElm = document.querySelector("#search");
         let searchVal = e.target.parentNode[0].value; // User inputted text
         
         
-        let ingredientsListCount = this.state.ingredients.length + 1;
-        this.state.ingredients.push(`${ingredientsListCount}. ${searchVal}`); //Send ingredient to state
+        let ingredientsListCount = this.state.ingredients.length + 1; // this var creates the number to sort ingredients. ex. '1'
+        this.state.ingredients.push(`${searchVal}`); //Send ingredient to state
 
         //Grab this one and create a new div for it
        await this.createNewIngredient();
@@ -42,7 +45,19 @@ class AddRecipe extends Component {
         const response = await axios.post('/add-recipe', this.state.ingredients);
         const ingredient = response.data.ingredient;
 
-        searchElm.value = ""; //Make search value empty f
+        searchElm.value = ""; //Make search value empty
+    }
+    async addToSteps(e){
+        e.preventDefault();
+
+        let search = document.querySelector('#search-ingredients');
+        let searchVal = e.target.parentNode[0].value;
+
+        this.state.steps.push(`${searchVal}`);
+
+        console.log(searchVal)
+        console.log(this.state.steps);
+
     }
     // This function creates new div elements to the DOM each time you add another ingredient
     createNewIngredient(e){
@@ -51,10 +66,9 @@ class AddRecipe extends Component {
         divChild.setAttribute('class','add-recipe-ingredients-list-child');
         
         const p = document.createElement("p");
-        p.classList.add("add-recipe-ingredients-list-p")
+        p.classList.add("add-recipe-ingredients-list-p");
         const pNode = document.createTextNode(`${this.state.ingredients[this.state.ingredients.length - 1]}`);
         p.appendChild(pNode); //Append text to paragraph tag
-        
         
         const img = document.createElement("img");
         img.src = deleteBtn;
@@ -64,18 +78,20 @@ class AddRecipe extends Component {
         btn.appendChild(btnNode); //Append text to paragraph tag
         btn.setAttribute('class','add-recipe-ingredients-list-child-delete-btn');
         btn.addEventListener("click", (e) => {
-            this.deleteIngredient();
+            this.deleteIngredient(e);
         })
-        
         
         divChild.appendChild(p);
         divChild.appendChild(btn);
         btn.appendChild(img);
         ingredientsDiv.appendChild(divChild);
     }
+    createNewStep(){
+        
+    }
     deleteIngredient(e){
         let x = document.querySelectorAll('.add-recipe-ingredients-list-child');
-        console.log(e)
+        e.target.parentElement.remove();
     }
     render() {
         let ingredientsArr = this.state.ingredients.map((elm, index) => {
@@ -94,13 +110,13 @@ class AddRecipe extends Component {
                     <div id='add-recipe-input-cont'>
                         {/* // prevent defualt function prevents reload onclick of 'add' button */}
                         <Form onClick={(e) => e.preventDefault()} >
-                            <label for="title">Title: </label>
+                            <label htmlFor="title">Title: </label>
                             <input className='add-recipe-inp-val' type="text" name="title" /><br />
-                            <label for="description">Description:</label><br />
+                            <label htmlFor="description">Description:</label><br />
                             <textarea className='add-recipe-inp-val' name="description" rows="4" cols="50"></textarea><br />
                             <div>
                                 <div className='add-recipe-quick-facts-prep-cook-flexbox'>
-                                    <label for="prep-time">Prep Time: </label>
+                                    <label htmlFor="prep-time">Prep Time: </label>
                                     <input className='add-recipe-number-inp' type='number' name='prep-time'/>
                                     <select id="prep-time-values">
                                         <option value="seconds">Seconds</option>
@@ -109,7 +125,7 @@ class AddRecipe extends Component {
                                     </select><br/>
                                 </div>
                                 <div className='add-recipe-quick-facts-prep-cook-flexbox'>
-                                    <label for="cook-time">Cook Time: </label>
+                                    <label htmlFor="cook-time">Cook Time: </label>
                                     <input className='add-recipe-number-inp' type='number' name='cook-time'/>
                                     <select id="cook-time-values">
                                         <option value="seconds">Seconds</option>
@@ -119,19 +135,31 @@ class AddRecipe extends Component {
                                 </div>
                             </div>
                             {/* Start of ingredients section */}
-                            <div id='ingredients-wrapper'>
-                                <label for="Ingredients">Ingredients:</label><br />
-                                <p id='add-recipe-ingredients-example'>Ex. "3 tablespoons of vegetable oil"</p>
-                                <form className='add-recipe-search-form' id='home-search-form' role="search">
-                                    <input id="search" type="search" placeholder="Ex. 2 sticks of butter" required />
-                                    <button onClick={this.addToIngredients}>Add</button>    
-                                </form>
-                                <div id='add-recipe-ingredients-list'>
-                                    {/* <div id='add-recipe-ingredients-list-child'>
-                                        <p className='add-recipe-ingredients-list-p'>1. 3 tablespoons of vingegar.</p>
-                                        <button><img src={deleteBtn} alt='delete-button'/>Delete</button>
-                                    </div> */}
-                                </div>
+                            <label htmlFor="Ingredients">Ingredients:</label><br />
+                            <p id='add-recipe-ingredients-example'>Ex. "3 tablespoons of vegetable oil"</p>
+                            <form className='add-recipe-search-form' id='home-search-form' role="search">
+                                <input id="search" type="search" placeholder="Ex. 2 sticks of butter" required />
+                                <button onClick={this.addToIngredients}>Add</button>    
+                            </form>
+                            <div id='add-recipe-ingredients-list'>
+                                {/* <div id='add-recipe-ingredients-list-child'>
+                                    <p className='add-recipe-ingredients-list-p'>1. 3 tablespoons of vingegar.</p>
+                                    <button><img src={deleteBtn} alt='delete-button'/>Delete</button>
+                                </div> */}
+                            </div>
+
+                            {/* Start of steps section */}
+                            <label htmlFor="Ingredients">Instructions:</label><br />
+                            <p id='add-recipe-instructions-example'>Ex. "Step 1: Preheat the Oven"</p>
+                            <form className='add-recipe-search-form' id='home-search-form' role="search">
+                                <input id="search-ingredients" type="search" placeholder="Ex. Preheat Oven" required />
+                                <button onClick={this.addToSteps}>Add</button>    
+                            </form>
+                            <div id='add-recipe-steps-list'>
+                                {/* <div id='add-recipe-ingredients-list-child'>
+                                    <p className='add-recipe-ingredients-list-p'>1. 3 tablespoons of vingegar.</p>
+                                    <button><img src={deleteBtn} alt='delete-button'/>Delete</button>
+                                </div> */}
                             </div>
                         </Form>
                     </div>

@@ -18,6 +18,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 import Logo from './Pictures/fridge-assist-logo.png';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
+import { Button } from '@mui/material';
 
 
 class App extends Component {
@@ -225,6 +226,8 @@ render() {
             </ul>
           </div>
       </div>
+      <Link onClick={(e) => this.closeNav(e)} style={{"padding":"10px 5px"}} to='/sign-up'><Button>Sign Up</Button></Link>
+      <Link onClick={(e) => this.closeNav(e)} style={{"padding":"10px 5px"}} to='/login'><Button>Log in</Button></Link>
       <p style={{"color":"white", "fontSize":"1.5rem"}}>Copyright © 2022 Daniel Wright ®</p>
 
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>

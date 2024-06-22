@@ -29,7 +29,7 @@
                 padding: 10px;
                 text-align: center;
                 margin-top: 1vh;
-                width: 50vw;
+                width: 60vw;
             }
             .add-recipe-search-form {
                 margin: auto;
@@ -79,6 +79,7 @@
                 margin-bottom: 2vh;
             }
             #add-recipe-ingredients-list{
+                // background-color:#da6509;
                 .add-recipe-ingredients-list-child {
                     border: 1px solid #da6509;
                     display: flex;
@@ -106,7 +107,7 @@
                     }
                 }
             }
-            #add-recipe-ingredients-example {
+            #add-recipe-ingredients-example, #add-recipe-instructions-example {
                 font-size: 1.3rem;
                 font-style: italic;
                 color: grey;
@@ -225,7 +226,7 @@
                 input[type="text"] {
                     width: 40vw;
                 }
-                #add-recipe-ingredients-example {
+                #add-recipe-ingredients-example, #add-recipe-instructions-example {
                     font-size: 1.6rem;
                 }
                 .add-recipe-search-form {
@@ -302,7 +303,7 @@
             .add-recipe-search-form {
                 width: 35vw;
             }
-            #add-recipe-ingredients-example {
+            #add-recipe-ingredients-example, #add-recipe-instructions-example {
                 font-size: 1.2rem;
             }
             #add-recipe-ingredients-list {
