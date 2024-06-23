@@ -201,11 +201,6 @@
 
 
 
-
-
-
-
-
 @keyframes spin {
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
@@ -215,7 +210,6 @@
 @media (min-width: 480px) {
 
 }
-
 // I want these css rules when i'm not mobile anymore => iPad
 @media (min-width: 768px) {
     #who-are-we-cont {

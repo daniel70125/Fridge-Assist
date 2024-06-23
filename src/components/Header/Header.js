@@ -79,7 +79,7 @@ class Header extends Component {
                         <ArrowDropDownIcon />
                         </button>
                         <div className="dropdown-content">
-                            <Link to='/'>Contact Us</Link>
+                            <Link to='/contact'>Contact Us</Link>
                             {/* <Link to='/'>About Us</Link> */}
                         </div>
                     </div>

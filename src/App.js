@@ -31,7 +31,10 @@ class App extends Component {
      }
   }
 async componentDidMount(){
-  console.log(window.location.href);
+  await axios.get('/getuser')
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err))
+
   const loadingOverlayElement = document.querySelector('#cooking-overlay');
   const p = document.querySelector('#chefcookingoverlay-p');
 
@@ -55,6 +58,9 @@ async componentDidMount(){
   } else {
     let newTitle = window.location.href.toString().slice(22);
     newTitle = newTitle.replace(/_/g, ' ');
+    newTitle = newTitle.split(''); // NewTitle = [array of letters] Ex. ['L','o','g','i', 'n']
+    newTitle[0] = newTitle[0].toUpperCase(); // Uppercase first letter of array
+    newTitle = newTitle.join(''); // Join string. Ex. ['L','o','g','i','n'] => Login
     document.title = `${newTitle} | Fridge Assist`;
 }
 // Change title on every click, usually page change click
@@ -64,69 +70,70 @@ window.addEventListener('click', function (event) {
   } else {
     let newTitle = window.location.href.toString().slice(22);
     newTitle = newTitle.replace(/_/g, ' ');
+    newTitle = newTitle.split(''); // NewTitle = [array of letters] Ex. ['L','o','g','i', 'n']
+    newTitle[0] = newTitle[0].toUpperCase(); // Uppercase first letter of array
+    newTitle = newTitle.join(''); // Join string. Ex. ['L','o','g','i','n'] => Login
     this.document.title = `${newTitle} | Fridge Assist`;
   }
 });
 
-  await axios.get('/getuser')
-  .then(res => console.log(res.data))
-  .catch(err => console.log(err))
 
-  if (window.location.href === 'http://localhost:4001/') {
-      document.querySelector('#topnav-home-btn').classList.add("active");
-  } else {
-      document.querySelector('#topnav-home-btn').classList.remove("active");
-      document.querySelector('#topnav-home-btn').style.color='#cfc7c7';
-  }
+if (window.location.href === 'http://localhost:4001/') {
+    document.querySelector('#topnav-home-btn').classList.add("active");
+} else {
+    document.querySelector('#topnav-home-btn').classList.remove("active");
+    document.querySelector('#topnav-home-btn').style.color='#cfc7c7';
+}
   
-  let dropdownContainers = document.querySelectorAll('.app-overlay-links-cont');
-  let dropdowns = document.querySelectorAll('.app-overlay-links-dropdown-cont');
+let dropdownContainers = document.querySelectorAll('.app-overlay-links-cont');
+let dropdowns = document.querySelectorAll('.app-overlay-links-dropdown-cont');
 
-  dropdownContainers.forEach((elm, index) => {
-    elm.addEventListener('click', (e) => {
-      if (index === 0){
-        if (this.state.discoverDropdown === false){
-          dropdowns[index].style.height = '120px';
-          // timeout because event bubbling is happening. this function runs twice.
-          window.setTimeout(() => {
-            this.setState({discoverDropdown: true})
-          }, 1000)
-        } else if (this.state.discoverDropdown === true){
-          dropdowns[index].style.height = '0';
-          window.setTimeout(() => {
-            this.setState({discoverDropdown: false})
-          }, 1000)
-        }
-        
-      } else if (index === 1) {
-        if (this.state.contactDropdown === false){
-          dropdowns[index].style.height = '60px';
-          // timeout because event bubbling is happening. this function runs twice.
-          window.setTimeout(() => {
-            this.setState({contactDropdown: true})
-          }, 1000)
-        } else if (this.state.contactDropdown === true){
-          dropdowns[index].style.height = '0';
-          window.setTimeout(() => {
-            this.setState({contactDropdown: false})
-          }, 1000)
-        }
-      } else {
-        if (this.state.userDropdown === false){
-          dropdowns[index].style.height = '120px';
-          // timeout because event bubbling is happening. this function runs twice.
-          window.setTimeout(() => {
-            this.setState({userDropdown: true})
-          }, 1000)
-        } else if (this.state.userDropdown === true){
-          dropdowns[index].style.height = '0';
-          window.setTimeout(() => {
-            this.setState({userDropdown: false})
-          }, 1000)
-        }
-      } 
-    })
+// Set heights to drop down each container on click of arrow
+dropdownContainers.forEach((elm, index) => {
+  elm.addEventListener('click', (e) => {
+    if (index === 0){
+      if (this.state.discoverDropdown === false){
+        dropdowns[index].style.height = '120px'; // Set height to drop down container drawer
+        // timeout because event bubbling is happening. this function runs twice.
+        window.setTimeout(() => {
+          this.setState({discoverDropdown: true})
+        }, 1000)
+      } else if (this.state.discoverDropdown === true){
+        dropdowns[index].style.height = '0';
+        window.setTimeout(() => {
+          this.setState({discoverDropdown: false})
+        }, 1000)
+      }
+      
+    } else if (index === 1) {
+      if (this.state.contactDropdown === false){
+        dropdowns[index].style.height = '25px'; // Set height to drop down user drawer
+        // timeout because event bubbling is happening. this function runs twice.
+        window.setTimeout(() => {
+          this.setState({contactDropdown: true})
+        }, 1000)
+      } else if (this.state.contactDropdown === true){
+        dropdowns[index].style.height = '0';
+        window.setTimeout(() => {
+          this.setState({contactDropdown: false})
+        }, 1000)
+      }
+    } else {
+      if (this.state.userDropdown === false){
+        dropdowns[index].style.height = '120px'; // Set height to drop down user drawer
+        // timeout because event bubbling is happening. this function runs twice.
+        window.setTimeout(() => {
+          this.setState({userDropdown: true})
+        }, 1000)
+      } else if (this.state.userDropdown === true){
+        dropdowns[index].style.height = '0';
+        window.setTimeout(() => {
+          this.setState({userDropdown: false})
+        }, 1000)
+      }
+    } 
   })
+})
 
 }
 componentDidUpdate(){
@@ -208,7 +215,7 @@ render() {
                 </div>
                   <div className='app-overlay-links-dropdown-cont'>
                     <Link onClick={(e) => this.closeNav(e)} to='/'>Contact Us</Link>
-                    <Link onClick={(e) => this.closeNav(e)} to='/'>About Us</Link>
+                    {/* <Link onClick={(e) => this.closeNav(e)} to='/'>About Us</Link> */}
                   </div>
               </li>
               <li>

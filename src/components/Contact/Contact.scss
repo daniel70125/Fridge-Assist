@@ -1,0 +1,14 @@
+#contact-wrapper {
+    #placeeholder-div {
+        height:15vh;
+        background-color: #da6509;
+    }
+}
+// I want these css rules when i'm not mobile anymore => iPad
+@media (min-width: 768px) {
+    
+}
+// I want these css rules when i'm not iPad anymore => Laptop
+@media (min-width: 1024px) {
+
+}
