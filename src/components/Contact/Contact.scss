@@ -1,12 +1,36 @@
 #contact-wrapper {
-    #placeeholder-div {
-        height:15vh;
-        background-color: #da6509;
+    #placeholder-div {
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../../Pictures/contact-us-main-wallpaper.jpg');
+        display: flex;
+        height:60vh;
+        justify-content: center;
+        span {
+            font-family: 'Parisienne', cursive;
+            color: #da6509;
+            font-size: 5rem;
+        }
+    }
+    #contact-flex-cont {
+        .contact-flex-div {
+            height:50vh;
+            text-align: center;
+            font-size: 2rem;
+            border: 1px solid orange;
+        }
     }
 }
 // I want these css rules when i'm not mobile anymore => iPad
 @media (min-width: 768px) {
-    
+    #contact-wrapper {
+        #placeholder-div {
+            span {
+                font-size: 7.5rem;
+            }
+        }
+    }
 }
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1024px) {
