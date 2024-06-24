@@ -1,16 +1,20 @@
 #contact-wrapper {
     #placeholder-div {
-        align-items: center;
+        align-items: flex-end;
         background-position: center;
         background-size: cover;
-        background-image: url('../../Pictures/contact-us-main-wallpaper.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../Pictures/contact-us-main-wallpaper.jpg');
         display: flex;
         height:60vh;
         justify-content: center;
-        span {
-            font-family: 'Parisienne', cursive;
-            color: #da6509;
-            font-size: 5rem;
+        div {
+            background-color: #0f0f0f;
+            padding: 15px;
+            span {
+                font-family: 'Parisienne', cursive;
+                color: #da6509;
+                font-size: 5rem;
+            }
         }
     }
     #contact-flex-cont {
@@ -26,13 +30,27 @@
 @media (min-width: 768px) {
     #contact-wrapper {
         #placeholder-div {
-            span {
-                font-size: 7.5rem;
+            div {
+                width: 65vw;
+                text-align: center;
+                span {
+                    font-size: 7.5rem;
+                }
             }
         }
     }
 }
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1024px) {
-
+    #contact-wrapper {
+        #placeholder-div {
+            div {
+                padding: 20px;
+                width: 30vw;
+                span {
+                    font-size: 6rem;
+                }
+            }
+        }
+    }
 }

@@ -7,7 +7,9 @@ class Contact extends Component {
         return ( 
             <div id='contact-wrapper'>
                 <div id='placeholder-div'>
-                    <span>Contact Us</span>
+                    <div>
+                        <span>Contact Us</span>
+                    </div>
                 </div>
                 <div id='contact-flex-cont'>
                         <div className='contact-flex-div'>
