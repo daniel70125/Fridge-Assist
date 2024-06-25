@@ -19,10 +19,77 @@
     }
     #contact-flex-cont {
         .contact-flex-div {
-            height:50vh;
+            height:80vh;
             text-align: center;
             font-size: 2rem;
-            border: 1px solid orange;
+            h1 {
+                background: black;
+                margin: 0;
+                padding: 20px;
+                color: #da6509;
+            }
+            a {
+                color: #0f0f0f;
+            }
+            #contact-flex-get-in-touch {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 82%;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .contact-div1-span {
+                        font-size: 3rem;
+                        color: #da6509;
+                        margin-bottom: 1vh;
+                    }
+                    svg {
+                        font-size: 5rem;
+                        color: #da6509;
+                    }
+                }
+            }
+        }
+        .contact-flex-div:nth-child(3){
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../Pictures/contact-send-message-bg.jpg');
+            input {
+                padding: 5px;
+                width: 90vw;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            button {
+                padding: 8px;
+                background-color: #da6509;
+                color: #0f0f0f;
+                font-size: 2rem;
+                margin-top: 2vh;
+                svg {
+                    font-size: 2rem;
+                    margin-left:1vw;
+                }
+            }
+            div {
+                position: relative;
+                top: 13vh;
+                height: 22vh;
+                p {
+                    color: white;
+                    font-size: 1.5rem;
+                    padding: 0 5px;
+                }
+            }
+        }
+        .contact-flex-div:nth-child(2){
+            background-image: url('../../Pictures/contact-maps.png');
+            background-size: cover;
+            background-position: center;
+            h1 {
+            }
         }
     }
 }
@@ -38,17 +105,88 @@
                 }
             }
         }
+        #contact-flex-cont {
+            .contact-flex-div {
+                #contact-flex-get-in-touch {
+                    div {
+                        .contact-div1-span {
+                            font-size: 5rem;
+                        }
+                        a, span{
+                            font-size: 3rem;
+                        }
+                        svg {
+                            font-size: 6rem;
+                        }
+                    }
+                }
+            }
+            .contact-flex-div:nth-child(3) {
+                input {
+                    font-size: 2.5rem;
+                    padding: 15px;
+                }
+                div {
+                    top:19vh;
+                    p {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+        }
     }
 }
 // I want these css rules when i'm not iPad anymore => Laptop
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     #contact-wrapper {
         #placeholder-div {
+            align-items: center;
             div {
                 padding: 20px;
                 width: 30vw;
                 span {
                     font-size: 6rem;
+                }
+            }
+        }
+        #contact-flex-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: #0f0f0f;
+            .contact-flex-div {
+                height:75vh;
+                width: 30vw;
+                #contact-flex-get-in-touch {
+                    color: white;
+                    div {
+                        a {
+                            color: white;
+                            font-size: 2rem;
+                        }
+                        svg {
+                            font-size: 3rem;
+                        }
+                        .contact-div1-span {
+                            font-size: 2.5rem;
+                        }
+                        span {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+            .contact-flex-div:nth-child(3) {
+                input {
+                    width: 25vw;
+                    padding: 0px;
+                    margin-bottom: 1vh;
+                }
+                div {
+                    top:12vh;
+                    p {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
