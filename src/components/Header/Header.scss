@@ -4,15 +4,16 @@
 }
 #header-main-div {
     display: flex;
-    // background-color: #313638;
     background-color: #000;
     justify-content: space-between;
     height:10vh;
     align-items: center;
-    position: sticky;
-    top:0;
+    position: fixed;
+    top:-0;
     height:7vh;
+    width: 100vw;
     border-bottom: 1px solid #da6509;
+    z-index: 3;
     #header-main-div-search-btn {
       color: rgb(218, 101, 9);
       font-size: 3.5rem;
@@ -34,15 +35,22 @@
   display: none;
   justify-content: space-between;
   background-color: #0f0f0f;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  width: 99vw;
   #topnav-links {
     display: flex;
     align-items: center;
+    #topnav-home-btn {
+      color: white !important; // added this because :visited keeps changing color
+    }
     #topnav-home-btn:hover {
       background-color: #da6509;
       color: white;
     }
     #topnav-home-btn {
-      padding: 6px 10px;
+      padding: 8px 10px;
       border-radius: 5px;
       margin-right: 4px;
     }
@@ -83,15 +91,10 @@
 }
   
   /* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #da6509;
-  color: white;
+.topnav a.active, .active {
+  background-color: #da6509 !important;
+  color: white !important;
 }
-
-
-
-
-
 
 
 
@@ -152,10 +155,13 @@
     Dropdown for nav menu from w3schools snippet
     =================================================== */
     /* The dropdown container */
-.dropdown {
+  .dropdown {
     float: left;
     overflow: hidden;
     border-radius: 5px;
+  }
+  .dropdown:nth-child(2) {
+    margin: 0 0.5vw;
   }
   
   /* Dropdown button */
@@ -163,7 +169,7 @@
     font-size: 2.5rem;
     border: none;
     outline: none;
-    padding: 6px 8px;
+    padding: 8px 8px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -247,9 +253,27 @@
     // Use cursor if user can click on tab ..
     // cursor: pointer;
   }
+  @keyframes in {
+    from { transform: rotate(0deg); font-size: 3.5rem; }
+      to { transform: rotate(360deg); font-size: 4rem; }
+  }
+
+  @keyframes out {
+      from { transform: rotate(360deg); font-size: 4rem; }
+      to { transform: rotate(0deg); font-size: 3.5rem; }
+  }
   #topnav-lg-search {
+    animation: out 0.5s;
+    transition: 0.5s;
+    color:#da6509;
     order: -1;
     font-size: 3.5rem;
     margin: 10px 16px;
+  }
+  #topnav-lg-search:hover {
+    animation: in 0.5s;
+    animation-fill-mode: forwards;
+    transition: 0.5s;
+    color: blue;
   }
 }

@@ -17,13 +17,31 @@ class Header extends Component {
         navbarOpen: false
     }
     componentDidMount(){
+        this.checkUrl();
         window.addEventListener('click', () => {
-            if (window.location.href === 'http://localhost:4001/') {
-                document.querySelector('#topnav-home-btn').classList.add("active");
-            } else {
-                document.querySelector('#topnav-home-btn').classList.remove("active");
-            }
+            this.checkUrl();
         })
+    }
+    checkUrl(){
+            switch (window.location.href) {
+                case 'http://localhost:3000/':
+                    document.querySelector('#topnav-home-btn').classList.add("active");
+                    document.querySelector('#topnav-discover-btn').classList.remove("active");
+                    document.querySelector('#topnav-contact-btn').classList.remove("active");
+                    break;
+                    case 'http://localhost:3000/meals':
+                        document.querySelector('#topnav-discover-btn').classList.add("active");
+                        document.querySelector('#topnav-home-btn').classList.remove("active");
+                        document.querySelector('#topnav-contact-btn').classList.remove("active");
+                    break;
+                    case 'http://localhost:3000/contact':
+                        console.log('heloooo')
+                    document.querySelector('#topnav-contact-btn').classList.add("active");
+                    document.querySelector('#topnav-home-btn').classList.remove("active");
+                    document.querySelector('#topnav-discover-btn').classList.remove("active");
+                default:
+                    break;
+            }
     }
     closeNav(){
         this.props.openNav(false)
@@ -67,7 +85,7 @@ class Header extends Component {
                         <button className="dropbtn">Discover
                         <ArrowDropDownIcon />
                         </button>
-                        <div className="dropdown-content">
+                        <div id='topnav-discover-btn' className="dropdown-content">
                         <Link to='/meals'>Meals</Link>
                         <Link to='/'>Chefs</Link>
                         <Link to='/'>Reviews</Link>
@@ -75,7 +93,7 @@ class Header extends Component {
                         </div>
                     </div>
                     <div className="dropdown">
-                        <button className="dropbtn">Contact
+                        <button id='topnav-contact-btn' className="dropbtn">Contact
                         <ArrowDropDownIcon />
                         </button>
                         <div className="dropdown-content">

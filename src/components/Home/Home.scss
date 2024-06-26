@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
-
+#home-wrapper {
+    margin-top: 5vh;
+}
 #who-are-we-cont {
     display: flex;
     flex-direction: column;
@@ -28,6 +30,7 @@
             }
             a:visited, a:link, a:active {
                 text-decoration: none;
+                color: white;
             }
     }
     }
@@ -291,6 +294,9 @@
 }
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1024px) {
+    #home-wrapper {
+        margin-top: 14vh;
+    }
     .lg-screen-margin {
         width:80%;
         margin: 0 auto;
