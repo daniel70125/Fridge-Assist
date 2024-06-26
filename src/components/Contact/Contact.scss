@@ -1,4 +1,5 @@
 #contact-wrapper {
+    margin-top: 7vh;
     #placeholder-div {
         align-items: flex-end;
         background-position: center;
@@ -11,7 +12,7 @@
             background-color: #0f0f0f;
             padding: 15px;
             span {
-                font-family: 'Parisienne', cursive;
+                font-family: "Lobster Two", sans-serif;
                 color: #da6509;
                 font-size: 5rem;
             }
@@ -139,6 +140,7 @@
 // I want these css rules when i'm not iPad anymore => Laptop
 @media (min-width: 1000px) {
     #contact-wrapper {
+        margin-top: 12vh;
         #placeholder-div {
             align-items: center;
             div {

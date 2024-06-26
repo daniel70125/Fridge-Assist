@@ -7,7 +7,7 @@ import SignUp from './components/SignUp/SignUp';
 import GroceryList from './components/GroceryList/GroceryList';
 // import DiscoverMeals from './components/DiscoverMeals/DiscoverMeals';
 // import FoodMaker from './components/FoodMaker/FoodMaker';
-// import AddRecipe from './components/AddRecipe/AddRecipe';
+import AddRecipe from './components/AddRecipe/AddRecipe';
 
 export default (
     <Routes>
@@ -17,7 +17,7 @@ export default (
             <Route path="reviews" element={ <DiscoverMeals/> } /> */}
             {/* <Route path="food-maker" element={ <FoodMaker/> } /> */}
             <Route path="contact" element={ <Contact/> } />
-            {/* <Route path="add-recipe" element={ <AddRecipe/> } /> */}
+            <Route path="add-recipe" element={ <AddRecipe/> } />
             <Route path="login" element={ <Login/> } />
             <Route path="sign-up" element={ <SignUp/> } />
             <Route path="grocery-list" element={ <GroceryList/> } />

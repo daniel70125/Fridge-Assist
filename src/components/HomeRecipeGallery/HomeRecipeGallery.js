@@ -10,7 +10,7 @@ class HomeRecipeGallery extends Component {
         let arrOfGalleryOverlays = document.querySelectorAll('.home-recipe-gallery-div');
         arrOfGalleryOverlays.forEach((elm, index) => {
             elm.addEventListener('mouseover', () => {
-                document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '35%';
+                document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '45%';
             })
             elm.addEventListener('mouseout', () => {
                 document.querySelectorAll('.home-recipe-gallery-overlay')[index].style.height = '0';

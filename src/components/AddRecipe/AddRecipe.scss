@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 #add-recipe-cont {
     min-height:80vh;
     background-color: black;
     color: white;
+    margin-top: 7vh;
     #add-recipe-title-cont {
         background-color: #da6509;
         color: black;
@@ -10,8 +13,11 @@
         font-size: 1.5rem;
         h1 {
             margin: 0;
-            font-family: 'Parisienne', cursive;
             letter-spacing: 1px;
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 5rem;
         }
     }
     #add-recipe-flexbox {
@@ -150,7 +156,7 @@
             }
             #add-recipe-preview-ingredients {
                 height:50vh;
-                border: 2px solid green;
+                border: 2px solid #da6509;
             }
         }
     }
@@ -254,6 +260,7 @@
     
 @media (min-width: 1000px) {
     #add-recipe-cont {
+        margin-top: 12vh;
         .home-recipe-gallery-div {
             width: 25vw;
         }
@@ -282,6 +289,7 @@
         }
         #add-recipe-preview-cont-main {
             width: 50vw;
+            margin-top: 2vh;
         }
         #add-recipe-preview, #add-recipe-input-cont {
             width: 50vw;

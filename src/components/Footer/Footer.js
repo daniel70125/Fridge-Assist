@@ -15,11 +15,11 @@ function Footer() {
             <div id='footer-cont'>
             <div className='footer-divs' id='footer-logo-cont'>
                 {/* <img alt='fridge assist logo' src={Logo} /> */}
-                <h2>Our Story</h2>
+                <h2 className='main-color'>Our Story</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem unde neque ipsam id soluta ducimus itaque, possimus maiores dolorem voluptates ex obcaecati.</p>
             </div>
             <div id='footer-support-cont'>
-                <h2>Support</h2>
+                <h2 className='main-color' >Support</h2>
                 <ul id='footer-support-ul'>
                     <li>Privacy</li>
                     <li>Terms</li>
@@ -27,7 +27,7 @@ function Footer() {
                 </ul>
             </div>
             <div id='footer-icon-cont'>
-                <h2>Follow Us</h2>
+                <h2 className='main-color'>Follow Us</h2>
                 <ul>
                     <li><TwitterIcon /></li>
                     <li><FacebookIcon /></li>
@@ -38,7 +38,7 @@ function Footer() {
                 </ul>
             </div>
             <div id='footer-gallery-cont'>
-            <h2>Gallery</h2>
+            <h2 className='main-color'>Gallery</h2>
             <div id='footer-gallery'>
                 <img alt='pizza' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-06-300x300.jpg' />
                 <img alt='drinks' src='https://themexbd.com/poket/restaurant/wp-content/uploads/2021/02/shop-05-300x300.jpg' />

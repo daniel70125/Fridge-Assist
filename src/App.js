@@ -195,9 +195,9 @@ render() {
           </div>
           <div id='app-overlay-links'>
             <ul>
-              <li onClick={(e) => this.closeNav(e)}><Link to='/'>Home</Link></li>
+              <li onClick={(e) => this.closeNav(e)}><Link className='main-color' to='/'>Home</Link></li>
               <li>
-                <div className='app-overlay-links-cont'>
+                <div className='app-overlay-links-cont main-color'>
                   <p>Discover</p>
                   <ArrowDropDown />
                 </div>
@@ -209,7 +209,7 @@ render() {
                   </div>
               </li>
               <li>
-                <div className='app-overlay-links-cont'>
+                <div className='app-overlay-links-cont main-color'>
                   <p>Contact</p>
                   <ArrowDropDown />
                 </div>
@@ -219,7 +219,7 @@ render() {
                   </div>
               </li>
               <li>
-                <div className='app-overlay-links-cont'>
+                <div className='app-overlay-links-cont main-color'>
                   <p>User</p>
                   <ArrowDropDown />
                 </div>

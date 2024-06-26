@@ -67,16 +67,18 @@ class GroceryList extends Component {
             )
         })
         return ( 
-            <div id='grocery-list-cont'>
-                <div id='grocery-list-add-item-cont'>
-                <form id='home-search-form' role="search">
-                    <label>Search for stuff</label>
-                    <input  id="itemInput" type='search' placeholder='Add Item..' required />
-                    <button onClick={(e, List) => this.addItem(e, this.state.list)}>Search</button>    
-                </form>
+            <div style={{"backgroundColor":"black"}}>
+                <div id='grocery-list-cont'>
+                    <div id='grocery-list-add-item-cont'>
+                    <form id='home-search-form' role="search">
+                        <label>Search for stuff</label>
+                        <input  id="itemInput" type='search' placeholder='Add Item..' required />
+                        <button onClick={(e, List) => this.addItem(e, this.state.list)}>Search</button>    
+                    </form>
+                    </div>
+                    <h2>To-Do-List!</h2>
+                    {fruitDivs}
                 </div>
-                <h2>To-Do-List!</h2>
-                {fruitDivs}
             </div>
          );
     }

@@ -45,7 +45,6 @@ class Home extends Component {
                 
                     <div id='features-intro-cont'>
                         <h1 className='main-color'>Features</h1>
-                        <p>Let's explore what we can do using <span className='trademarkName'>Fridge Assist</span></p>
                     </div>
                 
                 {/* Feature 1 */}
@@ -106,7 +105,7 @@ class Home extends Component {
                 </div>
 
                 <div id='home-review-cont'>
-                    <h2>See Our Customers <br /> <span style={{"color":"#da6509"}}>Review</span></h2>
+                    <h2>See Our Customers <br /> <span style={{"fontSize":"4rem"}} className='main-color' >Reviews</span></h2>
                     <span style={{"fontSize":"2rem"}}>Testimonial</span>
                     <div>
                         <img alt='testimonial-avatar' src={avatarImg}/>

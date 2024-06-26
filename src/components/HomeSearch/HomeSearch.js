@@ -17,7 +17,7 @@ class HomeSearch extends Component {
             <>
             {/* <img id='home-search-img1' src={burgerImg} alt='burger'/> */}
             <div>
-                <h1 id="homesearch-h1">Search through our recipes !</h1>
+                <h1 className='main-color' id="homesearch-h1">Search through our recipes !</h1>
             </div>
             <div>
             <form id='home-search-form' role="search">

@@ -11,7 +11,7 @@
 }
 #homesearch-h1 {
     font-size: 2.5rem;
-    color: var(--color-brand);
+    margin: 0;
 }
 #home-search-form {
     position: relative;
@@ -71,4 +71,14 @@
     text-align: center;
     font-size: 2rem;
     color: lightgray;
+}
+
+@media (min-width: 768px) {
+    #homesearch-h1 {
+        font-size: 4rem;
+        margin: 0;
+    }
+}
+@media (min-width: 1000px) {
+
 }

@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); // Fridge Assist name special logo
-// font-family: 'Parisienne', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap'); // Fridge Assist name special logo
 
 html {
   font-size: 60%;
@@ -12,13 +10,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 span.trademarkName {
-  font-family: 'Parisienne', cursive;
   color:#da6509;
   font-size:3rem;
   text-decoration: underline;
-  font-weight: 600;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 .main-color {
+  font-family: "Lobster Two", sans-serif;
   color: #da6509;
 }
 /* // Overlay styles */
@@ -96,8 +96,7 @@ span.trademarkName {
             color:white;
             text-align: left;
             a {
-              color: white;
-                  font-size: 2.2rem;
+                  font-size: 3.2rem;
                   text-decoration: none;
                   margin-bottom:0.5em;
             }
@@ -106,7 +105,7 @@ span.trademarkName {
               justify-content: space-between;
               align-items: center;
               p {
-                font-size: 2.2rem;
+                font-size: 3rem;
                 margin: 1vh 0;
               }
               svg {
