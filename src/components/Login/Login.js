@@ -46,8 +46,8 @@ class Login extends Component {
                       <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                         <LockOutlinedIcon />
                       </Avatar>
-                      <Typography component="h1" variant="h5">
-                        Sign in
+                      <Typography className='main-color' component="h1" variant="h5">
+                        Sign In
                       </Typography>
                       <Box component="form" onSubmit={this.handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField

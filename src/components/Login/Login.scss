@@ -9,3 +9,24 @@
 .css-nzinn5-MuiContainer-root {
     min-height:70vh;
 }
+.css-ag7rrr-MuiTypography-root {
+    font-size: 4rem !important;
+    margin: 0 !important;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+    font-size: 1.5rem !important;
+}
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    font-size: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+    .css-ag7rrr-MuiTypography-root {
+        font-size: 3rem !important;
+    }
+}
+@media (min-width: 1024px) {
+    .css-ag7rrr-MuiTypography-root {
+        font-size: 3rem !important;
+    }
+}

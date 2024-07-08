@@ -93,7 +93,7 @@ dropdownContainers.forEach((elm, index) => {
   elm.addEventListener('click', (e) => {
     if (index === 0){
       if (this.state.discoverDropdown === false){
-        dropdowns[index].style.height = '120px'; // Set height to drop down container drawer
+        dropdowns[index].style.height = '130px'; // Set height to drop down container drawer
         // timeout because event bubbling is happening. this function runs twice.
         window.setTimeout(() => {
           this.setState({discoverDropdown: true})
@@ -120,7 +120,7 @@ dropdownContainers.forEach((elm, index) => {
       }
     } else {
       if (this.state.userDropdown === false){
-        dropdowns[index].style.height = '120px'; // Set height to drop down user drawer
+        dropdowns[index].style.height = '135px'; // Set height to drop down user drawer
         // timeout because event bubbling is happening. this function runs twice.
         window.setTimeout(() => {
           this.setState({userDropdown: true})
@@ -234,7 +234,7 @@ render() {
           </div>
       </div>
       <Link onClick={(e) => this.closeNav(e)} style={{"padding":"10px 5px"}} to='/sign-up'><Button>Sign Up</Button></Link>
-      <Link onClick={(e) => this.closeNav(e)} style={{"padding":"10px 5px"}} to='/login'><Button>Log in</Button></Link>
+      <Link onClick={(e) => this.closeNav(e)} style={{"padding":"10px 5px"}} to='/login'><Button>Sign in</Button></Link>
       <p style={{"color":"white", "fontSize":"1.5rem"}}>Copyright © 2022 Daniel Wright ®</p>
 
       <div id='overlay-btn-div' onClick={(e) => this.closeNav(e)}>

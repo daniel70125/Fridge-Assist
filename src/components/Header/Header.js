@@ -101,8 +101,8 @@ class Header extends Component {
                             {/* <Link to='/'>About Us</Link> */}
                         </div>
                     </div>
-                    <Link style={{"padding":"10px 5px"}} to='/sign-up'><Button>Sign Up</Button></Link>
-                    <Link style={{"padding":"10px 5px"}} to='/login'><Button>Log in</Button></Link>
+                    <Link style={{"padding":"10px 5px"}} to='/login'><Button>Sign in</Button></Link>
+                    <Link style={{"padding":"10px 5px"}} to='/sign-up'><Button style={{ "border":"1px solid #da6509"}}>Sign Up</Button></Link>
                     <Search id='topnav-lg-search' onClick={(e) => this.openSearchNav(e)}/>
                     <div className="dropdown">
                     <img className='avatar-img' src={Avatar} alt='user-avatar'/>

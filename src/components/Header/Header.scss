@@ -70,9 +70,11 @@
   text-decoration: none;
   font-size: 2.5rem;
   button {
-    background-color: #da6509;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  #header-sign-up-btn {
+    border: 1px solid #da6509;
   }
   button:hover {
     background-color: #da6509 !important;

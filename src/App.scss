@@ -18,7 +18,7 @@ span.trademarkName {
   font-style: normal;
 }
 .main-color {
-  font-family: "Lobster Two", sans-serif;
+  font-family: "Lobster Two", sans-serif !important;
   color: #da6509;
 }
 /* // Overlay styles */
@@ -105,7 +105,7 @@ span.trademarkName {
               justify-content: space-between;
               align-items: center;
               p {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 margin: 1vh 0;
               }
               svg {
