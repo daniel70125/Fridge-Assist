@@ -195,7 +195,7 @@ span.trademarkName {
   position: fixed;
   top:0;
   left:0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,0.9));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.97), rgba(0,0,0,0.97));
 
   #search-overlay-main {
     height:30vh;
@@ -231,6 +231,7 @@ span.trademarkName {
     margin-left: 15vw;
   }
   #search-overlay {
+    margin-top: 7vh;
     #search-overlay-main {
       input {
         font-size: 2.5rem;
@@ -281,8 +282,9 @@ span.trademarkName {
     font-size: 50%;
   }
   #search-overlay {
+    margin-top: 13vh;
     #search-overlay-close-btn {
-      font-size: 3rem !important;
+      font-size: 3.5rem !important;
       top:1.5vh;
     }
     #search-overlay-main {
