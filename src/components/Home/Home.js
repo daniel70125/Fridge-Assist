@@ -4,13 +4,12 @@ import HomeRecipeGallery from '../HomeRecipeGallery/HomeRecipeGallery';
 import HomeSearch from '../HomeSearch/HomeSearch';
 // Imports from packages
 import {Link} from 'react-router-dom';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 // Imports of images
 // import mainDish from '../../Pictures/main-dish.png';
-import cookingIllustration from '../../Pictures/who-are-we.jpg';
 import recipeFeaturedImg from '../../Pictures/recipe-illustration.jpg';
 import groceryFeaturedImg from '../../Pictures/grocery-list.webp';
 import expirationFeaturedImg from '../../Pictures/expiration-date.jpg';
@@ -24,9 +23,18 @@ class Home extends Component {
     render() { 
         return ( 
             <div id='home-wrapper'>
-                
+                <div id='home-landing-cont'>
+                    <div id='home-landing-banner'>
+                        <h1 className='main-color'>Fridge Assist</h1>
+                        <p>
+                            Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
+                            us you will get to share your recipes and food ideas with hundreds of other like-minded members.
+                        </p>
+                    </div>
+                </div>
                 <div className='lg-screen-margin'>
-                <div id='who-are-we-cont'>
+                {/* OLD LANDING ONTAINER */}
+                {/* <div id='who-are-we-cont'>
                     <div id='who-are-we-text'>
                         <h5>Welcome to <span className='trademarkName'>Fridge Assist</span>!</h5>
                         <p>Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
@@ -37,11 +45,8 @@ class Home extends Component {
                             <Link to='/login'><Button>Sign in</Button></Link>
                         </div>
                     </div>
-                    
-                    
-                        <img alt='who-are-we-illustration' src={cookingIllustration} />
-                    
-                </div>
+                    <img alt='who-are-we-illustration' src={cookingIllustration} />
+                </div> */}
                 
                     <div id='features-intro-cont'>
                         <h1 className='main-color'>Features</h1>

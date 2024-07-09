@@ -248,6 +248,33 @@ span.trademarkName {
   #cooking-overlay img {
     height:55vh
   }
+  .overlay {
+    margin-top: 7vh;
+    .overlay-content {
+      #app-overlay-links {
+        ul {
+          li {
+            a {
+              font-size: 3.5rem;
+            }
+            div.app-overlay-links-cont {
+              p {
+                font-size: 3.5rem;
+              }
+              svg {
+                font-size: 4rem !important;
+              }
+            }
+            .app-overlay-links-dropdown-cont {
+              a {
+                font-size: 2.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 1024px) {
   html {

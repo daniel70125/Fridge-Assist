@@ -39,8 +39,8 @@ class Header extends Component {
                     document.querySelector('#topnav-contact-btn').classList.add("active");
                     document.querySelector('#topnav-home-btn').classList.remove("active");
                     document.querySelector('#topnav-discover-btn').classList.remove("active");
-                default:
                     break;
+                    default:
             }
     }
     closeNav(){
