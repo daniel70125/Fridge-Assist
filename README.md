@@ -81,8 +81,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![Fridge Assist](./src/Pictures/project-image.png)
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username:daniel70125`, `repo_name:Special Agent`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
@@ -107,18 +107,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 Setup is pretty easy. After cloning this repo use the command terminal or you can use the visual studio code's terminal 
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Install NPM packages
+1. Once cloned install NPM packages from your terminal
    ```sh
    npm install
    ```
@@ -130,6 +121,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm start
    ```
+   *Use two terminals to run both commands simultaneously.*
 ## Enjoy and happy coding!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -138,10 +130,11 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+# Sign up page
+![Sign up page](./src/Pictures/project-image-sign-up.png)
+# Add recipe page
+![Add Recipe Page](./src/Pictures/project-image-add-recipe.png)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -182,15 +175,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
