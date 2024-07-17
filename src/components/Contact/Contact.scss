@@ -1,139 +1,66 @@
 #contact-wrapper {
     margin-top: 7vh;
-    #placeholder-div {
-        align-items: flex-end;
-        background-position: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    #img-cont {
+        width: 100vw;
+        height:50vh;
+        background-image: url('../../Pictures/midjourney-chef-cooking.webp');
         background-size: cover;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../Pictures/contact-us-main-wallpaper.jpg');
-        display: flex;
-        height:60vh;
-        justify-content: center;
-        div {
-            background-color: #0f0f0f;
-            padding: 15px;
-            span {
-                font-family: "Lobster Two", sans-serif;
-                color: #da6509;
-                font-size: 5rem;
-            }
-        }
+        background-position: center;
     }
-    #contact-flex-cont {
-        .contact-flex-div {
-            height:80vh;
+    #get-in-touch-cont {
+        h1 {
+            font-size: 4rem;
             text-align: center;
-            font-size: 2rem;
-            h1 {
-                background: black;
-                margin: 0;
-                padding: 20px;
-                color: #da6509;
-            }
-            a {
-                color: #0f0f0f;
-            }
-            #contact-flex-get-in-touch {
+        }
+        #get-in-touch-child-cont {
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .get-in-touch-child-children {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                height: 82%;
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    .contact-div1-span {
-                        font-size: 3rem;
-                        color: #da6509;
-                        margin-bottom: 1vh;
-                    }
-                    svg {
-                        font-size: 5rem;
-                        color: #da6509;
-                    }
-                }
-            }
-        }
-        .contact-flex-div:nth-child(3){
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../Pictures/contact-send-message-bg.jpg');
-            input {
-                padding: 5px;
-                width: 90vw;
-                font-size: 1.8rem;
-                text-align: center;
-            }
-            button {
-                padding: 8px;
-                background-color: #da6509;
-                color: #0f0f0f;
-                font-size: 2rem;
-                margin-top: 2vh;
-                svg {
-                    font-size: 2rem;
-                    margin-left:1vw;
-                }
-            }
-            div {
-                position: relative;
-                top: 13vh;
-                height: 22vh;
-                p {
+                align-items: center;
+                padding: 15px;
+                p:nth-child(1) {
+                    font-size: 2.5rem;
+                    margin: 0 0 2vh 0;
                     color: white;
-                    font-size: 1.5rem;
-                    padding: 0 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg {
+                        margin-right: 0.3vw;
+                        font-size: 2.8rem;
+                        color: #da650a;
+                    }
                 }
-            }
-        }
-        .contact-flex-div:nth-child(2){
-            background-image: url('../../Pictures/contact-maps.png');
-            background-size: cover;
-            background-position: center;
-            h1 {
+                a {
+                    font-size: 2rem;
+                    color: white;
+                }
+                p:nth-child(2) {
+                    font-size: 2rem;
+                    text-align: center;
+                    color: white;
+                    margin: 0 0 1vh 0;
+                }
             }
         }
     }
-}
+}  
 // I want these css rules when i'm not mobile anymore => iPad
 @media (min-width: 768px) {
     #contact-wrapper {
-        #placeholder-div {
-            div {
-                width: 65vw;
-                text-align: center;
-                span {
-                    font-size: 7.5rem;
-                }
-            }
-        }
-        #contact-flex-cont {
-            .contact-flex-div {
-                #contact-flex-get-in-touch {
-                    div {
-                        .contact-div1-span {
-                            font-size: 5rem;
-                        }
-                        a, span{
-                            font-size: 3rem;
-                        }
-                        svg {
-                            font-size: 6rem;
-                        }
-                    }
-                }
-            }
-            .contact-flex-div:nth-child(3) {
-                input {
-                    font-size: 2.5rem;
-                    padding: 15px;
-                }
-                div {
-                    top:19vh;
-                    p {
-                        font-size: 2.2rem;
-                    }
-                }
-            }
+        overflow: hidden;
+        #img-cont {
+            height: 70vh;
         }
     }
 }
@@ -141,53 +68,55 @@
 @media (min-width: 1000px) {
     #contact-wrapper {
         margin-top: 12vh;
-        #placeholder-div {
-            align-items: center;
-            div {
-                padding: 20px;
-                width: 30vw;
-                span {
-                    font-size: 6rem;
-                }
-            }
+        display: flex;
+        justify-content: center;
+        height: 93vh;
+        align-items: center;
+        flex-direction: row;
+        #img-cont {
+            width: 30vw;
+            height: 60vh;
         }
-        #contact-flex-cont {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            background-color: #0f0f0f;
-            .contact-flex-div {
-                height:75vh;
-                width: 30vw;
-                #contact-flex-get-in-touch {
-                    color: white;
-                    div {
-                        a {
-                            color: white;
-                            font-size: 2rem;
-                        }
+        #get-in-touch-cont {
+            width: 40vw;
+            height:60vh;
+            h1 {
+                font-size: 4rem;
+            }
+            #get-in-touch-child-cont {
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .get-in-touch-child-children {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 15px;
+                    p:nth-child(1) {
+                        font-size: 2.5rem;
+                        margin: 0 0 2vh 0;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         svg {
-                            font-size: 3rem;
-                        }
-                        .contact-div1-span {
-                            font-size: 2.5rem;
-                        }
-                        span {
-                            font-size: 1.5rem;
+                            margin-right: 0.3vw;
+                            font-size: 2.8rem;
+                            color: #da650a;
                         }
                     }
-                }
-            }
-            .contact-flex-div:nth-child(3) {
-                input {
-                    width: 25vw;
-                    padding: 0px;
-                    margin-bottom: 1vh;
-                }
-                div {
-                    top:12vh;
-                    p {
-                        font-size: 1.5rem;
+                    a {
+                        font-size: 2rem;
+                        color: white;
+                    }
+                    p:nth-child(2) {
+                        font-size: 2rem;
+                        color: white;
+                        margin: 0 0 1vh 0;
                     }
                 }
             }

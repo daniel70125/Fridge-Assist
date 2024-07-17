@@ -31,10 +31,6 @@ class App extends Component {
      }
   }
 async componentDidMount(){
-  await axios.get('/getuser')
-  .then(res => console.log(res.data))
-  .catch(err => console.log(err))
-
   const loadingOverlayElement = document.querySelector('#cooking-overlay');
   const p = document.querySelector('#chefcookingoverlay-p');
 
@@ -42,7 +38,6 @@ async componentDidMount(){
     this.props.loadingOverlay(false);
     loadingOverlayElement.style.height = '0vh';
     loadingOverlayElement.style.display = 'none';
-    
   } else {
     setTimeout(() => {
       this.props.loadingOverlay(false);
@@ -52,6 +47,10 @@ async componentDidMount(){
     }, 5000)
     
   }
+  await axios.get('/getuser')
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err))
+
   // Changes title depending on href location
   if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000' || window.location.href === 'localhost:3000'){
     document.title = `Home | Fridge Assist`;

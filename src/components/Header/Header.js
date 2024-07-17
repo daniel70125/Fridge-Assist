@@ -17,7 +17,7 @@ class Header extends Component {
         navbarOpen: false
     }
     componentDidMount(){
-        this.checkUrl();
+        setTimeout(this.checkUrl, 100)
         window.addEventListener('click', () => {
             this.checkUrl();
         })

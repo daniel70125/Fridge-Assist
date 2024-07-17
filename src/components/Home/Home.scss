@@ -26,46 +26,11 @@ background-size: cover;
             h1 {
                 font-size: 5rem;
                 margin: 0;
+                text-decoration: underline;
             }
     }
 }
 
-#who-are-we-cont {
-    display: flex;
-    flex-direction: column;
-    #who-are-we-text {
-        text-align: center;
-        h5 {
-            font-size: 2.5rem;
-            margin-bottom: 1vh;
-        }
-        p {
-            font-size: 2rem;
-            padding: 5px;
-            font-weight: bold;
-            color: #939393;
-        }
-        #who-are-we-btns {
-            display: flex;
-            a {
-                margin: 0 auto;
-                button {
-                    padding:8px;
-                    background-color: #da6509;
-                    color:#fff;
-                    font-size: 2rem;
-                }
-            }
-            a:visited, a:link, a:active {
-                text-decoration: none;
-                color: white;
-            }
-    }
-    }
-    img {
-        width:100vw;
-    }
-}
 #features-intro-cont {
     h1 {
         text-align: center;
@@ -247,34 +212,6 @@ background-size: cover;
             }
         }
     }
-    #who-are-we-cont {
-        flex-direction: row;
-         img {
-            width: 60vw;
-        }
-        #who-are-we-text {
-            padding: 0 5px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            #who-are-we-btns {
-                justify-content: space-between;
-                a {
-                    margin: 0;
-                }
-            }
-            a {
-                margin: 0 auto;
-                button {
-                    padding:8px;
-                    background-color: #da6509;
-                    color:#fff;
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
     #home-recipe-gallery-wrapper {
         p {
             font-size: 2.5rem;
@@ -344,11 +281,6 @@ background-size: cover;
     .lg-screen-margin {
         width:80%;
         margin: 0 auto;
-    }
-    #who-are-we-cont {
-        img {
-            width: 50vw;
-        }
     }
     #home-recipe-categories {
         h2 {

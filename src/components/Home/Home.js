@@ -33,20 +33,6 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className='lg-screen-margin'>
-                {/* OLD LANDING ONTAINER */}
-                {/* <div id='who-are-we-cont'>
-                    <div id='who-are-we-text'>
-                        <h5>Welcome to <span className='trademarkName'>Fridge Assist</span>!</h5>
-                        <p>Fridge Assist is the ultimate cooking social community, where recipes come to life. By joining
-                            us you will get to share your recipes and food ideas with hundreds of other like-minded members.
-                        </p>
-                        <div id='who-are-we-btns'>
-                            <Link to='/sign-up'><Button>Sign Up</Button></Link>
-                            <Link to='/login'><Button>Sign in</Button></Link>
-                        </div>
-                    </div>
-                    <img alt='who-are-we-illustration' src={cookingIllustration} />
-                </div> */}
                 
                     <div id='features-intro-cont'>
                         <h1 className='main-color'>Features</h1>

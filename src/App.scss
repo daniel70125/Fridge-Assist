@@ -20,6 +20,7 @@ span.trademarkName {
 .main-color {
   font-family: "Lobster Two", sans-serif !important;
   color: #da6509;
+  text-decoration: underline;
 }
 /* // Overlay styles */
 /* The Overlay (background) */
@@ -282,7 +283,7 @@ span.trademarkName {
     font-size: 50%;
   }
   #search-overlay {
-    margin-top: 13vh;
+    margin-top: 12vh;
     #search-overlay-close-btn {
       font-size: 3.5rem !important;
       top:1.5vh;

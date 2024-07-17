@@ -8,6 +8,7 @@ import GroceryList from './components/GroceryList/GroceryList';
 // import DiscoverMeals from './components/DiscoverMeals/DiscoverMeals';
 // import FoodMaker from './components/FoodMaker/FoodMaker';
 import AddRecipe from './components/AddRecipe/AddRecipe';
+import NotFound from './components/404/404';
 
 export default (
     <Routes>
@@ -21,5 +22,6 @@ export default (
             <Route path="login" element={ <Login/> } />
             <Route path="sign-up" element={ <SignUp/> } />
             <Route path="grocery-list" element={ <GroceryList/> } />
+            <Route path="*" element={ <NotFound/> } />
       </Routes>
 )
