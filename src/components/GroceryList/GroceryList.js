@@ -76,7 +76,7 @@ class GroceryList extends Component {
                         <button onClick={(e, List) => this.addItem(e, this.state.list)}>Search</button>    
                     </form>
                     </div>
-                    <h2>To-Do-List!</h2>
+                    <h2>Grocery List!</h2>
                     {fruitDivs}
                 </div>
             </div>
