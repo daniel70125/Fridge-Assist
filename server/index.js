@@ -37,9 +37,10 @@ app.get('/getuser', (req, res) => {
 })
 
 // Get all meals
-app.get('/meals', (req, res) => {
+app.get('/users', (req, res) => {
     merchant_model.getMerchants()
     .then(response => {
+      console.log(response);
       res.status(200).send(response);
     })
     .catch(error => {

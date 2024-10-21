@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/src/Pictures/fridge-assist-logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Fridge Assist</h3>
@@ -135,10 +135,15 @@ Setup is pretty easy. After cloning this repo use the command terminal or you ca
 # Add recipe page
 ![Add Recipe Page](./src/Pictures/project-image-add-recipe.png)
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+<!-- Working Pages -->
+## Working Pages
+- Home Page
+- Search Feature (Top Search Button)
+- Contact Us Page
+- Sign Up/Sign In
+- Grocery List
 
 <!-- ROADMAP -->
 ## Roadmap

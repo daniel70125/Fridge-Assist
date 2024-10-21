@@ -35,7 +35,6 @@ class Header extends Component {
                         document.querySelector('#topnav-contact-btn').classList.remove("active");
                     break;
                     case 'http://localhost:3000/contact':
-                        console.log('heloooo')
                     document.querySelector('#topnav-contact-btn').classList.add("active");
                     document.querySelector('#topnav-home-btn').classList.remove("active");
                     document.querySelector('#topnav-discover-btn').classList.remove("active");
@@ -82,10 +81,10 @@ class Header extends Component {
                     <Link id='topnav-home-btn' className='active' to='/'>Home</Link>
 
                     <div className="dropdown">
-                        <button className="dropbtn">Discover
+                        <button id='topnav-discover-btn' className="dropbtn">Discover
                         <ArrowDropDownIcon />
                         </button>
-                        <div id='topnav-discover-btn' className="dropdown-content">
+                        <div className="dropdown-content">
                         <Link to='/meals'>Meals</Link>
                         <Link to='/'>Chefs</Link>
                         <Link to='/'>Reviews</Link>

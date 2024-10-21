@@ -23,7 +23,7 @@ import { Button } from '@mui/material';
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = { 
       discoverDropdown: false,  
       contactDropdown: false,  

@@ -14,6 +14,7 @@ export default (
     <Routes>
         <Route path="/" element={ <Home/> } />
             {/* <Route path="meals" element={ <DiscoverMeals/> } /> */}
+            <Route path="chefs/" element={ <chefs/> } />
             {/* <Route path="chefs" element={ <DiscoverMeals/> } />
             <Route path="reviews" element={ <DiscoverMeals/> } /> */}
             {/* <Route path="food-maker" element={ <FoodMaker/> } /> */}

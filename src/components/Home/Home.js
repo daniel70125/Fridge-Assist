@@ -34,9 +34,9 @@ class Home extends Component {
                 </div>
                 <div className='lg-screen-margin'>
                 
-                    <div id='features-intro-cont'>
-                        <h1 className='main-color'>Features</h1>
-                    </div>
+                <div id='features-intro-cont'>
+                    <h1 className='main-color'>Features</h1>
+                </div>
                 
                 {/* Feature 1 */}
                 
@@ -97,7 +97,6 @@ class Home extends Component {
 
                 <div id='home-review-cont'>
                     <h2>See Our Customers <br /> <span style={{"fontSize":"4rem"}} className='main-color' >Reviews</span></h2>
-                    <span style={{"fontSize":"2rem"}}>Testimonial</span>
                     <div>
                         <img alt='testimonial-avatar' src={avatarImg}/>
                         <div id='home-review-testimonial-caption'>

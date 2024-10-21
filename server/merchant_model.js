@@ -1,15 +1,15 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'daniel70125',
+  user: 'postgres',
   host: 'localhost',
-  database: 'fridgeassist',
-  password: 'root',
+  database: 'postgres',
+  password: 'myspace12',
   port: 5432,
 });
 
 const getMerchants = () => {
     return new Promise(function(resolve, reject) {
-      pool.query('SELECT * FROM recipes', (error, results) => {
+      pool.query('SELECT * FROM users', (error, results) => {
         if (error) {
           reject(error)
         }
