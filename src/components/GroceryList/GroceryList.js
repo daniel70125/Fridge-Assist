@@ -69,6 +69,7 @@ class GroceryList extends Component {
         return ( 
             <div style={{"backgroundColor":"black"}}>
                 <div id='grocery-list-cont'>
+                    <h2>Grocery List!</h2>
                     <div id='grocery-list-add-item-cont'>
                     <form id='home-search-form' role="search">
                         <label>Search for stuff</label>
@@ -76,7 +77,6 @@ class GroceryList extends Component {
                         <button onClick={(e, List) => this.addItem(e, this.state.list)}>Search</button>    
                     </form>
                     </div>
-                    <h2>Grocery List!</h2>
                     {fruitDivs}
                 </div>
             </div>

@@ -73,9 +73,9 @@ window.addEventListener('click', function (event) {
     newTitle[0] = newTitle[0].toUpperCase(); // Uppercase first letter of array
     newTitle = newTitle.join(''); // Join string. Ex. ['L','o','g','i','n'] => Login
     this.document.title = `${newTitle} | Fridge Assist`;
+    
   }
 });
-
 
 if (window.location.href === 'http://localhost:4001/') {
     document.querySelector('#topnav-home-btn').classList.add("active");
@@ -133,17 +133,10 @@ dropdownContainers.forEach((elm, index) => {
     } 
   })
 })
-
 }
 componentDidUpdate(){
-  // Changes title depending on href location
-  if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000'){
-    document.title = `Home | Fridge Assist`;
-  } else {
-    let newTitle = window.location.href.toString().slice(22);
-    newTitle = newTitle.replace(/_/g, ' ');
-    document.title = `${newTitle} | Fridge Assist`;
-}
+  
+  console.log('changedddddd')
   if (this.props.navOpen) {
     this.openNav()
   } else {
@@ -155,6 +148,7 @@ componentDidUpdate(){
     this.closeSearchNav()
   }
 }
+
 closeNav(){
   this.props.openNav(false)
   let overlay = document.querySelector('#myNav');
@@ -250,7 +244,7 @@ render() {
         <div id='search-overlay-main'>
           <p>Start Typing and hit the Search button...</p>
           <form id='home-search-form' role="search">
-              <label>Search for stuff</label>
+              <label> Search for stuff</label>
               <input id="search" type="search" placeholder="Chinese, Snacks, Burgers..." required />
               <button type="submit">Search</button>    
           </form>

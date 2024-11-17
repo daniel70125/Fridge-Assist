@@ -17,15 +17,15 @@ class Contact extends Component {
                     <div id='get-in-touch-child-cont'>
                         <div className='get-in-touch-child-children'>
                             <p><EmailIcon /> E-Mail Us</p>
-                            <a href= "mailto: fridgeassist@gmail.com"> fridgeassist@gmail.com </a>
+                            <a className='get-in-touch-link' href= "mailto: fridgeassist@gmail.com"> fridgeassist@gmail.com </a>
                         </div>
                         <div className='get-in-touch-child-children'>
                             <p><ContactPhoneIcon  /> Call Us</p>
-                            <a href="tel:+11231234567">(123)123-4567</a>
+                            <a className='get-in-touch-link' href="tel:+11231234567">(123)123-4567</a>
                         </div>
                         <div className='get-in-touch-child-children'>
                             <p><PlaceIcon /> Come See Us</p>
-                            <p>123 Imaginary Lane. Waverly Place, NV 12345</p>
+                            <p className='get-in-touch-link'>123 Imaginary Lane. Waverly Place, NV 12345</p>
                         </div>
                     </div>
                 </div>

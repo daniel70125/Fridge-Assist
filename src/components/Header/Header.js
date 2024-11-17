@@ -23,23 +23,30 @@ class Header extends Component {
         })
     }
     checkUrl(){
+        // This function changes the active highlighted btn on navmenu
             switch (window.location.href) {
                 case 'http://localhost:3000/':
                     document.querySelector('#topnav-home-btn').classList.add("active");
                     document.querySelector('#topnav-discover-btn').classList.remove("active");
                     document.querySelector('#topnav-contact-btn').classList.remove("active");
+                    document.querySelector('#topnav-signIn').classList.remove("active");
                     break;
-                    case 'http://localhost:3000/meals':
-                        document.querySelector('#topnav-discover-btn').classList.add("active");
-                        document.querySelector('#topnav-home-btn').classList.remove("active");
-                        document.querySelector('#topnav-contact-btn').classList.remove("active");
+                case 'http://localhost:3000/meals':
+                case 'http://localhost:3000/food-maker':
+                    document.querySelector('#topnav-discover-btn').classList.add("active");
+                    document.querySelector('#topnav-home-btn').classList.remove("active");
+                    document.querySelector('#topnav-contact-btn').classList.remove("active");
+                    document.querySelector('#topnav-signIn').classList.remove("active");
                     break;
-                    case 'http://localhost:3000/contact':
+                case 'http://localhost:3000/contact':
                     document.querySelector('#topnav-contact-btn').classList.add("active");
                     document.querySelector('#topnav-home-btn').classList.remove("active");
                     document.querySelector('#topnav-discover-btn').classList.remove("active");
+                    document.querySelector('#topnav-signIn').classList.remove("active");
                     break;
-                    default:
+                case "http://localhost:3000/grocery-list":
+
+                default:
             }
     }
     closeNav(){
@@ -100,7 +107,7 @@ class Header extends Component {
                             {/* <Link to='/'>About Us</Link> */}
                         </div>
                     </div>
-                    <Link style={{"padding":"10px 5px"}} to='/login'><Button>Sign in</Button></Link>
+                    <Link id='topnav-signIn' style={{"padding":"10px 5px"}} to='/login'><Button>Sign in</Button></Link>
                     <Link style={{"padding":"10px 5px"}} to='/sign-up'><Button style={{ "border":"1px solid #da6509"}}>Sign Up</Button></Link>
                     <Search id='topnav-lg-search' onClick={(e) => this.openSearchNav(e)}/>
                     <div className="dropdown">

@@ -287,6 +287,10 @@ span.trademarkName {
     #search-overlay-close-btn {
       font-size: 3.5rem !important;
       top:1.5vh;
+      cursor: pointer;
+    }
+    #search-overlay-close-btn:hover {
+      color: #da6509;
     }
     #search-overlay-main {
       input {

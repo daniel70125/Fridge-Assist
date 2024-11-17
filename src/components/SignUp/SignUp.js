@@ -66,7 +66,7 @@ class Login extends Component {
                         Sign up
                       </Typography>
                       <Box component="form" onSubmit={this.handleSubmit} noValidate sx={{ mt: 1 }}>
-                        <TextField
+                        <TextField className='sign-up-labels'
                           margin="normal"
                           required
                           fullWidth
